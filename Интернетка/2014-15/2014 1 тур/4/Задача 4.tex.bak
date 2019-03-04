@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+%\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE{Задача № 4}}
+\end{center}
+
+\vspace{4mm}
+
+\textbf{\underline{Условие}:} Какой минимальный заряд $q$ нужно закрепить в нижней точке сферической полости радиуса $R$, чтобы в поле тяжести небольшой шарик массы $m$ и заряда $Q$ находился в верхней точке полости в положении устойчивого равновесия?
+
+\begin{wrapfigure}{r}{235pt}
+\begin{center}
+\vspace{-5mm}
+\includegraphics[scale=0.4]{fig7.pdf}
+\end{center}
+\caption{Рис. 4.1.}
+\vspace{1mm}
+\end{wrapfigure}
+
+\textbf{\underline{Решение}:} При решении задачи будем пренебрегать размером шарика. Шарик может находиться в верхней точке полости благодаря электростатическому отталкиванию от заряда внизу. Так как расстояние между зарядами $l=2R$, то по закону Кулона электростатическая сила
+$$
+  F_{\text{el}}=\frac{1}{4\pi\varepsilon_0}\frac{Qq}{l^2}=\frac{Qq}{16\pi\varepsilon_0 R^2},
+$$
+где $\varepsilon_0$ --- электрическая постоянная. Равновесие должно быть устойчиво по отношению к малому смещению шарика в любом направлении. Достаточно рассмотреть смещения в двух направлениях: вниз и по касательной к поверхности полости. Для первого направления электростатическая сила должна быть не менее силы тяжести. При минимально возможном $q$ эти силы равны: ${F_{\text{el}}=mg}$, откуда
+\begin{equation}
+  q=\frac{16\pi\varepsilon_0 mgR^2}{Q}.\label{balance}
+\end{equation}
+Найдем минимальный заряд $q$, необходимый для равновесия при отклонении по касательной. Пусть он отклонился от равновесия на малый угол~$\varphi$ (см. рис. 4.1). Рассмотрим движение шарика вдоль оси $Ox$, направленной перпендикулярно радиусу, проведенному из центра полости к шарику. Так как длина хорды окружности радиуса $R$ с центральным углом $\varphi$ равна асимптотически $R\varphi$, то новое расстояние между зарядами $l'=\sqrt{l^2-R^2 \varphi^2}\approx l^2-R^2 \varphi^2/2$. Изменение расстояния квадратично по $\varphi$, им пренебрежем. Соответственно, при небольшом смещении шарика электрическая сила не изменится по модулю. Для устойчивости достаточно равенство нулю проекции результирующей сил, действующих на шарик\footnote{На самом деле равнодействующая должна быть ненулевой и направленной противоположно отклонению шарика. При ее стремлению к нулю приходим к уравнению, как в решении.}. Проекция силы реакции опоры $N_x=0$, силы тяжести $mg_x=-mg\sin\varphi\approx -mg\varphi$, электрической силы $F_{\text{el}x}=F_{\text{el}}\sin(\varphi/2)\approx F_{\text{el}}\varphi/2$. Тогда из условия устойчивости получим
+$$
+  mg=\frac{F_{\text{el}}}{2}=\frac{Qq}{32\pi\varepsilon_0 R^2},
+$$
+откуда
+$$
+  q=\frac{32\pi\varepsilon_0 mgR^2}{Q}.
+$$
+В этом случае ответ в два раза больше, чем по формуле \eqref{balance}. Соответственно, второе требование сильнее, оно и является определяющим.
+
+\textbf{\underline{Ответ}:} $q=\dfrac{32\pi\varepsilon_0 mgR^2}{Q}$.
+
+\end{document} 

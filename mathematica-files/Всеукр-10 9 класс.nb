@@ -1,0 +1,361 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12817,        352]
+NotebookOptionsPosition[     11870,        315]
+NotebookOutlinePosition[     12212,        330]
+CellTagsIndexPosition[     12169,        327]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+\:0417\:0430\:0434\:0430\:0447\:0430 5 (\:043e\:0431\:043e\:0437\:043d\:0430\
+\:0447\:0435\:043d\:0438\:044f \:0438\:0437 \:0443\:0441\:043b\:043e\:0432\
+\:0438\:044f, \[Alpha] - \:0443\:0433\:043e\:043b \:043f\:043e\:0432\:043e\
+\:0440\:043e\:0442\:0430 \:043f\:043b\:0430\:0441\:0442\:0438\:043d\:044b, x \
+- \:0440\:0430\:0441\:0441\:0442\:043e\:044f\:043d\:0438\:0435 \:043c\:0435\
+\:0436\:0434\:0443 \:0434\:0435\:043b\:0435\:043d\:0438\:044f\:043c\:0438). \
+\:0418\:0434\:0435\:044f \:0440\:0435\:0448\:0435\:043d\:0438\:044f - \:043d\
+\:0430\:0445\:043e\:0436\:0434\:0435\:043d\:0438\:0435 \:0446\:0435\:043d\
+\:0442\:0440\:0430 \:0442\:044f\:0436\:0435\:0441\:0442\:0438, \:043a\:043e\
+\:0442\:043e\:0440\:044b\:0439 \:0432 \:0441\:043e\:0441\:0442\:043e\:044f\
+\:043d\:0438\:0438 \:0443\:0441\:0442\:043e\:0439\:0447\:0438\:0432\:043e\
+\:0433\:043e \:0440\:0430\:0432\:043d\:043e\:0432\:0435\:0441\:0438\:044f \
+\:043d\:0430\:0445\:043e\:0434\:0438\:0442\:0441\:044f \:043d\:0430 \:043e\
+\:0434\:043d\:043e\:0439 \:0432\:0435\:0440\:0442\:0438\:043a\:0430\:043b\
+\:0438 \:0441 \:0442\:043e\:0447\:043a\:043e\:0439 \:043f\:043e\:0434\:0432\
+\:0435\:0441\:0430.\
+\>", "Text",
+ CellChangeTimes->{{3.6032588307806396`*^9, 3.603258904879878*^9}, {
+  3.603259116974009*^9, 3.6032591671148767`*^9}},
+ TextJustification->1],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tan\[Alpha]", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          FractionBox[
+           RowBox[{"T", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[Rho]Al", " ", "\[Alpha]Al", " ", 
+               SuperscriptBox["L", "2"]}], "-", 
+              RowBox[{"\[Rho]Cu", " ", "\[Alpha]Cu", " ", 
+               SuperscriptBox["l", "2"]}]}], ")"}]}], 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"h", "-", 
+              RowBox[{"2", "d"}]}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[Rho]Al", " ", "L"}], "+", 
+              RowBox[{"\[Rho]Cu", " ", "l"}]}], ")"}]}]], "/.", 
+          RowBox[{"T", "\[Rule]", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{"5", ",", "\"\<Kelvins\>\""}], "]"}]}]}], "/.", 
+         RowBox[{"\[Rho]Al", "\[Rule]", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{"2700", ",", 
+            FractionBox["\"\<Kilograms\>\"", 
+             SuperscriptBox["\"\<Meters\>\"", "3"]]}], "]"}]}]}], "/.", 
+        RowBox[{"\[Rho]Cu", "\[Rule]", 
+         RowBox[{"Quantity", "[", 
+          RowBox[{"8900", ",", 
+           FractionBox["\"\<Kilograms\>\"", 
+            SuperscriptBox["\"\<Meters\>\"", "3"]]}], "]"}]}]}], "/.", 
+       RowBox[{"\[Alpha]Al", "\[Rule]", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"2.3", " ", 
+           SuperscriptBox["10", 
+            RowBox[{"-", "5"}]]}], ",", 
+          SuperscriptBox["\"\<Kelvins\>\"", 
+           RowBox[{"-", "1"}]]}], "]"}]}]}], "/.", 
+      RowBox[{"\[Alpha]Cu", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{
+         RowBox[{"1.7", " ", 
+          SuperscriptBox["10", 
+           RowBox[{"-", "5"}]]}], ",", 
+         SuperscriptBox["\"\<Kelvins\>\"", 
+          RowBox[{"-", "1"}]]}], "]"}]}]}], "/.", 
+     RowBox[{"h", "\[Rule]", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{
+        RowBox[{"5", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "3"}]]}], ",", "\"\<Meters\>\""}], "]"}]}]}], "/.", 
+    RowBox[{"d", "\[Rule]", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["10", 
+         RowBox[{"-", "3"}]]}], ",", "\"\<Meters\>\""}], "]"}]}]}], "/.", 
+   RowBox[{"L", "\[Rule]", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{"0.2", ",", "\"\<Meters\>\""}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.603256465036327*^9, 3.6032565142171397`*^9}, {
+  3.6032568395377474`*^9, 3.603256844356023*^9}, {3.6032568890245776`*^9, 
+  3.6032570951863694`*^9}, {3.603257142338066*^9, 3.603257288601432*^9}, {
+  3.603257344721642*^9, 3.603257345895709*^9}, {3.6032574564360313`*^9, 
+  3.6032574566660447`*^9}, {3.6032574966053295`*^9, 3.6032575279351215`*^9}, {
+  3.6032585344656916`*^9, 3.6032585505976143`*^9}, {3.6032586287870865`*^9, 
+  3.603258630756199*^9}, {3.6032727491192255`*^9, 3.603272750481303*^9}}],
+
+Cell[BoxData["0.0021310068304939912`"], "Output",
+ CellChangeTimes->{{3.603256953960292*^9, 3.60325697997778*^9}, 
+   3.6032572496662054`*^9, 3.6032572928546753`*^9, 3.603257348606864*^9, 
+   3.6032574579651194`*^9, {3.6032574989194613`*^9, 3.603257529194193*^9}, 
+   3.603258600510469*^9, 3.603258634564417*^9, {3.603271950883569*^9, 
+   3.6032719630242634`*^9}, 3.6032727545635366`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"l", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"L", 
+      SqrtBox[
+       FractionBox["\[Rho]Al", "\[Rho]Cu"]]}], "/.", 
+     RowBox[{"L", "\[Rule]", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{"0.2", ",", "\"\<Meters\>\""}], "]"}]}]}], "/.", 
+    RowBox[{"\[Rho]Al", "\[Rule]", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"2700", ",", 
+       FractionBox["\"\<Kilograms\>\"", 
+        SuperscriptBox["\"\<Meters\>\"", "3"]]}], "]"}]}]}], "/.", 
+   RowBox[{"\[Rho]Cu", "\[Rule]", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{"8900", ",", 
+      FractionBox["\"\<Kilograms\>\"", 
+       SuperscriptBox["\"\<Meters\>\"", "3"]]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.603256667062882*^9, 3.60325676947174*^9}, 
+   3.603256817710499*^9, {3.603258616214367*^9, 3.6032586182984867`*^9}, {
+   3.6032719567859063`*^9, 3.603271960131098*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.11015821104517884`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Meters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.603271960711131*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"ArcTan", "[", "tan\[Alpha]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.603257301051144*^9, 3.6032573539811716`*^9}, {
+  3.603257468249707*^9, 3.60325746847972*^9}, {3.603258659189825*^9, 
+  3.6032586676433086`*^9}, {3.6032719352436743`*^9, 3.6032719418750534`*^9}, {
+  3.603272761174915*^9, 3.6032727986350574`*^9}}],
+
+Cell[BoxData["0.0021310036047337316`"], "Output",
+ CellChangeTimes->{{3.603257312124778*^9, 3.6032573558122764`*^9}, 
+   3.6032574689457474`*^9, 3.6032586695444174`*^9, {3.6032719424280853`*^9, 
+   3.603271965910428*^9}, {3.6032727641240835`*^9, 3.60327279973312*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x", "=", 
+  RowBox[{
+   RowBox[{"\[Alpha]", " ", "L"}], "/.", 
+   RowBox[{"L", "\[Rule]", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{"0.2", ",", "\"\<Meters\>\""}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.603257824519085*^9, 3.6032578489024796`*^9}, {
+  3.6032586786549387`*^9, 3.6032586808890667`*^9}, {3.603258727618739*^9, 
+  3.603258727702744*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.00042620072094674637`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Meters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.6032578498435335`*^9, {3.603258713248917*^9, 3.603258728838809*^9}, {
+   3.603272769416386*^9, 3.6032728018532414`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+\:0427\:0442\:043e-\:0442\:043e \:0440\:0430\:0441\:0441\:0442\:043e\:044f\
+\:043d\:0438\:0435 \:043c\:0435\:0436\:0434\:0443 \:0434\:0435\:043b\:0435\
+\:043d\:0438\:044f\:043c\:0438 \:043c\:0430\:043b\:043e - \:0434\:043b\:044f \
+\:043f\:043e\:043b\:044c\:0437\:043e\:0432\:0430\:043d\:0438\:044f \:0442\
+\:0430\:043a\:0438\:043c \:0442\:0435\:0440\:043c\:043e\:043c\:0435\:0442\
+\:0440\:043e\:043c \:043d\:0435\:043e\:0431\:0445\:043e\:0434\:0438\:043c \
+\:043c\:0438\:043a\:0440\:043e\:0441\:043a\:043e\:043f \:0438\:043b\:0438 \
+\:0445\:043e\:0442\:044f \:0431\:044b \:043b\:0443\:043f\:0430...\
+\>", "Text",
+ CellChangeTimes->{{3.603258994009976*^9, 3.603259059401716*^9}},
+ TextAlignment->Left,
+ TextJustification->1],
+
+Cell[" ", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 2}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 4}],
+
+Cell["\:0417\:0430\:0434\:0430\:0447\:0430 4", "Text",
+ CellChangeTimes->{{3.6032606852887115`*^9, 3.603260690662019*^9}}],
+
+Cell[TextData[{
+ "\:0418\:0437 \:0440\:0430\:0432\:0435\:043d\:0441\:0442\:0432\:0430 \:0441\
+\:0438\:043b \:0441\:043b\:0435\:0434\:0443\:0435\:0442, \:0447\:0442\:043e \
+\:043f\:0440\:043e\:0431\:0438\:0440\:043a\:0430 \:0432 \:043d\:0430\:0447\
+\:0430\:043b\:044c\:043d\:043e\:043c \:0441\:043e\:0441\:0442\:043e\:044f\
+\:043d\:0438\:0438 \:043f\:043e\:0433\:0440\:0443\:0436\:0435\:043d\:0430 \
+\:043d\:0430 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"h0", "=", 
+    RowBox[{"H", 
+     FractionBox[
+      StyleBox["m",
+       FontSize->12], 
+      StyleBox["M",
+       FontSize->12]]}]}], TraditionalForm]]],
+ ". \:0420\:0430\:0437\:043d\:043e\:0441\:0442\:044c \:0441\:0438\:043b\:044b \
+\:0410\:0440\:0445\:0438\:043c\:0435\:0434\:0430 \:0438 \:0442\:044f\:0436\
+\:0435\:0441\:0442\:0438 \:0437\:0430\:0432\:0438\:0441\:0438\:0442 \:043e\
+\:0442 \:0433\:043b\:0443\:0431\:0438\:043d\:044b \:043f\:043e\:0433\:0440\
+\:0443\:0436\:0435\:043d\:0438\:044f \:043f\:043e \:0437\:0430\:043a\:043e\
+\:043d\:0443 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Fa", " ", "=", 
+    RowBox[{"Mg", 
+     StyleBox[
+      FractionBox[
+       StyleBox[
+        RowBox[{"h", "-", "h0"}],
+        FontSize->13], 
+       StyleBox["H",
+        FontSize->13]],
+      FontSize->12]}]}], TraditionalForm]]],
+ ". \:0420\:0430\:0431\:043e\:0442\:0430"
+}], "Text",
+ CellChangeTimes->{{3.6032609731151743`*^9, 3.60326106954169*^9}, {
+  3.6032611728756*^9, 3.6032612312059364`*^9}, {3.603261268216053*^9, 
+  3.603261361843408*^9}, {3.603369250562434*^9, 3.6033692694255133`*^9}},
+ TextJustification->1],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"A", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"M", " ", "g"}], "H"], 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"H", "-", "h0"}], ")"}], "2"], "2"]}], "/.", 
+    RowBox[{"h0", "\[Rule]", 
+     RowBox[{"H", 
+      FractionBox["m", "M"]}]}]}], "//", "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.6032613648875823`*^9, 3.603261443269066*^9}, {
+  3.603261560902794*^9, 3.6032615764026804`*^9}, {3.6032616403213363`*^9, 
+  3.6032616650327497`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"g", " ", "H", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"m", "-", "M"}], ")"}], "2"]}], 
+  RowBox[{"2", " ", "M"}]]], "Output",
+ CellChangeTimes->{3.60326166574279*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 505},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1334, 20, 68, "Text"],
+Cell[CellGroupData[{
+Cell[1916, 44, 3011, 76, 237, "Input"],
+Cell[4930, 122, 388, 5, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5355, 132, 883, 23, 94, "Input"],
+Cell[6241, 157, 450, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6728, 173, 367, 6, 31, "Input"],
+Cell[7098, 181, 268, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7403, 189, 382, 9, 31, "Input"],
+Cell[7788, 200, 556, 13, 31, "Output"]
+}, Open  ]],
+Cell[8359, 216, 733, 12, 49, "Text"],
+Cell[9095, 230, 271, 9, 8, "Text"],
+Cell[9369, 241, 122, 1, 30, "Text"],
+Cell[9494, 244, 1571, 39, 93, "Text"],
+Cell[CellGroupData[{
+Cell[11090, 287, 540, 16, 49, "Input"],
+Cell[11633, 305, 221, 7, 50, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

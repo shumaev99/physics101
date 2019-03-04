@@ -1,0 +1,77 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+%\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE{Задача № 3}}
+\end{center}
+\vspace{5mm}
+
+\textbf{\underline{Условие}:} Подъемник поднимается и опускается в шахте, глубина которой $L=400$~м, за ${t_0=40}$~с. Сначала он разгоняется с постоянным ускорением, а затем с тем же по модулю ускорением замедляется. На сколько отстанут за сутки маятниковые часы подъемника по сравнению с неподвижными часами? Подъемник находится в движении в течение $T=5,\hspace{-0.5mm}0$ ч ежедневно.
+
+\textbf{\underline{Решение}:} Рассмотрим движение подъемника в шахте. Считаем, что в течение одного цикла разгона-остановки он движется ускоренно ровно половину пути (соответственно, половину времени), а остальную половину движется замедленно. Найдем его ускорение $a$ при таком движении. Подъемник проходит путь $L/2$ за время $t_0/4$, при этом его начальная или конечная скорость равна нулю. По формуле равноускоренного движения
+$$
+  \frac{L}{2}=\frac{a\left(\dfrac{t_0}{4}\right)^2}{2},
+$$
+откуда
+$$
+  a=\frac{16L}{t_0^2}.
+$$
+В отсутствие перегрузок период колебаний маятника $T_0=2\pi\sqrt{l/g}$. Чтобы показать правильное время, за время $t_0$ маятник должен совершить $n_0=t_0/T_0$ колебаний. При движении лифта с ускорением удобно перейти в неинерциальную систему отсчета, т.е. произвести замену $g\rightarrow g\pm a$. Соответственно, периоды колебаний маятника при двух направлениях ускорения равны
+$$
+  T_1=2\pi\sqrt{\frac{l}{g+a}}=T_0\left(1+\frac{a}{g}\right)^{-1/2}\hspace{3mm}\text{и}\hspace{3mm} T_2=2\pi\sqrt{\frac{l}{g-a}}=T_0\left(1-\frac{a}{g}\right)^{-1/2}.
+$$
+Тогда количество колебаний, совершенных маятником за эти промежутки времени, равны соответственно
+$$
+  n_1=\frac{t_0}{2T_1}=\frac{n_0}{2}\sqrt{1+\frac{a}{g}\vphantom{\frac{l}{g+a}}}\hspace{3mm}\text{и}\hspace{3mm} n_2=\frac{t_0}{2T_2}=\frac{n_0}{2}\sqrt{1-\frac{a}{g}\vphantom{\frac{l}{g-a}}}.
+$$
+Найдем отставание $\Delta T$ часов за один день. Относительное отставание (отношение абсолютного отставания к промежутку времени, измеренному неподвижным наблюдателем) равно
+$$
+  \eta=\frac{n_0-n_1-n_2}{n_0}=1-\frac{1}{2}\left(\sqrt{1+\frac{a}{g}\vphantom{\frac{l}{g+a}}}+\sqrt{1-\frac{a}{g}\vphantom{\frac{l}{g-a}}}\right).
+$$
+Тогда отставание часов в течение одного дня (считаем, что за день произошло целое количество циклов разгона-остановки)
+$$
+  \Delta T=\eta T=T\left(1-\frac{1}{2}\left[\sqrt{1+\frac{16L}{gt_0^2}}+\sqrt{1-\frac{16L}{gt_0^2}}\hspace{1mm}\right]\right).
+$$
+Проверим размерность:
+$$
+  \left[\Delta T\right]=\,\text{с}\cdot\left(1-\frac{1}{2}\left[\sqrt{1+{\frac{\text{м}\vphantom{\dfrac{\text{м}}{\text{с}^2}}}{\dfrac{\text{м}}{\text{с}^2}\cdot\text{с}^2}}}+\sqrt{1-{\frac{\text{м}\vphantom{\dfrac{\text{м}}{\text{с}^2}}}{\dfrac{\text{м}}{\text{с}^2}\cdot\text{с}^2}}}\right]\right)=\,\text{с}.
+$$
+Найдем численное значение:
+$$
+  \{\Delta T\}=5\cdot 3600\left(1-\frac{1}{2}\left[\sqrt{1+\frac{16\cdot 400}{9,\hspace{-0.5mm}8\cdot 40^2}\vphantom{\frac{l}{g+a}}}+\sqrt{1+\frac{16\cdot 400}{9,\hspace{-0.5mm}8\cdot 40^2}\vphantom{\frac{l}{g+a}}}\hspace{1mm}\right]\right)=396;\hspace{5mm} \Delta T=396\,\text{с}.
+$$
+\textbf{\underline{Ответ}:} $\Delta T=T\left(1-\dfrac{1}{2}\left[\sqrt{1+\dfrac{16L}{gt_0^2}}+\sqrt{1-\dfrac{16L}{gt_0^2}}\hspace{1mm}\right]\right)=396\,\text{с}$.
+
+\end{document} 

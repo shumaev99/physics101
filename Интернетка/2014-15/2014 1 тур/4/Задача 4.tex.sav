@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+%\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+
+
+\end{document} 

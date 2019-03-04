@@ -1,0 +1,60 @@
+\documentclass[14pt]{article}
+
+\usepackage[ukrainian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+Маємо неоднорідне рівняння Даламбера на функцію $u(x,y,t), (x,y)\in \mathbb{R}^2, t>0$, з початковими умовами:
+\begin{gather*}
+  u_{tt}=c^2(u_{xx}+u_{yy})+f(x,y,t),\\
+  u(x,y,0)=\varphi(x,y),\\
+  u_t(x,y,0)=\psi(x,y).
+\end{gather*}
+Розв'язок цього рівняння відомий, але я спробував його отримати. Перейдемо до фур'є-зображення $U(\omega_x,\omega_y)$:
+\begin{gather*}
+  U_{tt}=-\omega^2 c^2 U+F(\vec{\omega},t),\\
+  U(0)=\Phi(\vec{\omega}),\\
+  U_t(0)=\Psi(\vec{\omega}).
+\end{gather*}
+Тепер зробимо перетворення Лапласа по $t$:
+$$
+  s^2 \mathcal{U}-s\Phi-\Psi=-\omega^2 c^2 \mathcal{U}+\mathcal{F}(\vec{\omega},s),
+$$
+звідки
+$$
+  \mathcal{U}=\frac{\mathcal{F}+s\Phi+\Psi}{s^2+\omega^2 c^2}.
+$$
+Зробимо обернене перетворення Лапласа:
+$$
+  U=\Phi(\vec{\omega})\frac{\sin\omega ct}{\omega c}+\Psi(\vec{\omega}) \cos \omega ct +\int\limits_0^t F(\vec{\omega},t-\tau)\frac{\sin \omega c\tau}{\omega c}d\tau.
+$$
+Тепер треба робити обернене перетворення Фур'є. Звичайно, для заданих початкових умов це зробити нескладно, але як отримати загальну відповідь, при тому що $\cos \omega ct$ не перетворюється?
+
+\end{document} 

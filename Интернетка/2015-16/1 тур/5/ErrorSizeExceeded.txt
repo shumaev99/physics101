@@ -1,0 +1,38 @@
+Delivery to the following recipient failed permanently:
+
+     odessa-internet@ukr.net
+
+Technical details of permanent failure:
+Google tried to deliver your message, but it was rejected by the server for the recipient domain ukr.net by mxs.ukr.net. [212.42.77.251].
+
+The error that the other server returned was:
+552 Message size exceeds maximum permitted
+
+
+----- Original message -----
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=mJpRnSyp4zZGAj8uPwIR/dD8u3x6dk/iiKhr0007Y9c=;
+        b=u8bvngH8LTl60Iyig/C4TllsS1XRALSDw91Ln7VCLOtePfEBFuPZNIwpW8d3Q1Paht
+         xxHYPrOT/75QXE47SCH9ZcQNOi4+id6IrFh7zx1K9T1VOfqfzp3b3k9v6vabNnBYn0TN
+         tB8q2OQFbRTwCzcsipARXLeJhwgV3Mmk5lfLqBB4pLuynoWSAiGyE3rZQr7nVhmGRQP7
+         wv6Yd4cE/Tdk3Fm60C5msdqgnIL1zBSUBDn23N9318GTiIib6l0sKyQMxB9iX87XMIyi
+         bNebCsXQkl2UF/wqjMNmz7dlrJRA9JXNKyNqYEVGMlmwQo/SiIVio/TFFx+9YAFx31KS
+         Q6wA==
+MIME-Version: 1.0
+X-Received: by 10.194.77.5 with SMTP id o5mr10495723wjw.102.1438373900574;
+ Fri, 31 Jul 2015 13:18:20 -0700 (PDT)
+Received: by 10.27.186.208 with HTTP; Fri, 31 Jul 2015 13:18:19 -0700 (PDT)
+Date: Fri, 31 Jul 2015 23:18:19 +0300
+Message-ID: <CACnP=5q6g-u-jK3sMUYxSOXPTNeMT8VRhQc1kb6Gj2NV5D-3=A@mail.gmail.com>
+Subject: =?UTF-8?B?0YTRltC30LjQutCwIDk5MjU5Nw==?=
+From: =?UTF-8?B?0JDQu9C10LrRgdCw0L3QtNGAINCo0YPQvNCw0LXQsg==?= <shumaev99@gmail.com>
+To: odessa-internet@ukr.net
+Content-Type: multipart/mixed; boundary=047d7bd91da46b05b8051c318595
+
+
+
+Увага! Обсяг інформації перевищує 800 Кб через відео-фрагмент, про який
+йдеться в умові 5-ї задачі.

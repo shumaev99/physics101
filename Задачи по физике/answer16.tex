@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Yes, an imaginary image may be photographed. Even more, on the photo it won't differ in any parameter from a real image. For a camera or an eye or any other watching mechanism it's important for the rays to reach the detector, no matter on their pre-history.
+
+2. As at the given temperature the gases don't interact, their temperature will stay 300 K. But for the entropy the question is more complicated. Using the definition $dS=dQ/T$ we can conclude that the entropy won't change. Though, the system will anyway reach the situation when both gases are in equal proportions. If there's $N$ molecules of each gas (obviously, equal for both gases), then both gases set free $2^N$ situations of the molecules distribution. So, the entropy has changed by $\Delta S=2kN=2\nu R$, where $\nu=pV/(2RT)$ is the amount of substance of each gas. Then for the entropy we have
+$$
+  \Delta S=\frac{pV}{T}=0.68 \text{ J/K}.
+$$
+
+3. This problem is discussed in the book ``Problems in physics''\footnote{\textit{И. Воробьев, П. Зубков и др. (под ред. О. Я. Савченко) {\rm ``Задачи по физике''}, НГУ, Новосибирск, ISBN {\rm 5-86134-024-2}}}, its number is 11.2.13 and the answer is
+$$
+  \mathcal{E}=\frac{\pi h^2}{3}N^3 B_0 \omega \sin\omega t.
+$$
+
+4. The work done on the gas (on both processes) is
+$$
+  A=\nu RT_1 \ln\frac{V_1}{V_2}-\frac{\nu RT_2}{\gamma-1}\left(1-2^{\gamma-1}\right),
+$$
+where $\nu$ is the amount of substance of the gas. The heat taken from the gas is
+$$
+  Q=\nu RT_1 \ln\frac{V_1}{V_2}.
+$$
+As $pV^{\gamma}=const$, then $TV^{\gamma-1}=const$, and
+$$
+  T_f=\frac{T_i}{2^{\gamma-1}}=227 \text{ K}.
+$$
+
+5. Detected an attempt to measure heat capacity (usually J/K) in a dimensionless quantity $3N/2$. Fatal error, aborting..
+
+\end{document} 

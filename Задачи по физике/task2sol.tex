@@ -1,0 +1,80 @@
+\documentclass[14pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. In terms of triple products the expressions may be rewritten as
+\begin{multline}
+  \left(\vec{a}\times\vec{b}\right)\cdot\left(\vec{c}\times\vec{d}\,\right)=\left(\left(\vec{a}\times\vec{b}\right)\!,\vec{c},\vec{d}\,\right)=\left( \vec{d},\left(\vec{a}\times\vec{b}\right)\!,\vec{c}\right)=\vec{d}\cdot\left(\left(\vec{a}\times\vec{b}\right)\!\times\vec{c}\right)= -\vec{d}\cdot\left(\vec{c}\times\!\left(\vec{a}\times\vec{b}\right)\right)=\\=-\vec{d}\cdot\left(\vec{a}\left(\vec{b}\cdot\vec{c}\right)-\vec{b} \left(\vec{a}\cdot\vec{c}\,\right)\right)=\left(\vec{b}\cdot\vec{d}\,\right)\left(\vec{a}\cdot\vec{c}\,\right)-\left(\vec{a}\cdot\vec{d}\,\right) \left(\vec{b}\cdot\vec{c}\right),\nonumber
+\end{multline}
+\begin{multline}
+  \left(\vec{a}\times\vec{b}\right)\times\left(\vec{c}\times\vec{d}\,\right)=\vec{c}\left(\left(\vec{a}\times\vec{b}\right)\!\cdot\vec{d}\,\right)- \vec{d}\left(\left(\vec{a}\times\vec{b}\right)\!\cdot\vec{c}\right)=\vec{c}\left(\vec{d},\vec{a},\vec{b}\right)-\vec{d}\left(\vec{c},\vec{a}, \vec{b}\right)=\vec{c}\left(\vec{a},\vec{b},\vec{d}\,\right)-\vec{d}\left(\vec{a},\vec{b},\vec{c}\right)=\\=\vec{c}\left(\vec{a}\cdot\!\left( \vec{b}\times\vec{d}\,\right)\right)-\vec{d}\left(\vec{a}\cdot\!\left(\vec{b}\times\vec{c}\right)\right),\nonumber
+\end{multline}
+q.e.d.
+
+2. Let's denote $\vec{A}=\left(\vec{a}\cdot\vec{r}\,\right)\vec{b}$, $\vec{B}=\left(\vec{a}\cdot\vec{r}\,\right)\vec{r}$, $\vec{C}=\vec{a}\times\vec{r}$, $\vec{D}=\left(\vec{a}\times\vec{r}\,\right)\phi\left(\vec{r}\right)$, $\vec{E}=\vec{r}\times\left(\vec{a}\times\vec{r}\,\right)$, where $\vec{r}$ is the radius-vector. Then
+\begin{gather}
+  \nabla\cdot\vec{A}=\left(\vec{b}\cdot\nabla\right)\left(\vec{a}\cdot\vec{r}\right)+\left(\vec{a}\cdot\vec{r}\right)\left(\nabla\cdot\vec{b}\right) =\left(\vec{b}\cdot\nabla\right)\left(\vec{a}\cdot\vec{r}\right)=b_x a_x+b_y a_y+b_z a_z=\vec{a}\cdot\vec{b},\nonumber\\
+  \nabla\times\vec{A}=\left(\vec{a}\cdot\vec{r}\right)\left(\nabla\times\vec{b}\right)-\left(\vec{b}\times\nabla\right)\left(\vec{a}\cdot\vec{r} \right)=-\left(\vec{b}\times\nabla\right)\left(\vec{a}\cdot\vec{r}\right)=-\vec{b}\times\vec{a}=\vec{a}\times\vec{b},\nonumber\\
+  \nabla\cdot\vec{B}=\left(\vec{r}\cdot\nabla\right)\left(\vec{a}\cdot\vec{r}\right)+\left(\vec{a}\cdot\vec{r}\right)\left(\nabla\cdot\vec{r}\right) =\left(x a_x+y a_y+z a_z\right)+3\left(\vec{a}\cdot\vec{r}\right)=4\left(\vec{a}\cdot\vec{r}\right),\nonumber\\
+  \nabla\times\vec{B}=\left(\vec{a}\cdot\vec{r}\right)\left(\nabla\times\vec{r}\right)-\left(\vec{r}\times\nabla\right)\left(\vec{a}\cdot\vec{r} \right)=-\left(\vec{r}\times\nabla\right)\left(\vec{a}\cdot\vec{r}\right)=-\vec{r}\times\vec{a}=\vec{a}\times\vec{r},\nonumber\\
+  \nabla\cdot\vec{C}=\left(\nabla,\vec{a},\vec{r}\right)=\left(\vec{r},\nabla,\vec{a}\right)=\vec{r}\cdot\left(\nabla\times\vec{a}\right)=0,\nonumber\\
+  \nabla\times\vec{C}=\vec{a}\left(\nabla\cdot\vec{r}\right)-\vec{r}\left(\nabla\cdot\vec{a}\right)=3\vec{a},\nonumber\\
+  \nabla\cdot\vec{D}=\left(\left(\vec{a}\times\vec{r}\right)\cdot\nabla\right)\phi\left(\vec{r}\right)+\phi\left(\vec{r}\right)\left(\nabla\cdot\left(\vec{a}\times\vec{r}\right)\right) =\left(\left(\vec{a}\times\vec{r}\right)\cdot\nabla\right)\phi\left(\vec{r}\right),\nonumber\\
+  \nabla\times\vec{D}=\phi\left(\vec{r}\right)\left(\nabla\times\vec{C}\right)-\left(\left(\vec{a}\times\vec{r}\right)\times\nabla\right) \phi\left(\vec{r}\right)=3\phi\left(\vec{r}\right)\vec{a}+\vec{a}\left(\vec{r}\cdot\nabla\right)\phi\left(\vec{r}\right)- \vec{r}\left(\vec{a}\cdot\nabla\right)\phi\left(\vec{r}\right),\nonumber
+\end{gather}
+where it's denoted
+$$
+  \left(\vec{a}\cdot\nabla\right)=a_x \frac{\partial}{\partial x}+a_y \frac{\partial}{\partial y}+a_z \frac{\partial}{\partial z}
+$$
+and
+$$
+  \left(\vec{a}\times\nabla\right)=\begin{vmatrix}
+  \vec{i} & \vec{j} & \vec{k}\\
+  a_x & a_y & a_z\\
+  \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}
+  \end{vmatrix},
+$$
+both of these are \textit{operators}. The last ones are easier to calculate with a simplification $\vec{E}=r^2 \vec{a}-\vec{r}\left(\vec{a}\cdot\vec{r}\right)$. We obtain:
+\begin{gather}
+  \nabla\cdot\vec{E}=2(a_x x+a_y y+a_z z)-\nabla\cdot\vec{B}=-2\left(\vec{a}\cdot\vec{r}\right),\nonumber\\
+  \nabla\times\vec{E}=r^2\left(\nabla\times\vec{a}\right)-\left(\vec{a}\times\nabla\right)r^2-\nabla\times\vec{B}=-2\left(\vec{a}\times\vec{r}\right) -\left(\vec{a}\times\vec{r}\right)=-3\left(\vec{a}\times\vec{r}\right).\nonumber
+\end{gather}
+
+3. The plane $z=0$ will obviously not be equipotential. The potential at an arbitrary point ($x_0$, $y_0$, $z_0$) can be found from
+$$
+  \varphi(x_0,y_0,z_0)=\frac{\sigma_0}{4\pi\varepsilon_0}\int\limits_{-\infty}^\infty \int\limits_{-\infty}^\infty \frac{\sin(\alpha x)\sin(\beta y)dxdy}{\sqrt{(x-x_0)^2+(y-y_0)^2+z_0^2}}.
+$$
+In the plane $z=0$ this simplifies to
+$$
+  \varphi(x_0,y_0,0)=\frac{\sigma_0}{4\pi\varepsilon_0}\int\limits_{-\infty}^\infty \int\limits_{-\infty}^\infty \frac{\sin(\alpha (x+x_0))\sin(\beta (y+y_0))dxdy}{\sqrt{x^2+y^2}}=\frac{\sigma_0}{2\varepsilon_0 \sqrt{\alpha^2+\beta^2}}\sin(\alpha x_0)\sin(\beta y_0).
+$$
+
+\end{document} 

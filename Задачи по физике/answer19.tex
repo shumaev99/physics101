@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Due to the Planck distribution the spectral energy in a wavelength range ($\lambda$, $\lambda+d\lambda$) is given by
+$$
+  f(\lambda)d\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{\exp\left(\dfrac{hc}{kT}\right)-1},
+$$
+which peaks at
+$$
+  \frac{hc}{\lambda kT}=4.965.
+$$
+That gives the peak wavelength
+$$
+  \lambda_0=\frac{hc}{4.965\,kT}.
+$$
+Then the surface temperature of Betelgeuse is about $T_1=3000$ K and the surface temperature of Rigel is about $T_2=20000$ K.
+
+2. As $f(x)$ is differentiable, then in the limit of $n\to\infty$
+$$
+  \left(\frac{f\left(x+\dfrac{1}{n}\right)}{f(x)}\right)^n\approx\left(\frac{f(x)+\dfrac{1}{n}f'(x)}{f(x)}\right)^n=\left(1+\frac{1}{n}\frac{f'(x)}{f(x)}\right)^n=\exp\left(\frac{f'(x)}{f(x)}\right).
+$$
+
+3. Guess the van der Waals equation looks like
+$$
+  p=\frac{NkT}{V-bN}-\frac{aN^2}{V^2}=\frac{nkT}{1-bn}-an^2,
+$$
+where $n$ is the volumetric concenration of the gas. As there's considered to be no substance exchange with the surroundings, then $\partial N/\partial V=0$, and
+$$
+  \frac{\partial C_V}{\partial V}=\frac{3}{2}k\frac{\partial N}{\partial V}=0.
+$$
+As the entropy is given by
+$$
+  dS=\frac{dQ}{T}=\frac{C_V dT}{T},
+$$
+then (within an additive constant)
+$$
+  S=C_V \ln T=\frac32 Nk\ln T.
+$$
+The energy (comparing with a $T=const$ and $V\to\infty$ state)
+$$
+  E=\int pdV=\nu RT \ln(1-bn)+an^2 V.
+$$
+The work to be done is
+$$
+  A=E_{2}-E_{1}=\nu RT_2 \ln\left(1-\frac{bN}{V_2}\right)+\frac{aN^2}{V_2}-\nu RT_2 \ln\left(1-\frac{bN}{V_2}\right)-\frac{aN^2}{V_1},
+$$
+where $T_2$ can be found from the van der Waals equation using the initial (or final) pressure and the amount of substance of the gas, namely
+$$
+  T_2=\frac{V_2-bN}{Nk}\left(p_2+\frac{aN^2}{V_2^2}\right).
+$$
+
+4. As the dust sticks to the spacecraft, its mass increases with time. Its rate of increase is $dm/dt=\rho Av$. Also, due to momentum conservation $mv=m_0 v_0$, so
+$$
+  \frac{d}{dt}(mv)=v\frac{dm}{dt}+m\frac{dv}{dt}=0.
+$$
+Using $m=m_0 v_0/v$, we get
+$$
+  \rho Av^2=-\frac{m_0 v_0}{v}\frac{dv}{dt},
+$$
+which implies
+$$
+  \frac{dv}{dt}=-\frac{\rho Av^3}{m_0 v_0}.
+$$
+The solution of this equation is
+$$
+  \frac{1}{v^2}=\frac{1}{v_0^2}+\frac{2\rho At}{m_0 v_0},
+$$
+or
+$$
+  v(t)=\frac{v_0}{\sqrt{1+\dfrac{\rho v_0 At}{m_0}}}.
+$$
+
+\end{document}

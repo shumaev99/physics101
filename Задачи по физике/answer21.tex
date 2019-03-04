@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=-0.5 cm
+\evensidemargin=-0.5 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+2. The critical current is
+$$
+  I_c=\frac{\pi Bd}{\mu_0}=500 \text{ A},
+$$
+hence the critical current density is
+$$
+  j_c=\frac{4B}{\mu_0 d}=6.37\cdot 10^8 \text{ A/m}^2.
+$$
+For the tinobium wire the parameters are $I_c=61.3$ kA and $j_c=7.80\cdot 10^{10}$ A/m$^2$.
+
+3. The conducting plane creates three image charges, which attract the initial charge with a force
+$$
+  F=\frac{q^2}{4\pi\varepsilon_0}\left(\frac{1}{4p^2}+\frac{4p^3 a^3}{\left(p^4-a^4\right)^2}\right).
+$$
+
+4. The seismic mass may be defined from the density of steel $\rho=7800$ kg/m$^3$ and is equal to $m=6.13$ g. The spring constant of the piezodisk is $k=E\pi r^2/d=1.39\cdot 10^9$ N/m, its capacitance is $C=\varepsilon_r \varepsilon_0 \pi r^2/d=7.82\cdot 10^{-11}$ F. So, the displacement of the disk is $x=m(g+a)/k$, and the voltage on it is
+$$
+  V=\frac{d_{yy}x}{C}=\frac{m(g+a) d_{yy}}{Ck}.
+$$
+So, the vertical acceleration of the seismic mass is
+$$
+  a=\frac{kCV}{md_{yy}}-g.
+$$
+
+\end{document} 

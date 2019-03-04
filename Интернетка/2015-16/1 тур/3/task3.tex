@@ -1,0 +1,76 @@
+\chapter{}
+
+\textbf{\underline{Условие}:} Исследуется сила взаимодействия металлического шара и точечной положительно заряженной частицы, находящейся на
+постоянном расстоянии от шара. Когда на шар поместили некоторый положительный заряд, то оказалось, что шар и частица притягиваются с силой $f_1$,а когда заряд удвоили --- с силой $f_2$. Какова будет сила взаимодействия, если заряд шара утроить?
+
+\begin{wrapfigure}{r}{200pt}
+\begin{center}
+\vspace{-6mm}
+\includegraphics[scale=0.33]{3/fig31.pdf}
+\end{center}
+\caption{заряд и его изображения в незаряженном шаре.}\label{unchargedimage}
+\end{wrapfigure}
+
+\textbf{\underline{Решение}:} Пусть частица несет заряд $Q$ и расположена на расстоянии $d$ от центра шара радиуса $R$. Воспользуемся методом изображений\footnote{Метод изображений --- довольно стандартный и тривиальный метод решения задач электростатики и магнитостатики, поэтому не буду здесь приводить его обоснование. См. \href{https://en.wikipedia.org/wiki/Method_of_image_charges}{здесь}} для расчета силы ее взаимодействия с шаром. Как известно, можно заменить проводник системой зарядов, при условии того, что его поверхность останется эквипотенциальной. Например, для незаряженного незаземленного шара в качестве такой системы зарядов могут выступать два заряда $\pm q$, один из которых находится в центре шара, другой --- на прямой, соединяющий заряд-источник и центр шара, на расстоянии $d'$ от центра (см. рис. \ref{unchargedimage}). Величины же $q$ и $d'$ определяются соотношениями
+$$
+  q=Q\frac{R}{d}
+$$
+и
+\begin{equation}
+  d'=\frac{R^2}{d}\label{imagedistance}
+\end{equation}
+соответственно.
+
+\begin{wrapfigure}{r}{200pt}
+\begin{center}
+\vspace{-4mm}
+\includegraphics[scale=0.33]{3/fig32.pdf}
+\end{center}
+\caption{в заряженном шаре.}\label{chargedimage}
+\end{wrapfigure}
+
+Если ж сферу зарядить на $\Delta q$, то заряд-изображение в центре изменится на величину $\Delta q$, а второй заряд не изменится (это не нарушит эквипотенциальность поверхности шара). Распределение зарядов примет вид, как на рис. \ref{chargedimage}, причем заряды будут равны
+\begin{equation}
+  q_1=Q\frac{R}{d}+\Delta q\label{centercharge}
+\end{equation}
+и
+\begin{equation}
+  q_2=-Q\frac{R}{d}\label{peripherycharge}
+\end{equation}
+соответственно.
+
+Пусть вначале шар зарядили на величину $q_0$. Тогда сила взаимодействия шара с зарядом $Q$ равна
+$$
+  f_1=\frac{Q}{4\pi \varepsilon_0}\left(\frac{q_1}{d^2}+\frac{q_2}{\left(d-d'\right)^2}\right),
+$$
+откуда при использовании соотношений \eqref{imagedistance}, \eqref{centercharge} и \eqref{peripherycharge} получим
+\begin{equation}
+  f_1=\frac{Q^2}{4\pi \varepsilon_0}\left(\frac{R}{d^3}-\frac{Rd}{\left(d^2-R^2\right)^2}+\frac{1}{d^2}\frac{q_0}{Q}\right).\label{firstforce}
+\end{equation}
+В данном выражении положительное значение силы соответствует отталкиванию частицы от шара, отрицательное --- притяжению. Аналогично для заряда $2q_0$ имеем:
+\begin{equation}
+  f_2=\frac{Q^2}{4\pi \varepsilon_0}\left(\frac{R}{d^3}-\frac{Rd}{\left(d^2-R^2\right)^2}+\frac{1}{d^2}\frac{2q_0}{Q}\right).\label{secondforce}
+\end{equation}
+И наконец, для заряда $3q_0$,
+\begin{equation}
+  f_3=\frac{Q^2}{4\pi \varepsilon_0}\left(\frac{R}{d^3}-\frac{Rd}{\left(d^2-R^2\right)^2}+\frac{1}{d^2}\frac{3q_0}{Q}\right).\label{thirdforce}
+\end{equation}
+Вычитая уравнение \eqref{firstforce} из уравнения \eqref{secondforce}, получим:
+\begin{equation}
+  f_2-f_1=\frac{Qq_0}{4\pi \varepsilon_0 d^2}.\label{firstforcediff}
+\end{equation}
+Аналогично, вычитая уравнение \eqref{secondforce} из уравнения \eqref{thirdforce}, получим:
+\begin{equation}
+  f_3-f_2=\frac{Qq_0}{4\pi \varepsilon_0 d^2}.\label{secondforcediff}
+\end{equation}
+Сравнивая соотношения \eqref{firstforcediff} и \eqref{secondforcediff}, получим:
+$$
+  f_3-f_2=f_2-f_1,
+$$
+откуда
+$$
+  f_3=2f_2-f_1.
+$$
+Очевидно, правило знаков (положительная сила соответствует отталкиванию) соблюдено в данном выражении. Если же вдруг оказалось, что сила $f_2$ дана по модулю и имеет характер (притяжение/отталкивание) иной, нежели у силы $f_1$, то искомая сила по модулю равна $f_3=2f_2+f_1$ и сонаправлена силе $f_2$.
+
+\textbf{\underline{Ответ}:} $f_3=2f_2-f_1$. 

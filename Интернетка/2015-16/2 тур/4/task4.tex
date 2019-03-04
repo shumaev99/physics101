@@ -1,0 +1,44 @@
+\chapter{}
+
+\textbf{\underline{Условие}:} Амперметр, вольтметр и резистор включены по двум схемам (см. рис. \ref{circuitpt}). Ток, текущий через амперметр в первом случае $І_1 = 1,\hspace{-1.3pt}96$ А, во втором --- $І_2 = 2,\hspace{-1.3pt}06$ А. Напряжения на вольтметре $U_1 = 50,\hspace{-1.3pt}00$ В и $U_2 = 49,\hspace{-1.3pt}6$ В. Определить сопротивления резистора, амперметра и вольтметра. Напряжение на клеммах считать постоянным.
+
+\begin{wrapfigure}{r}{150pt}
+\begin{center}
+\vspace{-3mm}
+\includegraphics[scale=0.65]{4/fig41.pdf}
+\end{center}
+\vspace{-2mm}
+\caption{из условия.}\label{circuitpt}
+\vspace{3mm}
+\end{wrapfigure}
+
+\textbf{\underline{Решение}:} Очевидно, показание вольтметра в схеме \textit{а} равно напряжению на клеммах цепи. Запишем падение напряжения в этой схеме на участке амперметр-резистор:
+\begin{equation}
+  U_1=I_1 \left(r_A+R\right),\label{firstar}
+\end{equation}
+где $R$ --- сопротивление резистора, $r_A$ --- амперметра. Запишем также сумму падений напряжения на амперметре и вольтметре во второй схеме:
+\begin{equation}
+  U_1=U_2+I_2 r_A.\label{secondav}
+\end{equation}
+Рассмотрим участок параллельно включенных вольтметра и резистора. Их сопротивление равно $Rr_V/\left(R+r_V\right)$, где $r_V$ --- сопротивление вольтметра. Запишем закон Ома для этого участка:
+\begin{equation}
+  U_2=I_2 \frac{Rr_V}{R+r_V}.\label{secondohmrv}
+\end{equation}
+Осталось решить полученную систему уравнений \eqref{firstar}, \eqref{secondav}, \eqref{secondohmrv} относительно неизвестных сопротивлений. Сопротивление амперметра можно получить из уравнения \eqref{secondav}:
+$$
+  r_A=\frac{U_1-U_2}{I_2}=0,\hspace{-1.3pt}194 \text{ \textohm}.
+$$
+Далее, нетрудно выразить сопротивление резистора из \eqref{firstar}:
+$$
+  R=\frac{U_1}{I_1}-r_A=\frac{I_2 U_1-I_1 \left(U_1-U_2\right)}{I_1 I_2}=25,\hspace{-1.3pt}3 \text{ \textohm}.
+$$
+Наконец, осталось выразить сопротивление вольтметра из \eqref{secondohmrv}:
+$$
+  U_2 R+U_2 r_V=I_2 Rr_V,
+$$
+откуда
+$$
+  r_V=\frac{U_2 R}{I_2 R-U_2}=\frac{U_2 \left(I_2 U_1-I_1 \left(U_1-U_2\right)\right)}{U_1 I_2 \left(I_1-I_2\right)}=492 \text{ \textohm}.
+$$
+
+\textbf{\underline{Ответ}:} $r_A=\dfrac{U_1-U_2}{I_2}=0,\hspace{-1.3pt}194}$ \textohm,\hspace{3mm} $R=\dfrac{I_2 U_1-I_1 \left(U_1-U_2\right)}{I_1 I_2}=25,\hspace{-1.3pt}3$ \textohm,\hspace{3mm} $r_V=\dfrac{U_2 \left(I_2 U_1-I_1 \left(U_1-U_2\right)\right)}{U_1 I_2 \left(I_1-I_2\right)}=492$ \textohm. 

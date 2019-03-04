@@ -1,0 +1,52 @@
+\documentclass[14pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\includepdf{question1.pdf}
+\pagebreak
+
+I'm sorry, the answer was wrong..
+
+The corrected version looks like
+$$
+  B=\frac{\mu_0 i}{2\pi}\left(\frac{1}{a}-\frac{\sqrt{a^2+d^2}}{ad}\right),
+$$
+it fits the asymptotic case $a\rightarrow\infty$:
+$$
+  B\left(a\rightarrow\infty\right)=-\frac{\mu_0 i}{2\pi d}.
+$$
+
+\end{document} 

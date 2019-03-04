@@ -1,0 +1,136 @@
+\documentclass[14pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\LARGE{Task 5}
+\end{center}
+
+\vspace{5mm}
+
+1. (a) Let's look for a solution of form
+$$
+  u(x,y)=f(ax+by).
+$$
+Substituting this into the initial equation yields
+$$
+  2a^2-5ab+3b^2=0.
+$$
+So, such a solution fits the equation if $a=b$ or $2a=3b$. Then the full form is
+$$
+  u(x,t)=Af(x+y)+Bg(3x+2y).
+$$
+
+(b) Let's look for a solution of form
+$$
+  u(x,y)=e^{ax+by}f(cx+dy).
+$$
+Substitution yields a system of equations, stating that each term collected by $f$, $f'$ and $f''$ is equal to zero:
+$$
+  \left\{
+  \begin{aligned}
+    &2a^2+6ab+4b^2+a+b=0,\\
+    &4ac+6ad+6bc+8bd+c+d=0,\\
+    &2c^2+6cd+4d^2=0.
+  \end{aligned}
+  \right.
+$$
+This system has 2 solutions: $a=-b$ with $c=-d$, and $2a=-1-4b$ with $c=-2d$. So, the general solution looks like
+$$
+  u(x,t)=Af(x-y)+Be^{-x/2}g(2x-y).
+$$
+
+(c) In this equation the solution of the inhomogeneous equation is obtained from the solution of the homogeneous equation by adding $2e^x$. The substitution from the previous equation yields
+$$
+  \left\{
+  \begin{aligned}
+    &b^2-2ab+2a-b=0,\\
+    &2bd-2ad-2bc+2c-d=0,\\
+    &d^2-2cd=0.
+  \end{aligned}
+  \right.
+$$
+This system also has 2 solutions: $a=0$ with $d=0$, and $b=2a$ with $d=2c$. So, the general solution is
+$$
+  u(x,y)=2e^x+Ae^y f(x)+Bg(x+2y).
+$$
+
+2. By differentiation we obtain:
+\begin{gather*}
+  v_x=-\frac{x^2+t^2}{\left(x^2-t^2\right)^2}u^{(1,0)}-\frac{2xt}{\left(x^2-t^2\right)^2}u^{(0,1)},\\
+  v_t=\frac{2xt}{\left(x^2-t^2\right)^2}u^{(1,0)}+\frac{x^2+t^2}{\left(x^2-t^2\right)^2}u^{(0,1)},\\
+  v_{xx}=\frac{2x\left(x^2+3t^2\right)}{\left(x^2-t^2\right)^3}u^{(1,0)}+\frac{\left(x^2+t^2\right)^2}{\left(x^2-t^2\right)^4}u^{(2,0)}+ \frac{2t\left(3x^2+t^2\right)}{\left(x^2-t^2\right)^3}u^{(0,1)}+\frac{4x^2 t^2}{\left(x^2-t^2\right)^4}u^{(0,2)},\\
+  v_{tt}=\frac{2x\left(x^2+3t^2\right)}{\left(x^2-t^2\right)^3}u^{(1,0)}+\frac{\left(x^2+t^2\right)^2}{\left(x^2-t^2\right)^4}u^{(2,0)}+ \frac{2t\left(3x^2+t^2\right)}{\left(x^2-t^2\right)^3}u^{(0,1)}+\frac{4x^2 t^2}{\left(x^2-t^2\right)^4}u^{(0,2)}=v_{xx}.
+\end{gather*}
+So, the function $v$ satisfies the equation.
+
+3. The coordinates and differentials are parametrized as follows:
+$$
+  \left\{
+  \begin{aligned}
+    &x=0,\\
+    &y=2(1+\cos t),\\
+    &z=2(1+\sin t),\\
+    &dx=0,\\
+    &dy=-2\sin t\,dt,\\
+    &dz=2\cos t\,dt.
+  \end{aligned}
+  \right.
+$$
+The integral is taken from $t=0$ to $t=2\pi$, as the curve is periodic with a period of $2\pi$. By substitution of the coordinates we get:
+$$
+  I=\int\limits_0^{2\pi} 12(1+\cos t)\cos t\,dt=\int\limits_0^{2\pi} \left(12\cos t+6+6\cos 2t\right)dt=12\pi.
+$$
+\pagebreak
+
+\begin{center}
+\LARGE{Task 6}
+\end{center}
+
+\vspace{5mm}
+
+1. The energy of the two-sphere system is given by
+$$
+  W=\frac{Q_a^2}{2C_{aa}}+\frac{Q_b^2}{2C_{bb}}+\frac{C_{ab} Q_a Q_b}{C_{aa}C_{bb}},
+$$
+where $a$ and $b$ are the radii of the spheres, $Q_i$ are the respective charges, and\footnote{Maxwell J. C. 1891 A treatise on electricity and magnetism 3rd edn. Oxford, UK: Clarendon Press, \S 173; Russell A. 1909 The coefficients of capacity and the mutual attractions or repulsions of two electrified spherical conductors when close together. Proc. R. Soc. Lond. A 82, 524–531. doi:10.1098/rspa.1909.0057; Jeffery G. B. 1912 On a form of the solution of Laplace's equation suitable for problems relating to two spheres. Proc. R. Soc. Lond. A 87, 109–120. doi:10.1098/rspa.1912.0063 (doi:10.1098/rspa.1912.0063); Smythe W. R. 1950 Static and dynamic electricity. New York, NY: McGraw-Hill, \S 5.08}
+\begin{gather*}
+  C_{aa}=ab \sinh U \sum\limits_{n=0}^\infty \left[a\sinh nU+b\sinh (n+1)U\right]^{-1},\\
+  C_{bb}=ab \sinh U \sum\limits_{n=0}^\infty \left[b\sinh nU+a\sinh (n+1)U\right]^{-1},\\
+  C_{ab}=-\frac{ab}{d}\sinh U \sum\limits_{n=1}^\infty \left[\sinh nU\right]^{-1},\\
+  \cosh U=\frac{d^2-a^2-b^2}{2ab}=1+\frac{s^2+2(a+b)s}{2ab}
+\end{gather*}
+in Gaussian units ($s=d-a-b$). The force between the spheres is given by
+$$
+  F=-\partial_s W=\frac{Q_a^2}{2C_{aa}^2}\partial_s C_{aa}+\frac{Q_b^2}{2C_{bb}^2}\partial_s C_{bb}+\frac{Q_a Q_b}{C_{aa} C_{bb}}\left(-\partial_s C_{ab}+\frac{\partial_s C_{aa}}{C_{aa}}+\frac{\partial_s C_{bb}}{C_{bb}}\right),
+$$
+
+\end{document} 

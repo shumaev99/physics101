@@ -1,0 +1,578 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21963,        570]
+NotebookOptionsPosition[     21418,        546]
+NotebookOutlinePosition[     21761,        561]
+CellTagsIndexPosition[     21718,        558]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black", ",", 
+    RowBox[{"Arrow", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", "2.5"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "2.5"}], "}"}]}], "}"}], "]"}], ",", 
+    RowBox[{"Arrow", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "2.5"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2.5", ",", "0"}], "}"}]}], "}"}], "]"}], ",", "Red", ",", 
+    RowBox[{"Circle", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", "2"}], "]"}], ",", 
+    RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+    RowBox[{"Arrowheads", "[", "0.06", "]"}], ",", "Blue", ",", 
+    RowBox[{"Text", "[", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<\!\(\*SubscriptBox[\(U\), \(x\)]\)(\!\(\*
+StyleBox[\"t\",
+FontSlant->\"Italic\"]\))\>\"", ",", "Blue", ",", 
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", 
+        "30"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.35", ",", 
+        RowBox[{"-", "0.4"}]}], "}"}]}], "]"}], ",", 
+    RowBox[{"Text", "[", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<\!\(\*
+StyleBox[\"U\",
+FontWeight->\"Bold\",
+FontSlant->\"Italic\"]\)(\!\(\*
+StyleBox[\"t\",
+FontSlant->\"Italic\"]\))\>\"", ",", "Red", ",", 
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", 
+        "30"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.45", ",", "1.55"}], "}"}]}], "]"}], ",", 
+    RowBox[{"Arrow", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"40", "Degree"}], "]"}]}], ",", "0"}], "}"}]}], "}"}], 
+     "]"}], ",", "Red", ",", 
+    RowBox[{"Arrow", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"40", "Degree"}], "]"}]}], ",", 
+         RowBox[{"2", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"40", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}], ",", 
+    "Blue", ",", 
+    RowBox[{"Arrow", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"120", "Degree"}], "]"}]}], ",", "0"}], "}"}]}], "}"}], 
+     "]"}], ",", "Red", ",", 
+    RowBox[{"Arrow", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"2", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"120", "Degree"}], "]"}]}], ",", 
+         RowBox[{"2", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"120", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}]}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7012700929839563`*^9, 3.7012701806688232`*^9}, {
+   3.701270456933316*^9, 3.7012704876603003`*^9}, {3.7012705281379337`*^9, 
+   3.701270562226471*^9}, {3.7012706642545786`*^9, 3.7012707220504856`*^9}, {
+   3.7012707916470737`*^9, 3.7012708009072156`*^9}, {3.7012708368762827`*^9, 
+   3.7012708459254217`*^9}, 3.7012713408651776`*^9, {3.701271567566231*^9, 
+   3.7012716534515715`*^9}, {3.7012717994913654`*^9, 3.701271888668269*^9}, {
+   3.7012761958033357`*^9, 3.7012762025937243`*^9}, {3.701276439058249*^9, 
+   3.701276440249317*^9}, {3.701283086122209*^9, 3.701283096322792*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  {GrayLevel[0], Thickness[0.004], ArrowBox[{{0, -2.5}, {0, 2.5}}], 
+   ArrowBox[{{-2.5, 0}, {2.5, 0}}], 
+   {RGBColor[1, 0, 0], CircleBox[{0, 0}, 2]}, 
+   {RGBColor[0, 0, 1], Thickness[0.01], Arrowheads[0.06], InsetBox[
+     StyleBox["\<\"\\!\\(\\*SubscriptBox[\\(U\\), \
+\\(x\\)]\\)(\\!\\(\\*\\nStyleBox[\\\"t\\\",\\nFontSlant->\\\"Italic\\\"]\\))\"\
+\>",
+      StripOnInput->False,
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Times New Roman",
+      FontSize->30,
+      FontColor->RGBColor[0, 0, 1]], {1.35, -0.4}], InsetBox[
+     StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"U\\\",\\nFontWeight->\\\"Bold\\\",\
+\\nFontSlant->\\\"Italic\\\"]\\)(\\!\\(\\*\\nStyleBox[\\\"t\\\",\\nFontSlant->\
+\\\"Italic\\\"]\\))\"\>",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontFamily->"Times New Roman",
+      FontSize->30,
+      FontColor->RGBColor[1, 0, 0]], {1.45, 1.55}], 
+    ArrowBox[NCache[{{0, 0}, {2 Cos[40 Degree], 0}}, {{0, 0}, {
+       1.532088886237956, 0}}]], 
+    {RGBColor[1, 0, 0], 
+     ArrowBox[NCache[{{0, 0}, {2 Cos[40 Degree], 2 Sin[40 Degree]}}, {{0, 
+        0}, {1.532088886237956, 1.2855752193730785`}}]]}, 
+    {RGBColor[0, 0, 1], ArrowBox[{{0, 0}, {-1, 0}}]}, 
+    {RGBColor[1, 0, 0], 
+     ArrowBox[NCache[{{0, 0}, {-1, 3^Rational[1, 2]}}, {{0, 
+        0}, {-1, 1.7320508075688772`}}]]}}}]], "Output",
+ CellChangeTimes->{
+  3.7012701189733644`*^9, {3.701270152779892*^9, 3.7012701809513273`*^9}, {
+   3.7012704576783276`*^9, 3.701270487887804*^9}, 3.7012705326480074`*^9, 
+   3.7012705694560823`*^9, 3.701270722405491*^9, 3.701270801327222*^9, 
+   3.7012708466354322`*^9, 3.7012713413051844`*^9, {3.7012715923581157`*^9, 
+   3.701271601690765*^9}, {3.7012716335467577`*^9, 3.7012716553091*^9}, {
+   3.7012718045544443`*^9, 3.701271811530553*^9}, {3.7012718461781006`*^9, 
+   3.701271889010774*^9}, {3.7012761975684366`*^9, 3.7012762113292236`*^9}, 
+   3.701276440946357*^9, {3.701283091279504*^9, 3.701283096747817*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<D:\\\\\:0424\:0438\:0437\:0438\:043a\:0430-\:043c\:0430\:0442\:0435\
+\:043c\\\\Tutor\\\\\:041f\:043e\:0434\:0431\:043e\:0440\:043a\:0438\\\\\
+Sources\\\\\:041a\:043e\:043c\:043f\:043b\:0435\:043a\:0441\:043d\:044b\:0435 \
+\:0438\:043c\:043f\:0435\:0434\:0430\:043d\:0441\:044b\\\\impedance2.pdf\>\"",
+    ",", "%7"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7012762181456137`*^9, 3.7012762519245453`*^9}, {
+  3.701276445880639*^9, 3.7012764459696445`*^9}, {3.7012801031078205`*^9, 
+  3.7012801060409884`*^9}, {3.7012829866655207`*^9, 3.701283042051688*^9}, {
+  3.7012831013400793`*^9, 3.701283131540807*^9}}],
+
+Cell[BoxData["\<\"D:\\\\\:0424\:0438\:0437\:0438\:043a\:0430-\:043c\:0430\
+\:0442\:0435\:043c\\\\Tutor\\\\\:041f\:043e\:0434\:0431\:043e\:0440\:043a\
+\:0438\\\\Sources\\\\\:041a\:043e\:043c\:043f\:043b\:0435\:043a\:0441\:043d\
+\:044b\:0435 \
+\:0438\:043c\:043f\:0435\:0434\:0430\:043d\:0441\:044b\\\\impedance2.pdf\"\>"]\
+, "Output",
+ CellChangeTimes->{
+  3.7012762529786057`*^9, 3.701276446609681*^9, 3.7012801065310163`*^9, 
+   3.7012829945319705`*^9, 3.7012830425077143`*^9, {3.7012831048832817`*^9, 
+   3.701283131992833*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Show", "[", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black", ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"-", "2.5"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "2.5"}], "}"}]}], "}"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "2.5"}], ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"2.5", ",", "0"}], "}"}]}], "}"}], "]"}], ",", "Red", 
+          ",", 
+          RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+          RowBox[{"Arrowheads", "[", "0.06", "]"}], ",", "Blue", ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<\!\(\*SuperscriptBox[
+StyleBox[\"Ie\",
+FontSlant->\"Italic\"], 
+StyleBox[
+RowBox[{
+StyleBox[\"j\",
+FontSlant->\"Italic\"], \"\[Omega]\", 
+StyleBox[\"t\",
+FontSlant->\"Italic\"]}]]]\)\>\"", ",", "Blue", ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], 
+              ",", "30"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "0.5"}], ",", "1.8"}], "}"}]}], "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<\!\(\*SuperscriptBox[
+StyleBox[\"Ue\",
+FontSlant->\"Italic\"], 
+StyleBox[
+RowBox[{
+StyleBox[\"j\",
+FontSlant->\"Italic\"], \"\[Omega]\", 
+StyleBox[\"t\",
+FontSlant->\"Italic\"]}]]]\)\>\"", ",", "Red", ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], 
+              ",", "30"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1.45", ",", "1.55"}], "}"}]}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"1.6", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"110", "Degree"}], "]"}]}], ",", 
+               RowBox[{"1.6", 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"110", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}], 
+          ",", "Red", ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"40", "Degree"}], "]"}]}], ",", 
+               RowBox[{"2", 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"40", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}], 
+          ",", "Dashed", ",", "Blue", ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"1.6", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"115", "Degree"}], "]"}]}], ",", 
+               RowBox[{"1.6", 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"115", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}], 
+          ",", "Red", ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"45", "Degree"}], "]"}]}], ",", 
+               RowBox[{"2", 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"45", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}], 
+          ",", 
+          RowBox[{"Dashing", "[", "None", "]"}], ",", 
+          RowBox[{"Thickness", "[", "0.007", "]"}], ",", 
+          RowBox[{"Darker", "[", "Green", "]"}], ",", 
+          RowBox[{"Circle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}], ",", "0.3"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.28"}], ",", 
+               RowBox[{"-", "0.15"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "0.28"}], ",", 
+               RowBox[{"-", "0.16"}]}], "}"}]}], "}"}], "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<\[Omega]\>\"", ",", 
+              RowBox[{"Darker", "[", "Green", "]"}], ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], 
+              ",", "30"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "0.55"}], ",", "0.3"}], "}"}]}], "]"}]}], "}"}], 
+        "]"}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "250"}], ",", 
+       RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}], ",", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black", ",", 
+         RowBox[{"Arrow", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"-", "2.5"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "2.5"}], "}"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Arrow", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "2.5"}], ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"2.5", ",", "0"}], "}"}]}], "}"}], "]"}], ",", "Red", 
+         ",", 
+         RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+         RowBox[{"Arrowheads", "[", "0.06", "]"}], ",", "Blue", ",", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<\!\(\*
+StyleBox[\"I\",
+FontSlant->\"Italic\"]\)\>\"", ",", "Blue", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], 
+             ",", "30"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0.35", ",", "1.7"}], "}"}]}], "]"}], ",", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<\!\(\*
+StyleBox[\"U\",
+FontSlant->\"Italic\"]\)\>\"", ",", "Red", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], 
+             ",", "30"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"2.", ",", "0.4"}], "}"}]}], "]"}], ",", 
+         RowBox[{"Arrow", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"1.6", 
+               RowBox[{"Cos", "[", 
+                RowBox[{"70", "Degree"}], "]"}]}], ",", 
+              RowBox[{"1.6", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"70", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}], 
+         ",", "Red", ",", 
+         RowBox[{"Arrow", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"2", 
+               RowBox[{"Cos", "[", 
+                RowBox[{"0", "Degree"}], "]"}]}], ",", 
+              RowBox[{"2", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"0", "Degree"}], "]"}]}]}], "}"}]}], "}"}], "]"}]}], 
+        "}"}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "250"}], ",", 
+       RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}]}], "}"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7012772693577394`*^9, 3.7012772703027935`*^9}, {
+   3.7012773073799143`*^9, 3.701277409638763*^9}, {3.7012783259771748`*^9, 
+   3.7012783319945188`*^9}, {3.701278404535668*^9, 3.701278407213821*^9}, {
+   3.7012784461090455`*^9, 3.701278543053591*^9}, {3.7012786357108903`*^9, 
+   3.7012786501737175`*^9}, {3.701278718798643*^9, 3.70127876228913*^9}, {
+   3.7012788085197744`*^9, 3.7012788910104923`*^9}, 3.701278935162018*^9, {
+   3.701279373718102*^9, 3.7012793999196005`*^9}, {3.7012797382429514`*^9, 
+   3.7012798000304856`*^9}, {3.7012799016582985`*^9, 
+   3.7012800916661663`*^9}, {3.7012831102955914`*^9, 3.7012831238053646`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     GraphicsBox[{
+       {GrayLevel[0], Thickness[0.004], ArrowBox[{{0, -2.5}, {0, 2.5}}], 
+        ArrowBox[{{-2.5, 0}, {2.5, 0}}]}, 
+       {RGBColor[0, 0, 1], Thickness[0.01], Arrowheads[0.06], InsetBox[
+         StyleBox["\<\"\\!\\(\\*SuperscriptBox[\\n \
+StyleBox[\\\"Ie\\\",\\nFontSlant->\\\"Italic\\\"], \\n StyleBox[\\n  RowBox[{\
+\\n   StyleBox[\\\"j\\\",\\nFontSlant->\\\"Italic\\\"], \\\"\[Omega]\\\", \\n \
+  StyleBox[\\\"t\\\",\\nFontSlant->\\\"Italic\\\"]}]]]\\)\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontFamily->"Times New Roman",
+          FontSize->30,
+          FontColor->RGBColor[0, 0, 1]], {-0.5, 1.8}], InsetBox[
+         StyleBox["\<\"\\!\\(\\*SuperscriptBox[\\n \
+StyleBox[\\\"Ue\\\",\\nFontSlant->\\\"Italic\\\"], \\n StyleBox[\\n  RowBox[{\
+\\n   StyleBox[\\\"j\\\",\\nFontSlant->\\\"Italic\\\"], \\\"\[Omega]\\\", \\n \
+  StyleBox[\\\"t\\\",\\nFontSlant->\\\"Italic\\\"]}]]]\\)\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[1, 0, 0],
+          FrontFaceColor->RGBColor[1, 0, 0],
+          BackFaceColor->RGBColor[1, 0, 0],
+          GraphicsColor->RGBColor[1, 0, 0],
+          FontFamily->"Times New Roman",
+          FontSize->30,
+          FontColor->RGBColor[1, 0, 0]], {1.45, 1.55}], 
+        ArrowBox[{{0, 0}, {-0.54723222932107, 1.5035081932574537`}}], 
+        {RGBColor[1, 0, 0], 
+         ArrowBox[
+          NCache[{{0, 0}, {2 Cos[40 Degree], 2 Sin[40 Degree]}}, {{0, 0}, {
+            1.532088886237956, 1.2855752193730785`}}]]}, 
+        {RGBColor[0, 0, 1], Dashing[{Small, Small}], 
+         ArrowBox[{{0, 0}, {-0.6761892187851192, 1.45009245925864}}], 
+         {RGBColor[1, 0, 0], 
+          ArrowBox[
+           NCache[{{0, 0}, {2^Rational[1, 2], 2^Rational[1, 2]}}, {{0, 0}, {
+             1.4142135623730951`, 1.4142135623730951`}}]]}, 
+         {RGBColor[0, 
+           NCache[
+            Rational[2, 3], 0.6666666666666666], 0], Thickness[0.007], 
+          Dashing[None], CircleBox[{0, 0}, 0.3], 
+          ArrowBox[{{-0.28, -0.15}, {-0.28, -0.16}}], InsetBox[
+           StyleBox["\<\"\[Omega]\"\>",
+            StripOnInput->False,
+            LineColor->RGBColor[0, 
+              Rational[2, 3], 0],
+            FrontFaceColor->RGBColor[0, 
+              Rational[2, 3], 0],
+            BackFaceColor->RGBColor[0, 
+              Rational[2, 3], 0],
+            GraphicsColor->RGBColor[0, 
+              Rational[2, 3], 0],
+            FontFamily->"Times New Roman",
+            FontSize->30,
+            FontColor->RGBColor[0, 
+              Rational[2, 3], 0]], {-0.55, 0.3}]}}}},
+      AspectRatio->1,
+      ImageSize->250], {133.33333333333334, -131.25}, 
+     ImageScaled[{0.5, 0.5}], {250, 250.}], InsetBox[
+     GraphicsBox[{
+       {GrayLevel[0], Thickness[0.004], ArrowBox[{{0, -2.5}, {0, 2.5}}], 
+        ArrowBox[{{-2.5, 0}, {2.5, 0}}]}, 
+       {RGBColor[0, 0, 1], Thickness[0.01], Arrowheads[0.06], InsetBox[
+         StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"I\\\",\\nFontSlant->\\\"\
+Italic\\\"]\\)\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0, 0, 1],
+          FrontFaceColor->RGBColor[0, 0, 1],
+          BackFaceColor->RGBColor[0, 0, 1],
+          GraphicsColor->RGBColor[0, 0, 1],
+          FontFamily->"Times New Roman",
+          FontSize->30,
+          FontColor->RGBColor[0, 0, 1]], {0.35, 1.7}], InsetBox[
+         StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"U\\\",\\nFontSlant->\\\"\
+Italic\\\"]\\)\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[1, 0, 0],
+          FrontFaceColor->RGBColor[1, 0, 0],
+          BackFaceColor->RGBColor[1, 0, 0],
+          GraphicsColor->RGBColor[1, 0, 0],
+          FontFamily->"Times New Roman",
+          FontSize->30,
+          FontColor->RGBColor[1, 0, 0]], {2., 0.4}], 
+        ArrowBox[{{0, 0}, {0.54723222932107, 1.5035081932574537`}}], 
+        {RGBColor[1, 0, 0], ArrowBox[{{0, 0}, {2, 0}}]}}},
+      AspectRatio->1,
+      ImageSize->250], {400., -131.25}, 
+     ImageScaled[{0.5, 0.5}], {250, 250.}]}, {}},
+  ContentSelectable->True,
+  ImageSize->{545.3333333333334, 274.5},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{{3.7012787397748423`*^9, 3.701278763790216*^9}, {
+   3.7012788104518847`*^9, 3.7012788914605184`*^9}, 3.70127893537603*^9, 
+   3.7012794003136234`*^9, {3.7012797476834917`*^9, 3.70127980045751*^9}, {
+   3.701279918680272*^9, 3.7012800207901125`*^9}, {3.701280061524442*^9, 
+   3.7012800918831787`*^9}, 3.7012830382254696`*^9, 3.70128312460441*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3798, 108, 88, "Input"],
+Cell[4381, 132, 2242, 45, 407, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6660, 182, 664, 11, 33, "Input"],
+Cell[7327, 195, 530, 9, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7894, 209, 8821, 233, 217, "Input"],
+Cell[16718, 444, 4684, 99, 290, "Output"]
+}, Open  ]]
+}
+]
+*)
+

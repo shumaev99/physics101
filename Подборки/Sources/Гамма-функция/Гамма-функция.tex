@@ -1,0 +1,55 @@
+\documentclass[14pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{setspace}
+
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\Large{\textbf{Гамма -- функция}}
+
+\textbf{01.03.2018}
+
+\vspace{5mm}
+\end{center}
+
+Обозначим
+
+$$
+  \Gamma(s)=\int\limits_0^\infty x^{s-1}e^{-x}dx.
+$$
+
+Функцию $\Gamma(s)$ называют гамма-функцией аргумента $s$.
+
+1. При помощи интегрирования по частям найдите $\Gamma(s)$ при $s=0,1,2,3$. Какую закономерность вы наблюдаете?
+
+2. Найдите рекуррентную формулу, выражающую $\Gamma(s+1)$ через $\Gamma(s)$.
+
+3. Решите получившееся рекуррентное соотношение при целых $s$, т.е. выразите $\Gamma(s)$ через $s$.
+
+4. Найдите $\Gamma(3/2)$ при помощи замены переменных.
+
+5. Чему равно $\Gamma(s+1/2)$ при целых $s$?
+
+\end{document} 

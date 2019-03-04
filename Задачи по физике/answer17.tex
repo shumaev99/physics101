@@ -1,0 +1,126 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. The distribution of the surface charge density $\sigma(\varphi)$ may be found from an integral-functional equation
+$$
+  \int\limits_0^\pi \sigma(\psi)\frac{\sin\psi d\psi}{\cos\varphi-\cos\psi}=0,
+$$
+valid for all $\varphi\in (0,\pi)$ (here $\varphi$ is the angle between the radius-vector of the point and the plane which bounds the potentials $V$ and $-V$). Then, for a given point $\overrightarrow{r}=(\rho,\varphi)$ the potential
+$$
+  \phi(\rho,\varphi)=C \int\limits_0^\pi \sigma(\psi)\left(\frac{1}{r_-}-\frac{1}{r_+}\right)d\psi,
+$$
+where
+$$
+  r_\pm=\sqrt{(r\cos\psi-\rho\cos\varphi)^2+(r\sin\psi\pm\rho\sin\varphi)^2
+$$
+and $C$ is a constant of dimension m$^3$/F and is dependent on $V$.
+
+2. Obviously, due to the symmetry of the problem, the equipotential planes all will coincide on the axis of the system. Let's find the resistance $dR$ of a radial slice with an angle $d\alpha$ between the two bounding equipotential planes, if the thickness of the slit is $h$. Let the potential difference across the slice be $d\varphi$. Then the distribution of the electric field is
+$$
+  E(r)=\frac{d\varphi}{rd\alpha}.
+$$
+Then the distribution of the current density is
+$$
+  j(r)=\frac{E(r)}{\rho}=\frac{d\varphi}{\rho rd\alpha}.
+$$
+That gives the full current:
+$$
+  I=h\int\limits_{r_1}^{r_2} j(r)dr=\frac{hd\varphi}{\rho d\alpha}\ln\frac{r_2}{r_1},
+$$
+where $r_1=a$ and $r_2=2a$. The by definition the resistance is
+$$
+  dR=\frac{d\varphi}{I}=\frac{\rho}{h\ln2}d\alpha.
+$$
+Last, the full resistance is
+$$
+  R=2\pi\frac{dR}{d\alpha}=\frac{2\pi\rho}{h\ln2}.
+$$
+
+3. As the emitted frequency is equal to the cyclotron frequency, then
+$$
+  \omega=\frac{eB}{m},
+$$
+which implies
+$$
+  B=\frac{m\omega}{e}=1.6 \text{ mT}.
+$$
+As we see the radiation, the electrons must have a component of the velocity directed towards us (or in the opposite direction). Then a component of the magnetic field perpendicular to our view must exist. Nothing can be said about the radial (parallel to our view) component.
+
+4. Consider the distribution of the current axial-symmetric. Due to the Maxwell equations, the field is maximal on the surface and equal to
+$$
+  B=\frac{\mu_0 I}{\pi d}.
+$$
+If the field is bounded by $B_\text{max}=0.1$ T, then the current is bounded by
+$$
+  I_\text{max}=\frac{\pi B_\text{max}d}{\mu_0}=750 \text{ A}.
+$$ 
+
+5. The acceleration due to the electric field is
+$$
+  a_E=\frac{eE}{m}=9.58\cdot 10^{10} \text{ m/s}^2,
+$$
+the acceleration due to the magnetic field is
+$$
+  a_B=\frac{eBv}{m}=1.20\cdot 10^{11} \text{ m/s}^2.
+$$
+As it can be seen on the picture, the electric acceleration is directed upwards, whereas the magnetic acceleration is directed downwards. Then the resulting acceleration is
+$$
+  a=a_B-a_E=2.40\cdot 10^{10} \text{ m/s}^2
+$$
+and is directed downwards. If the velocity of the antiproton were reversed, then the resulting acceleration would be
+$$
+  a=a_E+a_B=2.16\cdot 10^{11} \text{ m/s}^2,
+$$
+directed upwards.
+
+6. Let's first solve a simpler problem. Consider a circular loop with current $i$ and radius $r$. Then the magnetic field in its center is found by Biot-Savart law:
+$$
+  B=\frac{\mu_0 i}{2r}.
+$$
+Let's return to our problem. The disk may be split into thin rings with thickness $dr$, then on the radius $r$ it provides a current
+$$
+  di=\frac{Q}{\pi R^2}\omega rdr,
+$$
+which creates a field
+$$
+  dB=\frac{\mu_0 di}{2r}=\frac{\mu_0 \omega Q}{2\pi R^2}dr.
+$$
+The field created by the whole disk may be obtained by integration of the previous expression:
+$$
+  B=\frac{\mu_0 \omega Q}{2\pi R}.
+$$
+
+\end{document} 

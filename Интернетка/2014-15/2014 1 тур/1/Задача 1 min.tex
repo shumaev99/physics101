@@ -1,0 +1,143 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE{Задача № 1}}
+\end{center}
+
+\vspace{4mm}
+
+\textbf{\underline{Условие}:} Миномет установлен у основания некоторой горы под углом $\alpha=$ 1\hspace{-0.5pt},5 радиана к горизонту.
+Минометный расчет ведет записи о том, насколько далеко падают мины
+в зависимости от их начальной скорости. Определите по этим данным высоту
+и примерную форму горы.
+
+\begin{center}
+\begin{tabular}{|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|}
+\hline
+$v_0$, м/с & 10 & 14 & 18 & 22 & 26 & 30 & 34 & 38 & 42 & 46\\
+\hline
+$l$, м & 0,710576 & 1,611942 & 2,85057 & 4,45474 & 6,48101 & 8,9838 & 12,0195 & 15,6393 & 19,879 & 24,7493\\
+\hline
+$v_0$, м/с & 50 & 54 & 58 & 62 & 66 & 70 & 74 & 78 & 82 &\\
+\hline
+$l$, м & 30,2305 & 36,2765 & 42,8294 & 49,8405 & 57,2941 & 65,2363 & 73,8201 & 83,4179 & 95,0382 &\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{5mm}
+
+\begin{wrapfigure}{r}{210pt}
+\vspace{-7mm}
+\begin{center}
+\includegraphics[width=0.47\textwidth]{fig2.pdf}
+\end{center}
+\vspace{-5mm}
+\caption{Рис. 1.1. Ось $Ox$ горизонтальна, ось $Oy$ вертикальна. Миномет расположен в начале координат.}
+\end{wrapfigure}
+
+\textbf{\underline{Решение}:} Сопротивлением воздуха при решении задачи пренебрегаем. Введем систему координат, как на рис. 1.1. Рассмотрим движение снаряда, выпущенного из начала координат со скоростью $v_0$ под углом $\alpha$ к горизонту. Его координаты при таком движении зависят от времени по законам $x(t)=v_0 t\cos\alpha$ и $y(t)=v_0 t\sin\alpha-gt^2/2$ соответственно. Выразив $t$ из первого уравнения и подставив во второе, получим уравнение траектории:
+\begin{equation}
+  y=x\,\text{tg}\,\alpha-\frac{gx^2}{2v_0^2\cos^2\alpha}.
+  \label{traj}
+\end{equation}
+Перейдем к полярным координатам $(l,\varphi)$. Будем искать полярные углы $\varphi$ точек падения снарядов. Координаты точек падения снаряда $x=l\cos\varphi$ и ${y=l\sin\varphi}$. Подставим их в уравнение \eqref{traj} и разделим обе его части на $x$:
+$$
+  \text{tg}\,\varphi=\text{tg}\,\alpha-\frac{gl\cos\varphi}{2v_0^2\cos^2\alpha},
+$$
+откуда, с использованием тождества $\text{tg}\,\alpha-\text{tg}\,\varphi=\dfrac{\sin(\alpha-\varphi)}{\cos\alpha\cos\varphi}$ получим
+\begin{equation}
+  \sin(\alpha-\varphi)=\frac{gl\cos^2\varphi}{2v_0^2\cos\alpha}.\label{trig}
+\end{equation}
+Такое уравнение невозможно решить стандартными способами, оно приводится к уравнению четвертой степени с громоздким решением.
+
+\begin{wrapfigure}{r}{220pt}
+\begin{center}
+\vspace{-5mm}
+\includegraphics[scale=0.3]{varfig0.pdf}
+\end{center}
+\vspace{-5mm}
+\caption{Рис. 1.2. График $f(\varphi)=\sin(\alpha-\varphi)/\cos^2 \varphi$, где $\alpha=1,\hspace{-0.5mm}5$ рад. Зеленым изображены прямые $g(\varphi)=\varepsilon_i$.}
+%\vspace{10mm}
+\end{wrapfigure}
+
+Попробуем тогда найти приближенное решение. Элементарными преобразованиями уравнение~\eqref{trig} приводится к виду
+$$
+  \frac{\sin(\alpha-\varphi)}{\cos^2\varphi}=\frac{gl}{2v_0^2\cos\alpha}.
+$$
+График зависимости левой части $f(\varphi)$ от переменной $\varphi$ изображен на рис. 1.2. Так как во всех 19 пар данных $\{l_i,v_{0i}\}$ случаях величина $\varepsilon_i=gl_i/(2v_{0i}^2\cos\alpha)$ меньше, чем $f(0)=\sin\alpha$, то уравнение имеет единственный корень, близкий к $\pi/2$ (он соответствует пересечению изображенного графика с прямой $g(\varphi)=\varepsilon_i$, а функция, изображенная на графике, очень быстро убывает при $\varphi$, близком к $\alpha$). Так как и угол $\alpha$ близок к $\pi/2$, то будем считать углы $\alpha$ и $\varphi$ близкими между собой. А именно, применим приближения $\sin(\alpha-\varphi)\approx\alpha-\varphi$ и $\cos\varphi=\sin(\pi/2-\varphi)\approx\pi/2-\varphi$. Уравнение~\eqref{trig} примет вид
+$$
+  \alpha-\varphi=\frac{gl}{2v_0^2\cos\alpha}\left(\frac{\pi}{2}-\varphi\right)^2,
+$$
+которое легко привести к виду
+$$
+  q\varphi^2-\varphi\left(q\pi-1\right)+\left(\frac{q\pi^2}{4}-\alpha\right)=0,\hspace{3mm} q=\frac{gl}{2v_0^2\cos\alpha}.
+$$
+Получили квадратное уравнение, корни которого
+$$
+  \varphi_{1,2}=\frac{1}{2q}\left(q\pi-1\pm\sqrt{(q\pi-1)^2-q\pi^2+4\alpha}\right).
+$$
+
+Во всех случаях искомый корень --- с плюсом перед радикалом (второй корень не подходит, так как он не соответствует примененным приближениям). В таблице представлены решения этого уравнения для всех случаев, представленных в условии, в порядке их перечисления. Как далее выяснится, ошибка по сравнению с точным решением $\Delta\varphi=0,\hspace{-0.5mm}001$\textdegree.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$\varphi$,\text{\textdegree} & 85,7915 & 85,7645 & 85,7517 & 85,7419 & 85,7326 & 85,7229 & 85,7126 & 85,7018 & 85,6907\\
+\hline
+85,6797 & 85,6695 & 85,6604 & 85,6528 & 85,6466 & 85,6416 & 85,6373 & 85,6328 & 85,6266 & 85,6151\\
+\hline
+\end{tabular}
+\end{center}
+
+По полученным данным полярные углы $\varphi$ всех точек близки, то есть форма горы близка к линейной. Однако в пределах погрешности можно утверждать, что гора выпукла вверх. Форму этой кривой можно аппроксимировать прямой с углом наклона, равным среднему полученных величин\footnote{На самом деле правильно усреднять не углы, а их тангенсы.}$\varphi$: $\overline{\varphi}=85,\hspace{-1.3pt}69$\textdegree. Высота горы $H=l_{19}\sin\varphi_{19}=94,\hspace{-1.3pt}7601$~м.
+
+Проверим полученные результаты при помощи точного решения. Уравнение \eqref{trig} решили с помощью программы \textit{Mathematica}\footnote{Имеется в виду программа компании Wolfram Research, Inc., см. www.wolfram.com/mathematica}. Полученные данные иллюстрирует следующая таблица:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$\varphi$,\text{\textdegree} & 85,7918 & 85,7648 & 85,7521 & 85,7423 & 85,7330 & 85,7234 & 85,7131 & 85,7023 & 85,6912\\
+\hline
+85,6803 & 85,6701 & 85,6610 & 85,6534 & 85,6472 & 85,6423 & 85,6380 & 85,6335 & 85,6273 & 85,6159\\
+\hline
+\end{tabular}
+\end{center}
+
+Как видим, отличие от приближенного решения в четвертом знаке после запятой.
+
+\textbf{\underline{Ответ}:} Высота $H=94,\hspace{-1.3pt}7601$ м, форма --- кривая с выпуклостью вверх, которую можно аппроксимировать наклонной плоскостью, образующей угол $\varphi=85,\hspace{-0.5mm}69$\textdegree\,с горизонтом.
+
+\end{document} 

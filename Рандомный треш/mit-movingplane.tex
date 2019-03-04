@@ -1,0 +1,58 @@
+\documentclass[10pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}
+%\usepackage{color}
+%\usepackage{ulem}
+  \usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\textit{\textbf{The problem:}} Consider an infinite plane carrying a uniform surface charge $\sigma$. At $t=0$, it starts moving with velocity $v$ parallel to itself. Find the fields $\vec{E}$ and $\vec{B}$ in all space.
+
+\textit{\textbf{My solution.}} First, we introduce the coordinate system. Let the $x$ axis be parallel to the plane's velocity, and $z$ axis normal to the plane. Next, we make use of the retarded potentials:
+\begin{gather*}
+ \vec{A}\left(\vec{r},t\right)=\frac{\mu_0}{4\pi}\iiint \frac{\vec{\jmath}\left(\vec{r}\,',t-\dfrac{|\vec{r}-\vec{r}\,'|}{c}\right)}{|\vec{r}-\vec{r}\,'|}dV',\\
+ \varphi\left(\vec{r},t\right)=\frac{1}{4\pi\varepsilon_0}\iiint \frac{\rho\left(\vec{r}\,',t-\dfrac{|\vec{r}-\vec{r}\,'|}{c}\right)}{|\vec{r}-\vec{r}\,'|}dV'.
+\end{gather*}
+For this problem $\vec{\jmath}\left(\vec{r}\,',t'\right)=\sigma v\delta(z')\theta(t')\hat{\imath}$, so
+\begin{gather*}
+ \vec{A}\left(\vec{r},t\right)=\frac{\mu_0}{4\pi}\iiint \frac{\sigma v\delta(z')\theta\left(t-\dfrac{|\vec{r}-\vec{r}\,'|}{c}\right)\hat{\imath}}{|\vec{r}-\vec{r}\,'|}dV'=\\\frac{\mu_0 \sigma v \hat{\imath}}{4\pi}\iint \left.\frac{\theta\left(t-\dfrac{|\vec{r}-\vec{r}\,'|}{c}\right)}{|\vec{r}-\vec{r}\,'|}dx' dy'\right|_{z'=0}.
+\end{gather*}
+With the symmetry of the problem $\vec{A}=\vec{A}(z,t)$, and in polar coordinates
+\begin{gather*}
+ \vec{A}(z,t)=\frac{\mu_0 \sigma v \hat{\imath}}{4\pi}\int\limits_0^\infty \frac{\theta\left(t-\dfrac{\sqrt{z^2+\rho'^2}}{c}\right)}{\sqrt{z^2+\rho'^2}}2\pi \rho' d\rho'.
+\end{gather*}
+If $z>ct$, then $\vec{A}=0$. Let $0<z<ct$. Then the theta function is nonzero for $0<\rho'<\rho'_0=\sqrt{c^2 t^2-z^2}$. So, we have
+\begin{gather*}
+ \vec{A}(z,t)=\frac{\mu_0 \sigma v \hat{\imath}}{2}\int\limits_0^{\rho'_0} \frac{\rho' d\rho'}{\sqrt{z^2+\rho'^2}}=\frac{\mu_0 \sigma v \hat{\imath}}{2}\left.\sqrt{z^2+\rho'^2}\right|_{0}^{\rho'_0}=\frac{\mu_0 \sigma v \hat{\imath}}{2}(ct-z).
+\end{gather*}
+The scalar potential is the same as due to an infinite plane, the integral would diverge but yet we know the field that it creates. We get interesting results. The magnetic field $\vec{B}=\text{curl}\, \vec{A}=\mu_0 \sigma v \hat{\imath}/2$ seems to be correct, but the electric field $\vec{E}=-\nabla\varphi-\partial \vec{A}/\partial t=\sigma \hat{k}(1-\beta)/(2\varepsilon_0)$ seems a bit weird. If we want to account for relativity, we need to multiply by $\gamma=1/\sqrt{1-\beta^2}$, which differs from unity in the second order, not the first. So, why do we have this $1-\beta$ in the answer??
+
+\end{document} 

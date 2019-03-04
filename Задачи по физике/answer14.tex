@@ -1,0 +1,105 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Consider a current $i$ flowing through the straight wire. It creates a magnetic field
+$$
+  B(r)=\frac{\mu_0 i}{2\pi r}.
+$$
+Then the flux through the circular loop is
+$$
+  \Phi=\int\limits_0^{2a} B(r)\sqrt{a^2-(a-r)^2}dr=\frac{\mu_0 i}{2\pi}\int\limits_0^{2a} \sqrt{\frac{2a-r}{r}}dr=\frac{\mu_0 ia}{2}.
+$$
+This yields the mutual inductance
+$$
+  M=\frac{\Phi}{i}=\frac{\mu_0 a}{2}.
+$$
+
+2. The magnetic field separates the charges on the sphere by the Lorentz force, as a consequence the charges create a force field equivalent to an electric field $E=Bv$ in the $-z$-direction. Then the surface charge density depends on the angle $\varphi$ between the $z$ axis and the radius-vector by law
+$$
+  \sigma(\varphi)=-3\varepsilon_0 E\cos\varphi=-3\varepsilon_0 Bv\cos\varphi.
+$$
+
+3. The distribution of the magnetic field induces a current in the loop which dissipates the gravitational energy. The total resistance of the loop is
+$$
+  R=\frac{4\rho D}{d^2},
+$$
+and the mass is
+$$
+  m=\frac{\pi^2 d^2 D\rho_m}{4}.
+$$
+The induced emf is
+$$
+  \mathcal{E}=\frac{d\Phi}{dt}=\frac{\pi D^2 \kappa v}{4},
+$$
+where $v$ is the velocity of the loop. Then the power of dissipation is
+$$
+  P=\frac{\mathcal{E}^2}{R}=\frac{\pi^2 d^2 D^3 \kappa^2 v^2}{64\rho}.
+$$
+For a steady velocity $P=mgv$, which yields
+$$
+  v=\frac{16\rho \rho_m g}{\kappa^2 D^2}.
+$$
+
+4. Integrating the wave function gives
+$$
+  A=2\alpha^{3/4}\left(\frac{2}{\pi}\right)^{1/4}.
+$$
+Substituting the given functions $\psi(x)$ and $U(x)$ into the differential equation, we get
+$$
+  \alpha=\frac{m\omega}{2\hbar}
+$$
+and
+$$
+  \varepsilon=\frac{3\hbar\omega}{2}.
+$$
+Several integrations yield
+\begin{gather*}
+  \langle x\rangle=\int\limits_{-\infty}^\infty x\psi^2(x)dx=0,\\
+  \langle x^2\rangle=\int\limits_{-\infty}^\infty x^2\psi^2(x)dx=\frac{3A^2}{16\alpha^{5/2}}\sqrt{\frac{\pi}{2}}=\frac{3}{4\alpha},\\
+  \langle p\rangle=-i\hbar\int\limits_{-\infty}^\infty \psi(x)\psi'(x)dx=0,\\
+  \langle p^2\rangle=\hbar^2\int\limits_{-\infty}^\infty \psi(x)\psi''(x)dx=\frac{3A^2}{4}\sqrt{\frac{\pi}{2\alpha}}=3\hbar^2 \alpha.\\
+\end{gather*}
+Then
+\begin{gather*}
+  \Delta x=\sqrt{\langle x^2\rangle-\langle x\rangle^2}=\frac{1}{2}\sqrt{3}{\alpha},\\
+  \Delta p=\sqrt{\langle p^2\rangle-\langle p\rangle^2}=\hbar\sqrt{3\alpha}.
+\end{gather*}
+In this case
+$$
+  \Delta p\cdot\Delta x=\frac{3\hbar}{2}\ge\frac{\hbar}{2}.
+$$
+
+\end{document} 

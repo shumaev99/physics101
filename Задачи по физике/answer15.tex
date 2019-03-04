@@ -1,0 +1,146 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Due to Newton law for rotation about the axis of the pendulum
+$$
+  ml^2 \ddot{\theta}=m\omega^2 l^2\sin\theta \cos\theta-mgl\sin\theta,
+$$
+which implies
+$$
+  \ddot{\theta}=\omega^2 \sin\theta \cos\theta-\frac{g}{l}\sin\theta.
+$$
+For a small perturbation $\delta\theta$
+$$
+  \delta\ddot{\theta}=\left(\omega^2-\frac{g}{l}\right)\delta\theta.
+$$
+So, the equilibrium at $\theta=0$ becomes unstable if $\ddot{\theta}>0$, or $\omega>\sqrt{g/l}$. The new equilibrium corresponds to
+$$
+  \cos\theta=\frac{g}{\omega^2 l}.
+$$
+For $\omega\le\sqrt{g/l}$ and $\theta=0$ the frequency of oscillations
+$$
+  \Omega=\sqrt{\frac{g}{l}-\omega^2}.
+$$
+For $\omega>\sqrt{g/l}$
+$$
+  \delta\ddot{\theta}=\delta\theta\left(\omega^2 \cos 2\theta-\frac{g}{l}\cos\theta\right),
+$$
+which implies
+$$
+  \Omega=\sqrt{-\left(\omega^2 \cos 2\theta-\frac{g}{l}\cos\theta\right)}=\sqrt{\omega^2-\frac{g^2}{\omega^2 l^2}}.
+$$
+
+2. The described system has a zero-frequency mode corresponding to one-directional rotation. As the system has 3 bonds, other 2 modes exist. Let $x_i$ be the deviations of the balls. Then
+\begin{gather*}
+  \ddot{x}_1=\omega_0^2 \left(x_2+x_3-2x_1\right),\\
+  \ddot{x}_2=\omega_0^2 \left(x_1+x_3-2x_2\right),\\
+  \ddot{x}_3=\omega_0^2 \left(x_1+x_2-2x_3\right),
+\end{gather*}
+where $\omega_0=\sqrt{k/m}$. Let's look for a solution of the form $x_1=A_1 \sin\omega t$, $x_2=A_2\sin\omega t$, $x_3=A_3\sin\omega t$. Substituting $x_i$ into the motion equations we get
+\begin{gather*}
+  -\omega^2 A_1=\omega_0^2 \left(A_2+A_3-2A_1\right),\\
+  -\omega^2 A_2=\omega_0^2 \left(A_1+A_3-2A_2\right),\\
+  -\omega^2 A_3=\omega_0^2 \left(A_1+A_2-2A_3\right).
+\end{gather*}
+This is a system of linear equations with variable determinants $\Delta_x=\Delta_y=\Delta_z=0$. According to the general theory of linear algebra, this system has a non-zero solution iff the main determinant $\Delta=0$. Thus we get
+$$
+  \begin{vmatrix}
+  2\omega_0^2-\omega^2 & -\omega_0^2 & -\omega_0^2\\
+  -\omega_0^2 & 2\omega_0^2-\omega^2 & -\omega_0^2\\
+  -\omega_0^2 & -\omega_0^2 & 2\omega_0^2-\omega^2
+  \end{vmatrix}=0\Leftrightarrow
+  \begin{vmatrix}
+  3\omega_0^2-\omega^2 & 0 & 0\\
+  0 & 3\omega_0^2-\omega^2 & 0\\
+  0 & 0 & 3\omega_0^2-\omega^2
+  \end{vmatrix}=0\Leftrightarrow \omega^2=3\omega_0^2.
+$$
+This equation has a duplicate solution $\omega_{1,2}=\omega_0 \sqrt{3}$. So, the system has an extra mode with frequency $\omega=\omega_0 \sqrt{3}$. It may be proved that the amplitudes $A_i$ of the oscillations may be arbitrary satisfying the relation
+$$
+  A_1+A_2+A_3=0,
+$$
+i.e. no motion of the ``center of mass''. The arbitrarity of the amplitudes (or, in fact, of their ratios) is in fact an extra degree of freedom which corresponds to the multiplicity 2 of the root. This may be understood as two modes of oscillation degenerated into one, but with arbitrary amplitudes.
+
+3. Let $\overrightarrow{p}_\gamma$ be the momentum of the incident photon, $\overrightarrow{p}_p$ and $\overrightarrow{p}_\pi$ be the momentum of the proton and the pion respectively after the reaction. Then due to conservation laws
+\begin{gather*}
+  \overrightarrow{p}_\gamma=\overrightarrow{p}_p+\overrightarrow{p}_\pi,\\
+  p_\gamma c+m_p c^2=\sqrt{m_p^2 c^4+p_p^2 c^2}+\sqrt{m_\pi^2 c^4+p_\pi^2 c^2}.
+\end{gather*}
+It may be proved that in case of constant momentum the energy of the products is minimal when $p_\pi=0$. Then the equations may be simplified:
+$$
+  p_\gamma c+m_p c^2=\sqrt{m_p^2 c^4+p_\gamma^2 c^2}+m_\pi c^2,
+$$
+which implies
+$$
+  p_\gamma=m_\pi c \frac{2m_p-m_\pi}{2\left(m_p-m_\pi\right)}.
+$$
+Then the threshold energy of the photon is
+$$
+  \varepsilon_\text{min}=p_\gamma c=m_\pi c^2 \frac{2m_p-m_\pi}{2\left(m_p-m_\pi\right)}=146.3 \text{ MeV}.
+$$
+
+4. Let $Ox$ axis be parallel to the plane, $Oy$ axis be perpendicular to it, both axes are in the plane of the dipole. The conducting plane acts as as a mirror, creating an image dipole. As the electric field exists only in half of the space, the energy is half the energy of the dipole-dipole interaction. The original dipole is $\overrightarrow{p}=(p\sin\theta,p\cos\theta)$, the image is $\overrightarrow{p_1}=(-p\sin\theta,p\cos\theta)$. The first dipole creates a field
+$$
+  \overrightarrow{E}=\frac{4\pi\varepsilon_0}{r^3}\left(-\overrightarrow{p}+\frac{(\overrightarrow{p},\overrightarrow{r})\overrightarrow{r}}{r^2}\right),
+$$
+where $\overrightarrow{r}$ is the radius-vector measured from the center of the dipole, $\overrightarrow{r}=(0,-2h)$ for the location of the second dipole. Then the energy of their interaction is
+$$
+  W=-(\overrightarrow{E},\overrightarrow{p_1})=-\frac{\pi\varepsilon_0 p^2}{2h^3}\left(1+\cos^2 \theta\right).
+$$
+The work to be done to remove the dipole to infinity is half of that:
+$$
+  A=-\frac{W}{2}=\frac{\pi\varepsilon_0 p^2}{4h^3}\left(1+\cos^2 \theta\right).
+$$
+
+5. Consider $d_1,d_2\ll L_1,L_2$ so that the plates form a type of a capacitor. Let $Ox$ axis be along the $L_2$-side, with $x=0$ at the left pair of sides (see picture). Then the electric field inside is
+$$
+  E(x)=\frac{V}{d_1 \left(1-\dfrac{x}{L_2}\right)+d_2 \dfrac{x}{L_2}}.
+$$
+The energy density is $w=\varepsilon_0 E^2/2$, so the energy is
+$$
+  W=\frac{\varepsilon_0 L_1}{2}\int\limits_0^{L_2} \left(d_1 \left(1-\frac{x}{L_2}\right)+d_2 \frac{x}{L_2}\right)E^2(x)dx=\frac{\varepsilon_0 V^2 L_1}{2}\int\limits_0^{L_2} \frac{dx}{d_1+\left(d_2-d_1\right)\dfrac{x}{L_2}}=\frac{\varepsilon_0 V^2 L_1 L_2}{2\left(d_2-d_1\right)}\ln\frac{d_2}{d_1}.
+$$
+By definition of capacitance the energy is $W=CV^2/2$, then the capacitance is
+$$
+  C=\frac{\varepsilon_0 L_1 L_2}{d_2-d_1}\ln\frac{d_2}{d_1}.
+$$
+In the limit of $d_1\to d_2=d$ the expression becomes
+$$
+  C=\frac{\varepsilon_0 L_1 L_2}{d},
+$$
+as for an ordinary capacitor.
+
+\end{document}

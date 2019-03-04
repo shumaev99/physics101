@@ -1,0 +1,81 @@
+\documentclass[14pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. In the given formulation of the problem it's only possible to write the answer in a symbolic form:
+$$
+  \varphi\left(x_0,y_0,z_0\right)=\int\limits_{t_0}^{t_1}\frac{\mu}{4\pi\varepsilon_0}\sqrt{\frac{x'(t)^2+y'(t)^2+z'(t)^2}{\left(x-x_0\right)^2 +\left(y-y_0\right)^2+\left(z-z_0\right)^2}}dt.
+$$
+
+2. For a periodic motion the acceleration $a$ is related with the velocity $v$ as
+$$
+  a=\omega v,
+$$
+where $\omega$ is the characteristic frequency. The characteristic frequency of the Moon rotation is $\omega=4.3\cdot 10^{-7}$~s$^{-1}$, so the Moon is subjected to a small acceleration while moving at a great velocity. The galaxies move with velocities of order $10^3$ km/s and with acceleration which is not more than $10^{-5}$ m/s$^2$.
+
+3. Let
+$$
+  A=\sum\limits_{k=0}^n \cos(\theta+k\alpha).
+$$
+This expression is easier manipulated in the complex plane. Let
+$$
+  B=\sum\limits_{k=0}^n e^{i(\theta+k\alpha)},
+$$
+then $A=\text{Re}\,(B)$. Using the formula of the sum of a geometric progression
+$$
+  B=e^{i\theta}\cdot\frac{1-e^{i(n+1)\alpha}}{1-e^{i\alpha}}=e^{i\theta}\cdot\frac{i\left(1-e^{i(n+1)\alpha}\right)\left(1-e^{-i\alpha}\right)} {2\sin\alpha}=(\cos\theta+i\sin\theta)\cdot\frac{\left(1-e^{i(n+1)\alpha}\right)\left(1+e^{-i\alpha}\right)} {2-2\cos\alpha}.
+$$
+The real part of this is
+\begin{multline}
+  A=\frac{1}{2\left(1-\cos\alpha\right)}\left(\left(1-\cos\left(n+1\right)\alpha\right)\left(\cos\theta \left(1-\cos\alpha\right)-\sin\alpha \sin\theta\right)+\sin (n+1)\alpha \left(\sin\theta \left(1-\cos\alpha\right)+\sin\alpha \sin\theta\right)\right)=\\=\frac12 \left(\cos\theta-\frac{\sin\alpha}{1-\cos\alpha}\sin\theta-\cos\theta \cos(n+1)\alpha+\sin\theta \sin(n+1)\alpha+\frac{\sin\alpha}{1-\cos\alpha}\sin\theta \cos(n+1)\alpha \right.+\\+\left.\frac{\sin\alpha}{1-\cos\alpha}\cos\theta \sin(n+1)\alpha\right)=\frac{1}{2\sin\dfrac{\alpha}{2}}\left(\cos\theta \cos\frac{\alpha}{2}-\sin\theta \cos\frac{\alpha}{2}-\cos\left(\theta-(n+1)\alpha\right)\sin\frac{\alpha}{2}+\right.\\+\left.\sin\left(\theta- (n+1)\alpha\right)\cos\frac{\alpha}{2}\right)=\frac{1}{2\sin\dfrac{\alpha}{2}}\left(\sin\left(\frac{\alpha}{2}-\theta\right)+ \sin\left(\theta+(n+1)\alpha-\frac{\alpha}{2}\right)\right)=\frac{\sin\dfrac{(n+1)\alpha}{2} \cos\left(\theta+\dfrac{\alpha n}{2}\right)}{\sin\dfrac{\alpha}{2}},\nonumber
+\end{multline}
+q.e.d.
+
+4. As the vector $\vec{A}=\phi(r)\vec{r}$ has only a radial component, its divergence is
+$$
+  \text{div}\,\vec{A}=\frac{1}{r^2}\frac{d}{dr}\left(r^3 \phi\right)=3\phi+r\frac{d\phi}{dr}=0,
+$$
+which implies
+$$
+  \phi\sim r^{-3}.
+$$
+
+5. First multiply the first equation by $u_1$, the second by $u_2$, the third by $u_3$, and add:
+$$
+  u_1 \frac{du_1}{dt}+u_2 \frac{du_2}{dt}+u_3 \frac{du_3}{dt}=0.
+$$
+This proves the first integral. For the second integral multiply the first equation by $\lambda_1 u_1$, the second by $\lambda_2 u_2$, the third by $\lambda_3 u_3$ and add. Again,
+$$
+  \lambda_1 u_1 \frac{du_1}{dt}+\lambda_2 u_2 \frac{du_2}{dt}+\lambda_3 u_3 \frac{du_3}{dt}=0.
+$$
+This proves the second integral.
+
+\end{document} 

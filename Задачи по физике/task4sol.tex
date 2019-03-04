@@ -1,0 +1,102 @@
+\documentclass[14pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+0. The top card overhangs the second one by a maximum of a half of a card length, the second one a fourth over the third one, the third one the sixth over the fourth one and so on. So for $N+1$ cards the total overhang is
+$$
+  L=\frac{a}{2}\sum\limits_{i=1}^N \frac{1}{i},
+$$
+where $a=88$ mm is the card length.
+
+1. The field in the dielectric is reduced by $\varepsilon/\varepsilon_0$ times. So, the field in the first dielectric is
+$$
+  E_1=\frac{q}{4\pi\varepsilon_1 r^2},
+$$
+and in the second one
+$$
+  E_2=\frac{q}{4\pi\varepsilon_2 r^2}.
+$$
+The potential is respective for these fields.
+
+2. Same as previous problem, the fields are
+$$
+  E_i=\frac{q}{4\pi \varepsilon_i r^2},
+$$
+the potentials are
+$$
+  \varphi_i=\frac{q}{4\pi\varepsilon_i r}.
+$$
+
+3. By introducing the new variable $t=a\sqrt{x}$ this expression simplifies to
+$$
+  \int\limits_0^\infty \frac{tdt}{1+e^t}=\frac{\pi^2}{12}.
+$$
+
+4. By differentiation with respect to $x$ and $y$ we get
+\begin{gather}
+  (x+z^2)\frac{\partial z}{\partial x}+z=0,\nonumber\\
+  (x+z^2)\frac{\partial^2 x}{\partial z^2}+2\frac{\partial z}{\partial x}+2z\left(\frac{\partial z}{\partial x}\right)^2=0,\nonumber\\
+  (x+z^2)\frac{\partial z}{\partial y}=1,\nonumber\\
+  (x+z^2)\frac{\partial^2 z}{\partial y^2}+2z\left(\frac{\partial z}{\partial y}\right)^2=0.\nonumber
+\end{gather}
+Eliminate the first derivatives:
+\begin{gather}
+  \frac{\partial^2 z}{\partial x^2}=\frac{2xz}{\left(x+z^2\right)^3},\nonumber\\
+  \frac{\partial^2 z}{\partial y^2}=-\frac{2z}{\left(x+z^2\right)^3}.\nonumber
+\end{gather}
+These satisfy the required equation.
+
+5. The equation for $\beta_n$ is
+$$
+  \beta_{k+1}=\frac{\beta_k+\beta}{1+\beta_k \beta}
+$$
+with $\beta_0=0$. The solution is
+$$
+  \beta_n=\frac{1-a^n}{1+a^n},
+$$
+where
+$$
+  a=\frac{1-\beta}{1+\beta}.
+$$
+The infinity asymptotic is
+$$
+  \beta_n\approx 1-2a^n.
+$$
+There is another approach to the solution. The velocity summation law of special relativity states that the velocities $\beta_i$ are not additive but the quantities $\tanh^{-1}\beta_i$ are. So,
+$$
+  \tanh^{-1}\beta_{k+1}=\tanh^{-1}\beta_k+\tanh^{-1}\beta.
+$$
+This easily yields
+$$
+  \beta_n=\tanh\left(n\tanh^{-1}\beta\right).
+$$
+
+\end{document} 

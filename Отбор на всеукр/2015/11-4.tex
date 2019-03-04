@@ -1,0 +1,256 @@
+\documentclass[12pt,a4paper,pdftex]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+\usepackage{ulem}
+\usepackage{setspace}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+{\Huge \bf Problem 1}
+\end{center}
+
+\vspace{5mm}
+
+{\Large Part A}
+
+\vspace{2mm}
+
+1A1.
+$$
+  n_\text{eff}=\sqrt{\sin^2 \alpha_0+\left(\frac{d_1+d_2}{\dfrac{d_1}{\sqrt{n_1^2-\sin^2 \alpha_0}}+\dfrac{d_2}{\sqrt{n_2^2-\sin^2 \alpha_0}}}\right)^2}.
+$$
+
+1A2. При $n_2^2-\sin^2 \alpha_0\sim (d_2/d_1)^2$ величина $n_\text{eff}$ начинает изменяться. При ${n_2^2-\sin^2 \alpha_0\ll (d_2/d_1)^2}$: $n_\text{eff}\to\infty$. См. график.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.6]{pic1.pdf}
+\end{center}
+\end{figure}
+
+1A3. Здесь 2 варианта, в зависимости от материала, на который луч падает.
+$$
+  n_\text{eff.1}=\sin\alpha_0\sqrt{1+\frac{n_1^2-\sin^2\alpha_0}{(d_1+d_2)^2}\left(\frac{d_1}{\sin\alpha_0}+\frac{d_2}{\sqrt{n_2^2-n_1^2+\sin^2\alpha_0}}\right)^2} \text{ --- на 1-й.}
+$$
+$$
+  n_\text{eff.2}=\sin\alpha_0\sqrt{1+\frac{n_2^2-\sin^2\alpha_0}{(d_1+d_2)^2}\left(\frac{d_2}{\sin\alpha_0}+\frac{d_1}{\sqrt{n_1^2-n_2^2+\sin^2\alpha_0}}\right)^2} \text{ --- на 2-й.}
+$$
+
+1A4. Да, например при $\sin\alpha_0\to \sqrt{|n_1^2-n_2^2|}$ по первой формуле величина конечна, а по второй --- стремится к бесконечности (в одном из случаев).
+
+1A5. В плоскости, параллельной слоям, углы
+$$
+  \alpha_{\parallel 1}=\arcsin\left(\frac{\sin\alpha}{n_1}\right), \hspace{5mm} \alpha_{\parallel 2}=\arcsin\left(\frac{\sin\alpha}{n_2}\right).
+$$
+
+В перпендикулярной же плоскости, как в предыдущем пункте, два случая:
+$$
+  \text{ctg}\hspace{1mm}\alpha_{\perp 1}=\frac{\sqrt{n_1^2-\sin^2\alpha_0}}{d_1+d_2}\left(\frac{d_1}{\sin\alpha_0}+\frac{d_2}{\sqrt{n_2^2-n_1^2+\sin^2\alpha_0}}\right),
+$$
+$$
+  \text{ctg}\hspace{1mm}\alpha_{\perp 2}=\frac{\sqrt{n_2^2-\sin^2\alpha_0}}{d_1+d_2}\left(\frac{d_2}{\sin\alpha_0}+\frac{d_1}{\sqrt{n_1^2-n_2^2+\sin^2\alpha_0}}\right).
+$$
+
+\vspace{5mm}
+
+{\Large Part B}
+
+\vspace{2mm}
+
+1B1.
+$$
+  \Phi_\text{r}/\Phi_0=r_{01}\left(\alpha\right)+\left(1-r_{01}\left(\alpha\right)\right)r_{12}\left(\beta\right)\frac{1-r_{10}\left(\beta\right)}{1-r_{10}\left(\beta\right)r_{12}\left(\beta\right)}, \hspace{3mm}\text{где } \beta=\arcsin(\sin\alpha/n_1).
+$$
+
+1B2. В главном приближении
+$$
+  \Phi_\text{r}^{(1)}/\Phi_0=r_{01}\left(\alpha\right)+r_{12}\left(\beta\right),
+$$
+не зависит от того, какой материал сверху, при $r_{12}\left(\beta\right)=r_{21}\left(\gamma\right)$ (здесь ${\gamma=\arcsin(n_1\sin\beta/n_2)=}$ ${=\arcsin(\sin\alpha/n_2)}$ --- угол движения во 2-й среде).
+
+1B3. Соответствующие поправки
+$$
+  \Phi_\text{r}^{(2)}/\Phi_0=-r_{12}\left(\beta\right)\left(r_{01}\left(\alpha\right)+r_{10}\left(\beta\right)\right) \hspace{3mm} \text{(у меня в работе не так..)},
+$$
+$$
+  \Phi_\text{r}^{(3)}/\Phi_0=r_{12}^2\left(\beta\right)r_{10}\left(\beta\right).
+$$
+На математике не проверено!!!
+
+\vspace{5mm}
+
+{\Large Part С}
+
+\vspace{2mm}
+
+1C1. Разность хода должна равняться целому числу длин волн. Тогда
+$$
+  \Delta d=2d_1\sqrt{n_1^2-\sin^2\alpha_0}=k\lambda,\,\, k\in\mathbb{N} \,\, \text{(и здесь у меня в работе не так..)},
+$$
+откуда
+$$
+  \sin\alpha_0=\sqrt{n_1^2-\frac{k^2 \lambda^2}{4d_1^2}},\,\, \text{при соответствующих значениях }k.
+$$
+
+1C2. Минимизации интенсивности отраженного излучения при нормальном падении соответствует толщина слоев $d=\lambda/(4n)$, для наклонного излучения все по-другому.
+
+1C3. Из преобразований скоростей для фотона $(c\cos\alpha_0,\,c\sin\alpha_0)$ получим
+$$
+  \left(\frac{v+c\cos\alpha_0}{1+\dfrac{v\cos\alpha_0}{c}},\,\frac{c\sin\alpha_0}{\gamma\left(1+\dfrac{v\cos\alpha_0}{c}\right)}\right), \hspace{5mm} \gamma=\sqrt{1-\dfrac{v^2\cos^2\alpha}{c^2}}\approx 1.
+$$
+Тогда \underline{в системе отсчета движущейся пластины} скорость повернулась на угол
+$$
+  \Delta \alpha=\frac{v}{c}\sin\alpha_0.
+$$
+Далее при помощи формул из части А находим изменение показателя преломления
+$$
+  \Delta n_\text{eff}=\frac{dn_\text{eff}}{d\alpha_0}\Delta\alpha.
+$$
+Для неподвижной системы отсчета все по-другому (проще всего также разложить на составляющие и пользоваться законом сложения скоростей).
+
+\vspace{5mm}
+
+{\Large Part D}
+
+\vspace{2mm}
+
+1D1. Из условия непрерывности (одинаковая плотность тока) получим $E/\rho=const$.
+
+1D2.
+$$
+  \rho_\perp=\frac{\rho_1 d_1+\rho_2 d_2}{d_1+d_2}.
+$$
+
+1D3.
+$$
+  \rho_\parallel=\frac{\rho_1 \rho_2 \left(d_1+d_2\right)}{\rho_1 d_2+\rho_2 d_1}.
+$$
+
+1D4. Могут. Например, когда $\rho_1\ll \rho_2$ или наоборот.
+
+1D5. Если направить ось $Ox$ по нормали к слоям, то компоненты вектора напряженности равны соответственно
+\begin{eqnarray}
+  E_x & = & j\rho_{\perp}\cos\varphi,\nonumber\\
+  E_y & = & j\rho_{\parallel}\sin\varphi.\nonumber
+\end{eqnarray}
+В общем случае, векторы плотности тока и напряженности не коллинеарны.
+
+1D6. Сложная энергетическая оценка диссипации дает
+$$
+  \rho_\text{eff}\sim\frac{E^2}{n^2 e^2 v^2 \rho},
+$$
+где $E$ --- напряженность электрического поля, $n$ --- концентрация электронов в веществе, $v$ --- средний модуль скорости их движения, $\rho$ --- удельное сопротивление. Если воспользоваться сомнительной оценкой $v\sim E/B$, получим
+$$
+  \rho_\text{eff}\sim\frac{B^2}{n^2 e^2 \rho}.
+$$
+Тот факт, что собственное удельное сопротивление материала стоит в знаменателе, имеет свое объяснение в этой модели.
+
+\newpage
+
+\begin{center}
+{\Huge \bf Problem 2}
+\end{center}
+
+\vspace{5mm}
+
+{\Large Part A}
+
+\vspace{2mm}
+
+2A1.
+$$
+  P_1=\cos^2\omega t, \hspace{5mm} P_2=\sin^2\omega t.
+$$
+
+2A2. $\langle s\rangle=0$. Недиагональные элементы не делают погоды ни в каком виде.
+
+2A3.
+$$
+\begin{pmatrix}
+\dfrac{3}{4}+\dfrac{1}{4}\sin\omega t & * \\
+* & \dfrac{1}{4}-\dfrac{1}{4}\sin\omega t
+\end{pmatrix},
+$$
+где вместо звездочек могут стоять любые числа.
+
+\vspace{5mm}
+
+{\Large Part B}
+
+\vspace{2mm}
+
+2B1.
+$$
+  I/I_0=\cos^2\phi.
+$$
+
+2B2.
+$$
+  I=0.
+$$
+
+2B3.
+$$
+  I/I_0=3/16.
+$$
+
+\vspace{5mm}
+
+{\Large Part C}
+
+\vspace{2mm}
+
+2C1.
+$$
+  \rho(x)=1/a,\hspace{3mm} 0\le x\le a.
+$$
+
+2C2.
+$$
+  \langle x\rangle =a/2.
+$$
+
+2C3.
+$$
+  \rho(x)=\frac{\left(\sqrt{2}-1\right)x^{-2+\sqrt{2}}}{a^{\sqrt{2}-1}}.
+$$
+
+2C4.
+$$
+  \langle v\rangle =\sqrt{\frac{8kT}{\pi m}},
+$$
+согласно википедии (у меня двойка под корнем потеряна).
+
+2C5. Распределение по модулю скорости имеет вид
+$$
+  f(v)dv=4\pi v^2\left(\frac{m}{2\pi kT}\right)^{3/2}\exp\left(-\frac{mv^2}{2kT}\right)dv.
+$$
+По квадрату скорости --- соответственно.
+
+\end{document} 

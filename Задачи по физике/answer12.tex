@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. The absolute value of the wave function squared is
+$$
+  \left|\Psi(x,t)\right|^2=A^2 e^{-2\alpha x^2}.
+$$
+By integration we get
+$$
+  \int\limits_{-\infty}^\infty \left|\Psi(x,t)\right|^2 dx=A^2\sqrt{\frac{\pi}{2\alpha}}=1,
+$$
+which implies
+$$
+  A=\left(\frac{2\alpha}{\pi}\right)^{1/4}.
+$$
+As the differential equation is linear for $\Psi(x,t)$ (so that the constant $A$ and the exponent are eliminated), and the derivatives are
+$$
+  \frac{1}{A}\frac{\partial}{\partial t}\Psi(x,t)=-\frac{\alpha i\hbar}{m}\exp\left[-\alpha\left(x^2+\frac{i\hbar t}{m}\right)\right]
+$$
+and
+$$
+  \frac{1}{A}\frac{\partial^2}{\partial x^2}\Psi(x,t)=\left(4\alpha^2 x^2-2\alpha\right)\exp\left[-\alpha\left(x^2+\frac{i\hbar t}{m}\right)\right]
+$$
+respectively, then for the potential we get
+$$
+  V(x,t)=\frac{2\alpha^2 \hbar^2}{m}x^2.
+$$
+
+2. Let's choose the \textit{x}-direction along the wall and the \textit{y}-direction perpendicular to the wall to the left in the plane of the figure (see problem text). We consider that the collision is absolutely elastic in the \textit{y}-direction, so that after the collision the \textit{y}-component of the cube's velocity is ${v_y '=v\sin\alpha}$.
+
+Consider the (short) period of time of the collision. Let the normal reaction force be $N$, then the friction force is $F_\text{fr}=\mu N$, this is true if the cube is having a non-zero \textit{x}-velocity. By integrating over the time of the collision we can get
+$$
+  \int\limits_T Ndt=2mv\sin\alpha.
+$$
+So, the maximal change in the \textit{x}-velocity is
+$$
+  \Delta v_x=\frac{1}{m}\int\limits_T F_\text{fr}dt=\frac{\mu}{m}\int\limits_T Ndt=2\mu v\sin\alpha.
+$$
+The original \textit{x}-velocity is $v_x=v\cos\alpha$. If $\Delta v_x>v_x$ (corresponding to $\tan\alpha>1/(2\mu)$) then the cube will move normally from the wall, $\beta=\pi/2$. Otherwise the \textit{x}-velocity will become $v_x '=v_x-\Delta v_x=v(\cos\alpha-2\mu\sin\alpha)$, and the reflection angle
+$$
+  \beta=\arctan\frac{v_y '}{v_x '}=\arctan\frac{\sin\alpha}{\cos\alpha-2\mu\sin\alpha}=\text{arccot}\left(\cot\alpha-2\mu\right).
+$$
+
+3. Let $\alpha$ be the angle between the radius-vector of the particle and its velocity vector. Then from geometry $\cos\alpha=r/(2R)$. Using Newton's law and considering the positive direction of the force as \textit{\textbf{towards}} the center we get
+\begin{gather}
+  m\frac{dv}{dt}=-F\sin\alpha,\nonumber\\
+  m\frac{v^2}{R}=F\cos\alpha=F\frac{r}{2R}.\nonumber
+\end{gather}
+As from geometry $dr=vdt\sin\alpha$, the first equation may be rewritten as
+$$
+  mv\frac{dv}{dr}=-F.
+$$
+By differentiating the second equation we get
+$$
+  2mv\frac{dv}{dr}=\frac{F}{2}+\frac{r}{2}\frac{dF}{dr}.
+$$
+The last is to eliminate the unknown $dv$, after that the equation becomes
+$$
+  -2F=\frac{F}{2}+\frac{r}{2}\frac{dF}{dr},
+$$
+which implies
+$$
+  \frac{dF}{F}=-5\frac{dr}{r}.
+$$
+This relation corresponds to a power law $F(r)=\alpha r^{-5}$.
+
+4. In this problem we consider that the spring is hard enough that the incoming body doesn't contact the other one directly. By using the center of mass frame it may be proved that the spring doesn't bring dissipation into the system, so that the kinetic energy of the system before the collision is equal to the kinetic energy after the collision. So, this is just a model of an absolutely elastic collision. Conservation laws yield
+\begin{gather}
+  m_1 v_0=m_1 v_1+m_2 v_2,\nonumber\\
+  \frac{m_1 v_0^2}{2}=\frac{m_1 v_1^2}{2}+\frac{m_2 v_2^2}{2},\nonumber
+\end{gather}
+where $v_1$ and $v_2$ are the respective velocities after the collision. The solution of this system of equations is
+\begin{gather}
+  v_1=\frac{\left(m_1-m_2\right)v_0}{m_1+m_2},\nonumber\\
+  v_2=\frac{2m_1 v_0}{m_1+m_2}.\nonumber
+\end{gather}
+
+5. The total energy of the molecules inside the cabin can't be increased due to energy conservation law. Nevertheless, this law doesn't put any restrictions on the ways of energy conversions. In the considered situation the heat energy of the air is increased by decreasing the chemical energy of the logs and the oxygen in the atmosphere. And as for these two men the second type of energy isn't significant, they are right to convert it into the first one, the heat energy.
+
+\end{document}

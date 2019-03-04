@@ -1,0 +1,1636 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     61308,       1626]
+NotebookOptionsPosition[     60345,       1588]
+NotebookOutlinePosition[     60690,       1603]
+CellTagsIndexPosition[     60647,       1600]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dim", "[", 
+   RowBox[{"n_", ",", "dim_"}], "]"}], ":=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"n", ",", "dim"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6143546648406878`*^9, 3.6143547332926025`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"kg", ":=", "\"\<Kilograms\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"met", ":=", "\"\<Meters\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"sec", ":=", "\"\<Seconds\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"newt", ":=", "\"\<Newtons\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"pas", ":=", "\"\<Pascals\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"mm", ":=", "\"\<Millimeters\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"cm", ":=", "\"\<Centimeters\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"gr", ":=", "\"\<Grams\>\""}]}], "Input",
+ CellChangeTimes->{{3.61435473813888*^9, 3.6143547917149444`*^9}, {
+  3.614354832508278*^9, 3.6143548849582777`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x", "=", 
+  RowBox[{"dim", "[", 
+   RowBox[{"0.8", ",", "mm"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6143548200125628`*^9, 3.614354828624056*^9}, {
+  3.6143548637290635`*^9, 3.614354863867071*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.8`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: millimeters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{{3.6143548748857017`*^9, 3.6143548871064005`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x1", "=", 
+  RowBox[{"dim", "[", 
+   RowBox[{"2.9", ",", "cm"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6143548920446825`*^9, 3.614354898025025*^9}, {
+  3.6143551730227537`*^9, 3.614355173707793*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"2.9`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: centimeters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.614354898518053*^9, 3.6143551740978155`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"d1", "=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1.7", ",", "2.1", ",", "2.3", ",", "2.5", ",", "2.7", ",", "3.0", ",", 
+     "3.2", ",", "3.4", ",", "3.7", ",", "4.0"}], "}"}], 
+   RowBox[{"dim", "[", 
+    RowBox[{"1", ",", "cm"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.614354907782583*^9, 3.6143549566883802`*^9}, {
+  3.614355090718046*^9, 3.6143551778870325`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"1.7`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"2.1`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"2.3`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"2.5`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"2.7`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.2`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.4`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.7`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )], ",", 
+   TemplateBox[{"4.`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"cm\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: centimeters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6143551463872304`*^9, 3.6143551783540587`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"d", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"d1", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "x"}], 
+       RowBox[{"x", "'"}]], ",", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"d1", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "x"}], 
+        RowBox[{"x", "'"}]], 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox[
+            RowBox[{"dim", "[", 
+             RowBox[{"0.5", ",", "mm"}], "]"}], 
+            RowBox[{"x", "'"}]], ")"}], "2"], "+", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox[
+            RowBox[{"dim", "[", 
+             RowBox[{"0.5", ",", "mm"}], "]"}], 
+            RowBox[{"d1", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]], ")"}], "2"]}]]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.614355203564501*^9, 3.614355239177538*^9}, {
+  3.614355337144141*^9, 3.6143553435365067`*^9}, {3.6143554012328067`*^9, 
+  3.614355485325617*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.46896551724137936`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.015988334186893327`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.5793103448275864`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.017029739633739032`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.6344827586206897`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.017604523684491558`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.6896551724137933`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.018210882015768513`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.7448275862068967`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.018845767187784974`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.8275862068965518`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.01984556104164097`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.8827586206896554`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.02054014067223704`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.9379310344827587`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.021254604491323978`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1.020689655172414`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.022359399331354408`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1.1034482758620692`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )], ",", 
+     TemplateBox[{"0.023498919052624263`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", "\"mm\""}], "QuantityUnitTraditionalLabel"]}], 
+         ShowStringCharacters -> False], "Unit: millimeters"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", "\"Millimeters\""}], "]"}]& )]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.6143554780642014`*^9, 3.6143554886948094`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"S", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Pi]", " ", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"d", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "1"}], "]"}], "]"}], "2"], "/", "4"}]}], ",", 
+      RowBox[{
+       FractionBox["1", "2"], "\[Pi]", " ", 
+       RowBox[{"d", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "1"}], "]"}], "]"}], 
+       RowBox[{"d", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "2"}], "]"}], "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6143556467438493`*^9, 3.6143557199010334`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.1727315627847706`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.011777795376822131`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.2635799971906016`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.015496697978536984`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.31617645921502985`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.017545428584473968`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.3735544177871337`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.01972799074349271`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.4357138729069127`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.02204902815457985`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.5379183616134725`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.025798621561980862`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.6120315581024398`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.028481657396789328`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.6909262511390823`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.03131437954547036`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.8182335967209378`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.03584872569777037`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.9562993095350623`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )], ",", 
+     TemplateBox[{"0.040730500117531376`"},
+      "QuantityUnit",
+      DisplayFunction->(TooltipBox[
+        StyleBox[
+         RowBox[{#, "\[InvisibleSpace]", 
+           StyleBox[
+            RowBox[{" ", 
+              RowBox[{
+                SuperscriptBox["\"mm\"", "2"]}]}], 
+            "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False],
+         "Unit: millimeters squared"]& ),
+      InterpretationFunction->(RowBox[{"Quantity", "[", 
+         RowBox[{#, ",", 
+           SuperscriptBox["\"Millimeters\"", "2"]}], "]"}]& )]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.6143557169328637`*^9, 3.6143557206210747`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"v", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"0.03", 
+        RowBox[{"RandomReal", "[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1"}], "]"}]}]}], ")"}], 
+     RowBox[{"dim", "[", 
+      RowBox[{"3.58", ",", 
+       RowBox[{"met", "/", "sec"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "10"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "1", ",", "5"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6143561852366495`*^9, 3.614356286179423*^9}, {
+  3.6143563210424166`*^9, 3.614356334361179*^9}, {3.6143563664340134`*^9, 
+  3.6143564096104827`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"3.539439776492315`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.47517253933017`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.553802743725896`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5762932262156593`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            RowBox[{
+             "\"m\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+              "\"s\""}]}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4729373597464317`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4880307493123572`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.54528163614869`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5737889762984225`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.533377993897297`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4992690909345834`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5469700514693345`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5441967772589447`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.479263003488476`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.554586534115902`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5050753855482393`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4845677509582234`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.490723030889441`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5230760446868583`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5492605449529435`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4798295093359055`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4746365769153864`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4775129483624534`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.51655205583268`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.576637126952265`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.497680478275451`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5318225785301056`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.534088986055563`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5756867997928397`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.477635338002432`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.527853395935546`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.481109136048418`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.486125704433995`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5524010996608033`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.491352988875397`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5117841028939534`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.495513618267273`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.503175455686368`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.55489284679141`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4881486058003723`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4994487745886564`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.552973515678745`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.559057164445556`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5142571929613373`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5741948977613007`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.4853076975788344`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5070894122185856`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5598203104502693`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.541015301321726`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5087526519711085`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], ",", 
+   TemplateBox[{"3.5614168999480484`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.614356227588072*^9, {3.6143563258406916`*^9, 3.614356334702198*^9}, 
+   3.614356405225232*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 505},
+WindowMargins->{{321, Automatic}, {Automatic, 64}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 239, 6, 31, "Input"],
+Cell[799, 28, 659, 10, 172, "Input"],
+Cell[CellGroupData[{
+Cell[1483, 42, 225, 5, 31, "Input"],
+Cell[1711, 49, 473, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2221, 65, 226, 5, 31, "Input"],
+Cell[2450, 72, 469, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2956, 88, 404, 10, 31, "Input"],
+Cell[3363, 100, 4171, 103, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7571, 208, 1170, 36, 101, "Input"],
+Cell[8744, 246, 9334, 224, 112, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18115, 475, 726, 22, 46, "Input"],
+Cell[18844, 499, 11653, 304, 121, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30534, 808, 703, 20, 52, "Input"],
+Cell[31240, 830, 29089, 755, 212, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

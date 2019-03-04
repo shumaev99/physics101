@@ -1,0 +1,63 @@
+\documentclass[14pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+\captionsetup[figure]{labelformat=empty}
+
+\begin{document}
+
+\begin{center}
+\Large{\textbf{Полные дифференциалы}}
+
+\textbf{23.04.2017}
+
+\vspace{5mm}
+\end{center}
+
+Приращением функции $f(t)$ называют величину $\Delta f=f(t+dt)-f(t)$. Если $f=f(t)$, то полным дифференциалом называют величину $df=f'(t)dt$, по сравнению с приращением по формуле Тейлора
+$$
+  \Delta f=f(t+dt)-f(t)=f'(t)dt+\dfrac12 f''(t)dt^2+\dfrac16 f^{(3)}(t)dt^3+\ldots
+$$
+В большинстве задач нужны только дифференциалы первого порядка, поэтому приращение величины $\Delta f$ за время $dt$ равно $df=f'(t)dt$. Дифференциалы можно и нужно понимать как бесконечно малые приращения. Для функции нескольких переменных $f(x,y,z,\ldots)$
+$$
+  df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz+\ldots
+$$
+Величина $(\partial f/\partial x)dx$ есть приращение функции $f$ при изменении только аргумента $x$. Соответственно, полное приращение есть сумма таких величин для разных аргументов.
+
+1. Запишите полные дифференциалы следующих величин:
+
+\begin{tabular}{llll}
+1) $i^{229}$, \hspace{1.5cm} & 2) $(-i)^{4851}$, \hspace{1.5cm} & 3) $i^{101}+i^{102}+i^{103}$, \hspace{1.2cm} & 4) $i^{-413}$,\\
+5) $i^{225}-i^{224}-i^{-224}+i^{-225}$, & 6) $(i^{253}+i^{250})i^{-343}$, & 7) $(-3i)^{-20}$ & 8)$(i^{-20}+(-i)^{-21})i^3$,\\
+9) $(1-i)^{51}$, & 10) $(i\sqrt3-1)^{20}$, & 11) $(3+4i)^{5\pi/\arctan(4/3)}$ & 12)$\left(\dfrac{i+1}{\sqrt2}\right)^{-12}$,\\
+13) $\text{Re}\,(29e^{i(7\pi/2-\arctan(20/21))})$, & 14) $\text{Im}\,|9-7i|$, & 15) $\text{Re}\,(5e^{\pi-\arctan(4/3)})$ & 16) $\text{Im}\,(i^{228}+(1+i)^{14})$,\\
+17) $\left|\dfrac{-i-\sqrt3}{2}\right|^{25}$, & 18) $\left|3i+4\right|^{16}$, & 19) $\left|1+i\right|^{-13}$ & 20) $\left|i^{3204}\right|$.
+\end{tabular}
+
+\end{document} 

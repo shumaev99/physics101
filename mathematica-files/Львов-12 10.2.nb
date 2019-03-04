@@ -1,0 +1,385 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13048,        376]
+NotebookOptionsPosition[     12086,        342]
+NotebookOutlinePosition[     12432,        357]
+CellTagsIndexPosition[     12389,        354]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[Omega]", ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Pi]"}], 
+    RowBox[{"2.1", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"86400", ",", "\"\<Seconds\>\""}], "]"}]}]], "//", 
+   "N"}]}]], "Input",
+ CellChangeTimes->{{3.600432333406192*^9, 3.600432414078806*^9}, {
+  3.600433776387726*^9, 3.6004337779638157`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"R1", ":=", 
+  FractionBox[
+   RowBox[{"Quantity", "[", 
+    RowBox[{"213", ",", 
+     RowBox[{"\"\<Meters\>\"", "/", "\"\<Seconds\>\""}]}], "]"}], 
+   "\[Omega]"]}]], "Input",
+ CellChangeTimes->{
+  3.6004329745258617`*^9, {3.600433274493019*^9, 3.600433301820582*^9}, {
+   3.600433786743318*^9, 3.6004337997440615`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Tecl", ":=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1.3", "8.2"], "*", "86400"}], ",", "\"\<Seconds\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6004339893019037`*^9, 3.600434028246131*^9}, {
+  3.600434259674368*^9, 3.600434262257516*^9}, {3.6004343171976585`*^9, 
+  3.600434341515049*^9}}],
+
+Cell[BoxData[
+ RowBox[{"gsurf", ":=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"120", ",", 
+    RowBox[{"\"\<Meters\>\"", "/", 
+     SuperscriptBox["\"\<Seconds\>\"", "2"]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.600434926683519*^9, 3.6004349731301756`*^9}, {
+  3.6004391481979756`*^9, 3.6004391493980446`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"rstar", ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[Omega]", " ", "Tecl"}], "2"], 
+   RowBox[{"(", 
+    RowBox[{"R1", "+", 
+     FractionBox[
+      RowBox[{"gsurf", " ", 
+       SuperscriptBox["Tecl", "2"]}], "4"]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6004396263903265`*^9, 3.6004396972483797`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"G", ":=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{
+    RowBox[{"6.67", " ", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "11"}]]}], ",", 
+    FractionBox[
+     SuperscriptBox["\"\<Meters\>\"", "3"], 
+     RowBox[{"\"\<Kilograms\>\"", " ", 
+      SuperscriptBox["\"\<Seconds\>\"", "2"]}]]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.600439929526665*^9, 3.6004399946933928`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Mstar", ":=", 
+  FractionBox[
+   RowBox[{"gsurf", " ", 
+    SuperscriptBox["rstar", "2"]}], "G"]}]], "Input",
+ CellChangeTimes->{{3.600440108190884*^9, 3.6004401280200186`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"R2", ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "rstar"}], 
+    RowBox[{"\[Omega]", " ", "Tecl"}]], "-", "R1"}]}]], "Input",
+ CellChangeTimes->{{3.600440377775304*^9, 3.6004403964983745`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"rplanet", ":=", 
+  RowBox[{"rstar", 
+   SqrtBox[
+    FractionBox[
+     RowBox[{"0.004", " ", "6.8"}], "4.05"]]}]}]], "Input",
+ CellChangeTimes->{{3.6004406115836763`*^9, 3.600440623024331*^9}, {
+  3.6004406860409355`*^9, 3.6004406926903152`*^9}, {3.600440760181176*^9, 
+  3.600440762892331*^9}, {3.600440794193121*^9, 3.600440796603259*^9}, {
+  3.600440923563521*^9, 3.6004409370902944`*^9}, {3.600441018694962*^9, 
+  3.600441018869972*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Mplanet", ":=", 
+  FractionBox[
+   RowBox[{"4", "R1", " ", 
+    SuperscriptBox["rstar", "2"]}], 
+   RowBox[{"G", " ", 
+    SuperscriptBox["Tecl", "2"]}]]}]], "Input",
+ CellChangeTimes->{{3.6004411224338956`*^9, 3.600441149311433*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[Rho]star", ":=", 
+  FractionBox[
+   RowBox[{"3", "Mstar"}], 
+   RowBox[{"4", "\[Pi]", " ", 
+    SuperscriptBox["rstar", "3"]}]]}]], "Input",
+ CellChangeTimes->{{3.600441190312778*^9, 3.600441226816866*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Rho]planet", ":=", 
+  FractionBox[
+   RowBox[{"3", "Mplanet"}], 
+   RowBox[{"4", "\[Pi]", " ", 
+    SuperscriptBox["rplanet", "3"]}]]}]], "Input",
+ CellChangeTimes->{{3.600441230436073*^9, 3.60044125311537*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Star radius \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"1.3364174514871495`*^9"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: meters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Meters\""}], "]"}]& )], 
+   "\[InvisibleSpace]", "\<\"; planet radius \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"1.0952142317766966`*^8"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: meters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Meters\""}], "]"}]& )]}],
+  SequenceForm["Star radius ", 
+   Quantity[1.3364174514871495`*^9, "Meters"], "; planet radius ", 
+   Quantity[1.0952142317766966`*^8, "Meters"]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6004417750272217`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Star mass \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"3.2132142812103286`*^30"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"kg\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kilograms"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kilograms\""}], "]"}]& )], 
+   "\[InvisibleSpace]", "\<\"; planet mass \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"3.5112740050184285`*^27"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"kg\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kilograms"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kilograms\""}], "]"}]& )]}],
+  SequenceForm["Star mass ", 
+   Quantity[3.2132142812103286`*^30, "Kilograms"], "; planet mass ", 
+   Quantity[3.5112740050184285`*^27, "Kilograms"]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.600441775593254*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Star density \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"321.38430553484284`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"kg\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", 
+              SuperscriptBox["\"m\"", "3"]}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: kilograms per meter cubed"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Kilograms\"", 
+          SuperscriptBox["\"Meters\"", "3"]]}], "]"}]& )], 
+   "\[InvisibleSpace]", "\<\"; planet density \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"638.0855006502313`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"kg\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", 
+              SuperscriptBox["\"m\"", "3"]}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: kilograms per meter cubed"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Kilograms\"", 
+          SuperscriptBox["\"Meters\"", "3"]]}], "]"}]& )]}],
+  SequenceForm["Star density ", 
+   Quantity[321.38430553484284`, "Kilograms" "Meters"^(-3)], 
+   "; planet density ", 
+   Quantity[638.0855006502313, "Kilograms" "Meters"^(-3)]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.600441776519307*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Star orbit radius \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"6.150816522288413`*^6"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: meters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Meters\""}], "]"}]& )], 
+   "\[InvisibleSpace]", "\<\"; planet orbit radius \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"5.628695300416421`*^9"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: meters"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Meters\""}], "]"}]& )]}],
+  SequenceForm["Star orbit radius ", 
+   Quantity[6.150816522288413*^6, "Meters"], "; planet orbit radius ", 
+   Quantity[5.628695300416421*^9, "Meters"]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6004417767593207`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Angular speed of rotation \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"0.000034629548650681144`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            RowBox[{"\"per \"", "\[InvisibleSpace]", "\"second\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: reciprocal seconds"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["1", "\"Seconds\""]}], "]"}]& )]}],
+  SequenceForm["Angular speed of rotation ", 
+   Quantity[0.000034629548650681144`, "Seconds"^(-1)]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6004417767723217`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Linear speed of star \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"213.`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )], 
+   "\[InvisibleSpace]", "\<\"; of planet \"\>", "\[InvisibleSpace]", 
+   TemplateBox[{"194919.17774563076`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", 
+            
+            RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/\"", 
+              "\[InvisibleSpace]", "\"s\""}]}], 
+          "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+      "Unit: meters per second"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", 
+         FractionBox["\"Meters\"", "\"Seconds\""]}], "]"}]& )]}],
+  SequenceForm["Linear speed of star ", 
+   Quantity[213., "Meters"/"Seconds"], "; of planet ", 
+   Quantity[194919.17774563076`, "Meters"/"Seconds"]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.600441777075339*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{707, 505},
+WindowMargins->{{Automatic, 160}, {-26, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 353, 10, 48, "Input"],
+Cell[913, 32, 344, 9, 46, "Input"],
+Cell[1260, 43, 355, 9, 46, "Input"],
+Cell[1618, 54, 315, 7, 33, "Input"],
+Cell[1936, 63, 336, 10, 50, "Input"],
+Cell[2275, 75, 403, 11, 52, "Input"],
+Cell[2681, 88, 201, 5, 49, "Input"],
+Cell[2885, 95, 224, 6, 47, "Input"],
+Cell[3112, 103, 465, 10, 56, "Input"],
+Cell[3580, 115, 258, 7, 51, "Input"],
+Cell[3841, 124, 232, 6, 48, "Input"],
+Cell[CellGroupData[{
+Cell[4098, 134, 237, 6, 49, "Input"],
+Cell[CellGroupData[{
+Cell[4360, 144, 1200, 28, 23, "Print"],
+Cell[5563, 174, 1214, 28, 23, "Print"],
+Cell[6780, 204, 1723, 43, 23, "Print"],
+Cell[8506, 249, 1218, 28, 23, "Print"],
+Cell[9727, 279, 801, 19, 23, "Print"],
+Cell[10531, 300, 1527, 38, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

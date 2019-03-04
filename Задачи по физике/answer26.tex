@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=-0.5 cm
+\evensidemargin=-0.5 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. The theoretical formula for the decay is
+$$
+  m(t)=m_0 \cdot 2^{-t/T_{1/2}},
+$$
+which yields
+$$
+  \log_2 m=\log_2 m_0-\frac{t}{T_{1/2}}.
+$$
+The LSM (least squares method) represented in \textit{Mathematica} by LinearModelFit returns the regression values $\log_2 m_0=5.1705 \pm 0.0003$ (in grams) and $1/T_{1/2}=0.04148$ s$^{-1}\,\pm\,0.03\%$. So, $m_0=36.014$ g $\pm\,0.0002\,\%$ and $T_{1/2}=24.106\pm 0.007$ s.
+
+2. The activity of a material is defined as $A=\lambda N$, where $N$ is the number of atoms in the sample, $\lambda$ is the decay constant for the material. For uranium $N=A/\lambda$, so the mass of the sample is
+$$
+  m=Nm_0=\frac{Am_0}{\lambda}=1.62 \text{ g}.
+$$
+
+3. Generally, incompressibility and continuity gives a restriction div$\overrightarrow{v}=0$, and it \textit{doesn't} imply equal velocity in any point of the cross section \textit{at all}. Even more, with viscosity effects taken into consideration, the velocity distribution function over the cross section is quadratic. So, in the given problem, for the points B and C we have $v_B=v_C=0$. Taking the gravity effects into account will distort the velocity profile, making the velocities in the bottom bigger than in the top. The last thing to say is that for realistic parameters of the tube turbulences fatally break the theoretical predictions and almost nothing can be said about the velocity distribution.
+
+4. The coaxial cable represents a capacitance and an inductance which are switched in a pretty complicated way. The task is to find the capacitance and inductance of a unit length.
+
+First, let's find the capacitance $CdL$ of a length $dl$. Let the charge on it be $dQ$, then the electric field $E$ depends on the radius $r$ from the axis as
+$$
+  E(r)=\frac{\lambda}{2\pi \varepsilon r},
+$$
+where $\lambda=dQ/dl$ is the charge of a unit length. Then the voltage across the capacitance is
+$$
+  V=\int\limits_a^b E(r)dr=\frac{\lambda}{2\pi \varepsilon}\ln\frac{b}{a}.
+$$
+Finally, the capacitance is defined as
+$$
+  C=\frac{dQ}{Vdl}=\frac{\lambda}{V}=\frac{2\pi \varepsilon}{\ln\dfrac{b}{a}}.
+$$
+
+Next, let's find the inductance $Ldl$ of a unit length $dl$. Let a current $i$ flow through it. We consider that the magnetic permeability of all materials is $\mu=\mu_0$, and the current flows on the \textit{outer} surfaces of the conductors. Then the magnetic field depends on the radius as
+$$
+  B(r)=\frac{\mu_0 i}{2\pi r}.
+$$
+This fields creates a flux $d\Phi$ on the length $dl$ which is equal to
+$$
+  d\Phi=dl\int\limits_a^c B(r)dr=\frac{\mu_0 i}{2\pi}\ln\frac{c}{a}dl.
+$$
+Due to Faraday's law, the induced emf on the outer surface is
+$$
+  d\mathcal{E}=d\Phi'=\frac{\mu_0 i'}{2\pi}\ln\frac{c}{a}dl
+$$
+Finally, the inductance is defined as
+$$
+  L=\frac{d\mathcal{E}}{i' dl}=\frac{\mu_0}{2\pi}\ln\frac{c}{a}.
+$$
+
+Now the electromagnetic parameters of the cable are defined. To calculate the current dependence on time $t$ and coordinate $x$, we'll use a system of differential equations called the \textit{telegraph equations}\footnote{Telegraph equations describe wave propagation in an electric line, see \href{https://en.wikipedia.org/wiki/Telegrapher's_equations}{here}.}:
+\begin{gather*}
+  \frac{\partial V}{\partial x}=-L\frac{\partial I}{\partial t},\\
+  \frac{\partial I}{\partial x}=-C\frac{\partial V}{\partial t}.
+\end{gather*}
+These equations may be combined into two wave equations:
+\begin{gather*}
+  \frac{\partial^2 V}{\partial t^2}=u^2\frac{\partial^2 V}{\partial x^2},\\
+  \frac{\partial^2 I}{\partial t^2}=u^2\frac{\partial^2 I}{\partial x^2},
+\end{gather*}
+where $u=1/\sqrt{LC}$ is the wave speed in the cable. The boundary conditions are defined as
+\begin{gather*}
+  V(0,t)=V_0-I(0,t)R_0,\\
+  V(L,t)=I(L,t)R.
+\end{gather*}
+This is a system of partial differential equations with functional initial conditions, can't be solved by \textit{Mathematica}, and a simple solution of type $V(x,t)=V(x-ut)$ doesn't fit the system..
+
+5. Let's consider that the activity of the sample didn't change significantly during the measure-ment period of 12 hours. Then the activity is $A=N/t=1.528$ mBq, and the specific activity is $a=A/m=152.8$ Bq/g. For comparison, the specific activity of fresh carbon is $a_0=840$~Bq/min. As the activity changes with time as
+$$
+  a(t)=a_0 \cdot 2^{-t/T_{1/2}},
+$$
+the age of the wood is
+$$
+  t=T_{1/2}\log_2\frac{a_0}{a}=13670 \text{ yrs}.
+$$
+
+\end{document}

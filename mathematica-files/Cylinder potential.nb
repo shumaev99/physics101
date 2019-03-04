@@ -1,0 +1,236 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7374,        228]
+NotebookOptionsPosition[      6552,        206]
+NotebookOutlinePosition[      6886,        221]
+CellTagsIndexPosition[      6843,        218]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    FractionBox["4", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "m"}], "+", "1"}], ")"}], "\[Pi]"}]], 
+    SuperscriptBox["\[Rho]", 
+     RowBox[{
+      RowBox[{"2", "m"}], "+", "1"}]], 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "m"}], "+", "1"}], ")"}], "\[Phi]"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m", ",", "0", ",", "\[Infinity]"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.644241446517682*^9, 
+  3.6442414880552497`*^9}},ExpressionUUID->"b6db146a-69df-4e41-8106-\
+4c0932f97e65"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"ArcTanh", "[", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Phi]"}]], " ", "\[Rho]"}], 
+      "]"}], "-", 
+     RowBox[{"ArcTanh", "[", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"\[ImaginaryI]", " ", "\[Phi]"}]], " ", "\[Rho]"}], "]"}]}], 
+    ")"}]}], "\[Pi]"]], "Output",
+ CellChangeTimes->{
+  3.644241490782754*^9},ExpressionUUID->"62ba5514-80e1-417a-93fe-\
+121494c59dd8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ArcTanh", "[", "x", "]"}], "//", "TrigToExp"}]], "Input",
+ CellChangeTimes->{{3.644241588612892*^9, 
+  3.6442416009929094`*^9}},ExpressionUUID->"64fcc31f-11fe-4059-89de-\
+03a2db618a56"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"1", "-", "x"}], "]"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"1", "+", "x"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.6442416019929104`*^9},ExpressionUUID->"62e570a3-b1db-4205-8aae-\
+8138909a3798"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"DensityPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Re", "[", "%1", "]"}], "/.", 
+       RowBox[{"\[Rho]", "\[Rule]", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"]}]]}]}], "/.", 
+      RowBox[{"\[Phi]", "\[Rule]", 
+       RowBox[{"ArcTan", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", 
+        SqrtBox[
+         RowBox[{"1", "-", 
+          SuperscriptBox["x", "2"]}]]}], ",", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         SuperscriptBox["x", "2"]}]]}], "}"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "500"}], ",", 
+     RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "750"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", "val", "}"}], ",", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"1", "+", "val"}], "2"], ",", "0", ",", 
+          FractionBox[
+           RowBox[{"1", "-", "val"}], "2"]}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}]}], "]"}], ",", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.003", "]"}], ",", 
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", "1.001"}], "]"}]}], "}"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.644241983241012*^9, 3.644242092821165*^9}, {
+   3.644242129711217*^9, 3.6442421452312384`*^9}, {3.6442421797112865`*^9, 
+   3.6442422628214035`*^9}, {3.644242315341477*^9, 3.6442425283717747`*^9}, {
+   3.6442425823118505`*^9, 3.6442426002418756`*^9}, {3.644242664881966*^9, 
+   3.6442426675119696`*^9}, 
+   3.644242726672053*^9},ExpressionUUID->"8c63020e-05a2-42a7-a1d4-\
+d1781a2c635a"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"DensityPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Re", "[", "%1", "]"}], "/.", 
+       RowBox[{"\[Rho]", "\[Rule]", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", 
+          SuperscriptBox["y", "2"]}]]}]}], "/.", 
+      RowBox[{"\[Phi]", "\[Rule]", 
+       RowBox[{"ArcTan", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", 
+        SqrtBox[
+         RowBox[{"1", "-", 
+          SuperscriptBox["x", "2"]}]]}], ",", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         SuperscriptBox["x", "2"]}]]}], "}"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "500"}], ",", 
+     RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "750"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", "val", "}"}], ",", 
+        RowBox[{"Hue", "[", 
+         RowBox[{"0.3", "-", 
+          RowBox[{"0.25", "val"}]}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}]}], "]"}], ",", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.003", "]"}], ",", 
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", "1.001"}], "]"}]}], "}"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6442427426820755`*^9, 3.6442427467220807`*^9}, {
+   3.644242799572155*^9, 3.644242804772162*^9}, {3.6442428656522474`*^9, 
+   3.644242873372258*^9}, {3.6442429767224026`*^9, 3.644242976872403*^9}, 
+   3.64424308921256*^9},ExpressionUUID->"ea287e6e-310a-4132-9725-\
+e9f700ebef53"]
+},
+WindowSize->{1366, 686},
+WindowMargins->{{0, Automatic}, {Automatic, 28}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 643, 21, 59, "Input",ExpressionUUID->"b6db146a-69df-4e41-8106-4c0932f97e65"],
+Cell[1226, 45, 601, 18, 60, "Output",ExpressionUUID->"62ba5514-80e1-417a-93fe-121494c59dd8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1864, 68, 220, 5, 31, "Input",ExpressionUUID->"64fcc31f-11fe-4059-89de-03a2db618a56"],
+Cell[2087, 75, 376, 13, 53, "Output",ExpressionUUID->"62e570a3-b1db-4205-8aae-8138909a3798"]
+}, Open  ]],
+Cell[2478, 91, 2141, 58, 131, "Input",ExpressionUUID->"8c63020e-05a2-42a7-a1d4-d1781a2c635a"],
+Cell[4622, 151, 1926, 53, 111, "Input",ExpressionUUID->"ea287e6e-310a-4132-9725-e9f700ebef53"]
+}
+]
+*)
+

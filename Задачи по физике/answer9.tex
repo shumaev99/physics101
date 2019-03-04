@@ -1,0 +1,102 @@
+\documentclass[14pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Integration gives
+$$
+  B=\frac{\mu_0 I}{2\pi}\left(1-\frac{a+d}{\sqrt{a^2+d^2}}\right),
+$$
+the positive direction is by default downwards (away from the picture).
+
+2. Consider a loop current $i_1$ in the bigger loop. It creates a field
+$$
+  B_0=\frac{\mu_0 i_1}{2R_1}
+$$
+in its center. In case of $R_1\gg R_2$ we can consider $B_0$ as a uniform field containing the smaller coil. Then the magnetic flux is
+$$
+  \Phi_2=\pi R_2^2 B_0=\pi R_2^2 \cdot \frac{\mu_0 i_1}{2R_1},
+$$
+then the mutual inductance is
+$$
+  M=\frac{\mu_0 \pi R_2^2}{2R_1}.
+$$
+
+3. The general formula is
+$$
+  1-\beta^2=\left(\frac{mc^2}{E}\right)^2.
+$$
+As $E\gg mc^2$ (for an electron $mc^2=512$ keV), then a small quantity
+$$
+  \varepsilon=1-\beta=\frac{1}{2}\left(\frac{mc^2}{E}\right)^2=3.6\cdot 10^{-9},
+$$
+and the electron's velocity is
+$$
+  \beta=1-\varepsilon=0.9999999964.
+$$
+
+4. The rockets' relative velocity is
+$$
+  \beta=\frac{\beta_1+\beta_2}{1+\beta_1 \beta_2}=0.8.
+$$
+Then the contraction factor is $l_0/l=\gamma=\left(1-\beta^2\right)^{-1/2}=5/3$.
+
+5. The momentum of the system is conserved and is equal to
+$$
+  p=\frac{m_0 v}{\sqrt{1-v^2/c^2}}.
+$$
+At the end the velocity of the system is
+$$
+  \beta_1=\left(1+\left(\frac{2m_0 c}{p}\right)^2\right)^{-1/2}=\left(\frac{4c^2}{v^2}-3\right)^{-1/2},
+$$
+so the mass of the system is
+$$
+  m_1=\frac{p}{\beta_1 c}=m_0\sqrt{\frac{4-3\beta_0^2}{1-\beta_0^2}},
+$$
+where $\beta_0$ corresponds to $v/c$.
+
+6. Consider a photon with momentum $\overrightarrow{p}$ creating an electron-positron pair with momenta $\overrightarrow{p_1}$ and $\overrightarrow{p_2}$ respectively. Then due to conservation laws
+$$
+  \overrightarrow{p}=\overrightarrow{p_1}+\overrightarrow{p_2},
+$$
+$$
+  pc=\sqrt{p_1^2 c^2+m^2 c^4}+\sqrt{p_2^2 c_2+m^2 c^4},
+$$
+where $m$ corresponds to the electron's (positron's) mass. Squaring both these equations and eliminating $p^2 c^2$, we get
+$$
+  \overrightarrow{p_1}\cdot \overrightarrow{p_2}=m^2 c^2+\sqrt{\left(p_1^2+m^2 c^2\right)\left(p_2^2+m^2 c^2\right)}.
+$$
+This can't correspond to the reality as $\overrightarrow{p_1}\cdot \overrightarrow{p_2}\le p_1 p_2<\sqrt{\left(p_1^2+m^2 c^2\right)\left(p_2^2+m^2 c^2\right)}.$
+
+\end{document} 

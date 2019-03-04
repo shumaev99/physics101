@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=-0.5 cm
+\evensidemargin=-0.5 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. The velocity at the first cross section is
+$$
+  v_1=\frac{Q}{7.854\cdot 10^{-3} \text{ m}^2}.
+$$
+The velocity at the second cross section is
+$$
+  v_2=\frac{4Q}{\pi d^2}.
+$$
+Due to Bernoulli's law,
+$$
+  v_1^2-v_2^2=2g\Delta h=3.92 \text{ m}^2/\text{s}^2.
+$$
+By substituting the velocities, we get
+$$
+  Q^2 \left(10^4 \text{ m}^{-4}+\frac{1}{d^4}\right)=2.418 \text{ m}^2/\text{s}^2,
+$$
+which implies
+$$
+  Q=\sqrt{2.418 \text{ m}^2/\text{s}^2 \cdot\left(10^4 \text{ m}^{-4}+\frac{1}{d^4}\right)^{-1}}.
+$$
+
+2. The potential energy of a mass $m$ on such a planet on a height $h$ is
+$$
+  W(h)=mh\left(g_0-\frac{\alpha h}{2}\right).
+$$
+The the Bernoulli equation looks like
+$$
+  p+\frac{\rho v^2}{2}+\rho h\left(g_0-\frac{\alpha h}{2}\right).
+$$
+
+3. The air masses move circumferentially under the influence of the pressure gradient. If the velocity pattern is $v(r)$, then the Newton's law states 
+$$
+  \frac{\rho v^2}{r}=\frac{dp}{dr}.
+$$
+It's natural to assume that the Bernoulli's law works for all the range of $r$, although it's a controversial issue. If it's true then
+$$
+  p+\frac{\rho v^2}{2}=const.
+$$
+Differentiation yields
+$$
+  \frac{dp}{dr}+\rho v \frac{dv}{dr}=0.
+$$
+Comparing this equation with the Newton's, we get
+$$
+  \frac{dv}{v}=-\frac{dr}{r},
+$$
+which solution is
+$$
+  v(r)\propto r^{-1},
+$$
+or
+$$
+  v(r)=v_0 \frac{r_0}{r},
+$$
+where $v_0$ and $r_0$ are some constants. As it can be seen, this solution is absurd in the range of small $r$, that happens because Bernoulli's law works bad for big velocities (actually, it works bad everywhere, the truth is that it's \textit{never} true). Maybe, a better solution would be obtained from the Navier-Stokes equation.
+
+\end{document} 

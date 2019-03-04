@@ -1,0 +1,47 @@
+\documentclass[14pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+Maglev trains based on the so-called \textit{Inductrack} technology move similar to the magnet above a superconductive plane. For a Maglev train the drag force is
+$$
+  F_d=F_1 \frac{v_0 v}{v_0^2+v^2},
+$$
+and the lift force is
+$$
+  F_l=F_2\frac{v^2}{v_0^2+v^2},
+$$
+where $v_0$ is the characteristic velocity. The drag force reaches its maximum value $F_d (\text{max})=F_1/2$ at $v=v_0$ and tends to zero as $1/v^2$ at $v\gg v_0$. The lift force tends to $F_2$ as $v$ approaches infinity.
+
+The qualitative description of the Maglev drag force is like this. As the dissipation is due to resistivity, it is analogous to viscous friction and gives a linear $v$ term in the numerator. The denominator is actually the characteristic impedance squared $Z^2$. The resistivity gives a constant term, the inductance gives the term that is proportional to $v^2$, aka $(\omega L)^2$.
+
+Reference: WoPhO problem ``Why Maglev Trains Levitate'' (\href{http://www.wopho.org/file/upload/Theoretical2problem.pdf}{2011.2}).
+
+\end{document} 

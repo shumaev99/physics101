@@ -1,0 +1,217 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\LARGE{Problem 1}
+\end{center}
+\vspace{1cm}
+Изврат № 1. Поменялись местами точное и приближенное решения, при этом уравнения и лианеризации по-прежнему разные. Объяснено, как бортануть лишние корни в приближенном решении.
+
+\pagebreak
+
+\begin{center}
+\textbf{\LARGE{Задача № 1}}
+\end{center}
+
+\vspace{4mm}
+
+\textbf{\underline{Условие}:} Миномет установлен у основания некоторой горы под углом $\alpha=$ 1\hspace{-0.5pt},5 радиана к горизонту.
+Минометный расчет ведет записи\footnote{Значения дальности полета округлили до 2-х знаков после запятой, а к значениям начальной скорости добавили 2 знака для того, чтобы сбалансировать их погрешности.} о том, насколько далеко падают мины
+в зависимости от их начальной скорости. Определите по этим данным высоту
+и примерную форму горы.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$v_0$, м/с & 10,00 & 14,00 & 18,00 & 22,00 & 26,00 & 30,00 & 34,00 & 38,00 & 42,00 & 46,00\\
+\hline
+$l$, м & 0,711 & 1,612 & 2,851 & 4,454 & 6,481 & 8,984 & 12,020 & 15,640 & 19,879 & 24,749\\
+\hline
+$v_0$, м/с & 50,00 & 54,00 & 58,00 & 62,00 & 66,00 & 70,00 & 74,00 & 80,00 & 82,00 &\\
+\hline
+$l$, м & 30,231 & 36,277 & 42,829 & 49,841 & 57,294 & 65,236 & 73,820 & 83,418 & 95,038 &\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{5mm}
+
+\begin{wrapfigure}{r}{210pt}
+\vspace{-7mm}
+\begin{center}
+\includegraphics[width=0.47\textwidth]{fig2.pdf}
+\end{center}
+\vspace{-5mm}
+\caption{Рис. 1.1. Ось $Ox$ горизонтальна, ось $Oy$ вертикальна. Миномет расположен в начале координат.}
+\end{wrapfigure}
+
+\textbf{\underline{Решение}:} Сопротивлением воздуха при решении задачи пренебрегаем. Введем систему координат, как на рис. 1.1. Рассмотрим движение снаряда, выпущенного из начала координат со скоростью $v_0$ под углом $\alpha$ к горизонту. Его координаты при таком движении зависят от времени по законам $x(t)=v_0 t\cos\alpha$ и $y(t)=v_0 t\sin\alpha-gt^2/2$ соответственно. Выразив $t$ из первого уравнения и подставив во второе, получим уравнение траектории:
+\begin{equation}
+  y=x\,\text{tg}\,\alpha-\frac{gx^2}{2v_0^2\cos^2\alpha}.
+  \label{traj}
+\end{equation}
+Далее приведем два способа решения: приближенный в общем виде и точный численный.
+
+1. \textit{Приближенное решение.}
+
+Решим задачу приближенно, не основываясь на численных методах. Перейдем к полярным координатам $(l,\varphi)$. Координаты точек падения снаряда $x=l\cos\varphi$ и $y=l\sin\varphi$. Подставим их в уравнение \eqref{traj} и разделим обе его части на $x$:
+$$
+  \text{tg}\,\varphi=\text{tg}\,\alpha-\frac{gl\cos\varphi}{2v_0^2\cos^2\alpha},
+$$
+откуда, с использованием тождества $\text{tg}\,x-\text{tg}\,y=\dfrac{\sin(x-y)}{\cos x\cos y}$ получим
+\begin{equation}
+  \sin(\alpha-\varphi)=\frac{gl\cos^2\varphi}{2v_0^2\cos\alpha}.\label{trig}
+\end{equation}
+Такое уравнение невозможно решить стандартными способами, оно приводится к уравнению четвертой степени, которое решать безнадежно.
+
+\begin{figure}[h]
+\vspace{-5mm}
+\begin{center}
+\hspace{-6mm}
+\includegraphics[scale=0.7]{fig0.pdf}
+\end{center}
+\vspace{-5mm}
+\caption{Рис. 1.2. Зависимость квадрата начальной скорости от дальности полета по данным из условия.}
+\end{figure}
+
+Если считать форму горы плоскостью, то угол $\varphi$ должен быть одинаковым для всех экспериментальных точек. Учитывая уравнение~\eqref{trig}, получим постоянство величины $l/v_0^2$. В самом деле, рассмотрите рис.~1.2. Зависимость $v_0^2(l)$ достаточно близка к линейной.
+
+Найдем тогда угол $\varphi$ наклона горы. Будем считать углы $\alpha$ и $\varphi$ близкими между собой и к $\pi/2$. А именно, применим приближения $\sin(\alpha-\varphi)\approx\alpha-\varphi$ и $\cos\varphi=\sin(\pi/2-\varphi)\approx\pi/2-\varphi$. Уравнение~\eqref{trig}
+\begin{wrapfigure}{r}{220pt}
+\begin{center}
+\includegraphics[scale=0.3]{varfig0.pdf}
+\end{center}
+\vspace{-3mm}
+\caption{Рис. 1.3. График функции $y(x)=\sin(\alpha--x)/\cos^2 x$, где $\alpha=1,\hspace{-0.5mm}5$ рад.}
+\vspace{-10mm}
+\end{wrapfigure}
+примет вид
+$$
+  \alpha-\varphi=\frac{gl}{2v_0^2\cos\alpha}\left(\frac{\pi}{2}-\varphi\right)^2,
+$$
+которое легко привести к виду
+$$
+  q\varphi^2-\varphi\left(q\pi-1\right)+\left(\frac{q\pi^2}{4}-\alpha\right),\hspace{3mm} q=\frac{gl}{2v_0^2\cos\alpha}.
+$$
+Получили квадратное уравнение, корни которого
+$$
+  \varphi_{1,2}=\frac{1}{2q}\left(q\pi-1\pm\sqrt{(q\pi-1)^2-q\pi^2+4\alpha}\right).
+$$
+
+Во всех случаях искомый корень --- с плюсом перед радикалом (второй корень не подходит, так как он не соответствует примененным приближениям). Других корней быть не может. Действительно, рассмотрите рис. 1.3. Функция, изображенная на графике, по уравнению \eqref{trig} равна $\varepsilon=gl/2v_0^2\cos\alpha$. Так как все такие величины $\varepsilon$ согласно условию меньше 1 (убедитесь сами), то прямая $y=\varepsilon$ пересекает график на рис. 1.3 в единственной точке, близкой к $\pi/2$. В таблице представлены решения этого уравнения для всех случаев, представленных в условии, в порядке их перечисления.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$\varphi$,\text{\textdegree} & 85,79 & 85,76 & 85,75 & 85,74 & 85,73 & 85,72 & 85,71 & 85,70 & 85,69\\
+\hline
+85,68 & 85,67 & 85,66 & 85,65 & 85,65 & 85,64 & 85,64 & 85,63 & 85,63 & 85,62\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[h]
+\vspace{-5mm}
+\begin{center}
+\hspace{-10mm}
+\includegraphics[scale=0.85]{fig1.pdf}
+\vspace{-10mm}
+\caption{Pис. 1.4. График поверхности горы по точкам (не в масштабе). Зеленым изображена поверхность горы, другими цветами изображены траектории снарядов. Справа приведен график в масштабе.}
+\end{center}
+\end{figure}
+
+По полученным данным был построен график, см. рис. 1.4. Траектории снарядов кажутся настолько прижатыми к поверхности из-за малой разности углов $\alpha$ и $\varphi$.
+
+Наилучшая величина для угла наклона горы --- среднее этих величин\footnote{На самом деле правильно усреднять не углы, а их тангенсы, как во втором случае.}: $\varphi=85,\hspace{-1.3pt}69$\textdegree. Как далее выяснится, ошибка по сравнению с точным решением $\Delta\varphi=0,\hspace{-0.5mm}01$\textdegree. Отличие этого ответа от полученного точным способом вызвано не ошибкой приближения, а различными методами усреднения. По полученным данным можно утверждать, что гора имеет небольшую выпуклость вверх. Высота горы $H=l_{19}\sin\varphi_{19}=94,\hspace{-1.3pt}76$~м.
+
+2. \textit{Точное решение.}
+
+Пусть снаряд упал в точке $(x,y)$. Тогда эта пара точек удовлетворяет уравнению \eqref{traj}. Также, из теоремы Пифагора следует уравнение:
+\begin{equation}
+ x^2+y^2=l^2. \label{pyth}
+\end{equation}
+Подставив $y$ из \eqref{traj} в \eqref{pyth}, получим:
+\begin{equation}
+  x^2\left(1+\left[\text{tg}\,\alpha-\frac{gx}{2v_0^2\cos^2\alpha}\right]^2\right)=l^2
+  \label{pow4}
+\end{equation}
+%\begin{figure}
+%\includegraphics[scale=0.5]{fig1.jpg}
+%\end{figure}
+Получили уравнение четвертой степени. Ввиду технических сложностей точного решения его решили численно при помощи программы \textit{Mathematica}\footnote{Имеется в виду программа компании Wolfram Research, Inc., см. www.wolfram.com/mathematica}. Каждому значению $x$ найдено соответствующее значение координаты $y$ в соответствии с уравнением \eqref{pyth}. По полученным данным была составлена таблица (ее элементы перечислены в порядке их предоставления в таблице из условия):
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$x$, м & 0,052 & 0,120 & 0,211 & 0,331 & 0,482 & 0,670 & 0,898 & 1,172 & 1,494 & 1,864\\
+\hline
+$y$, м & 0,71 & 1,62 & 2,84 & 4,44 & 6,46 & 8,96 & 11,99 & 15,60 & 19,82 & 24,68\\
+\hline
+$x$, м & 2,282 & 2,745 & 3,246 & 3,783 & 4,353 & 4,962 & 5,620 & 6,360 & 7,265 &\\
+\hline
+$y$, м & 30,14 & 36,17 & 42,71 & 49,70 & 57,13 & 65,05 & 73,61 & 83,18 & 94,76 &\\
+\hline
+\end{tabular}
+\end{center}
+
+За высоту горы примем высоту наивысшей точки, в которую попал снаряд: $H=94,\hspace{-1.3pt}76$ м.
+
+Предполагая линейную зависимость $y(x)$, найдем наклон этой горы и оценим его погрешность. Величины, данные в условии, определены с достаточно высокой точностью (порядка $10^{-4}$), их погрешностью мы пренебрегаем. Воспользуемся методом наименьших квадратов. Пусть уравнение поверхности горы имеет вид $y=kx$. Будем минимизировать сумму\footnote{Метод подробно описан в книге Squires, G.L. \textit{Practical physics}. 4$^{\text{th}}$ ed. Cambridge University Press, 2001, см. формулы (4.34) и (4.35)}
+$$
+  S=\sum{(y_i-k x_i)^2},
+$$
+где суммирование ведется по всем $i$ от 1 до $n=19$ --- количество измерений. Так как единственным параметром является $k$, то необходимо выполнение условия $dS/dk=0$. Продифференцировав, получим:
+$$
+  \sum{2x_i\left(y_i-k x_i\right)=0},
+$$
+откуда
+\begin{equation}
+  k=\dfrac{\sum{x_i y_i}}{\sum{x_i^2}}.
+  \label{minsq}
+\end{equation}
+Погрешность оцениваем по формуле
+\begin{equation}
+  \Delta k\approx\sqrt{\frac{1}{n-1}\frac{\sum{(y_i-m x_i)^2}}{\sum{x_i^2}}}=\sqrt{\frac{1}{n-1}\frac{\sum{x_i^2}\sum{y_i^2}-\left(\sum{x_i y_i}\right)^2}{\left(\sum{x_i^2}\right)^2}}.
+  \label{indef}
+\end{equation}
+
+По формулам \eqref{minsq} и \eqref{indef} получаем $k=13,\hspace{-1.3pt}10\pm0,\hspace{-1.3pt}01$. Как видим, погрешность наклона за счет неточности попадания на прямую намного больше погрешности измерения исходных величин. Угол наклона горы $\varphi=\text{arctg}\,k=\left(85,\hspace{-1.3pt}636\pm0,\hspace{-1.3pt}004\right)$\textdegree. Погрешность оцениваем по формуле
+$$
+  \Delta \varphi=\Delta k\frac{d\varphi}{dk}=\frac{\Delta k}{1+k^2}.
+$$
+Такое резкое уменьшение относительной погрешности связано с тем, что функция арктангенса растет очень медленно при аргументах, близких к $\pi/2$. В ответе приведем значения, полученные точным методом.
+
+\textbf{\underline{Ответ}:} Высота $H=94,\hspace{-1.3pt}76$ м, форма --- наклонная плоскость, образующая угол $\varphi=\left(85,\hspace{-1.3pt}636\pm0,\hspace{-1.3pt}004\right)$\textdegree\,с горизонтом.
+
+\end{document} 

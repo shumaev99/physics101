@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+%\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+%\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\textbf{\LARGE{Problem 3}}
+\end{center}
+\vspace{5mm}
+
+\textbf{\underline{Problem text}:} An elevator goes up and down the mine of depth $L=400$~m with a period of ${t_0=40}$~m. First it boosts with constant acceleration, and then it stops with the same acceleration. A pendulum clock is placed in that elevator. How much will it leave behind compared with a stationary clock? The elevator is in motion during the time of $T=5,\hspace{-0.5mm}0$ hrs daily.
+
+\textbf{\underline{Solution}:} Let's consider the motion of the elevator. We assume that during one cycle of boost-stop it boosts during exactly the half of the way (respectively, the half of the time), and stops during the other half. Let's find its acceleration $a$ in that motion. The elevator passes the way of $L/2$ during the time of $t_0/4$ with having its initial or final speed equal to zero. According to the formula of constant-accelerated motion we get
+$$
+  \frac{L}{2}=\frac{a\left(\dfrac{t_0}{4}\right)^2}{2},
+$$
+which implies
+$$
+  a=\frac{16L}{t_0^2}.
+$$
+According to the problem, the clock is a pendulum which shows time by the number of its oscillations. Its lag is caused by reduction of the number of oscillations, which is a consequence of non-inertiality of the clock's reference frame. Normally, without overloads, the period of pendulum oscillations is $T_0=2\pi\sqrt{l/g}$, where $l$ is the length of the pendulum. During one cycle of boost-stop lasting $t_0$ it has to do $n_0=t_0/T_0$ oscillations to show true time. For simplicity we will consider that $t_0\gg T_0$, so that we can consider the number of oscillations integer with high precision.
+
+Let's find how many oscillations the pendulum does in reality. Now let's turn to the reference frame of the elevator (or the clock). In that frame during the half of the time the effective acceleration is $g_1=g+a$, and during the other half $g_2=g-a$. Accordingly, the periods of pendulum oscillations in these two cases are respectively
+$$
+  T_1=2\pi\sqrt{\frac{l}{g+a}}=T_0\left(1+\frac{a}{g}\right)^{-1/2}\hspace{3mm}\text{and}\hspace{3mm} T_2=2\pi\sqrt{\frac{l}{g-a}}=T_0\left(1-\frac{a}{g}\right)^{-1/2}.
+$$
+We still consider that $t_0\gg T_1, T_2$; so that the error of rounding can be neglected.
+Then the numbers of oscillations during these intervals are respectively
+$$
+  n_1=\frac{t_0}{2T_1}=\frac{n_0}{2}\sqrt{1+\frac{a}{g}\vphantom{\frac{l}{g+a}}}\hspace{3mm}\text{and}\hspace{3mm} n_2=\frac{t_0}{2T_2}=\frac{n_0}{2}\sqrt{1-\frac{a}{g}\vphantom{\frac{l}{g-a}}}.
+$$
+Let's now find the daily lag $\Delta T$ of the clock. The relative lag (the ratio of absolute lag to the time interval measured by a stationary clock) is
+$$
+  \eta=\frac{n_0-n_1-n_2}{n_0}=1-\frac{1}{2}\left(\sqrt{1+\frac{a}{g}\vphantom{\frac{l}{g+a}}}+\sqrt{1-\frac{a}{g}\vphantom{\frac{l}{g-a}}}\right).
+$$
+Then the daily lag (considering that an integer number of boost-stop cycles happens daily) is
+$$
+  \Delta T=\eta T=T\left(1-\frac{1}{2}\left[\sqrt{1+\frac{16L}{gt_0^2}}+\sqrt{1-\frac{16L}{gt_0^2}}\hspace{1mm}\right]\right).
+$$
+Let's check the dimension:
+$$
+  \left[\Delta T\right]=\,\text{s}\cdot\left(1-\frac{1}{2}\left[\sqrt{1+{\frac{\text{m}\vphantom{\dfrac{\text{m}}{\text{s}^2}}}{\dfrac{\text{m}}{\text{s}^2}\cdot\text{s}^2}}}+\sqrt{1-{\frac{\text{m}\vphantom{\dfrac{\text{m}}{\text{s}^2}}}{\dfrac{\text{m}}{\text{s}^2}\cdot\text{s}^2}}}\right]\right)=\,\text{s}.
+$$
+The numerical value is
+$$
+  \{\Delta T\}=5\cdot 3600\left(1-\frac{1}{2}\left[\sqrt{1+\frac{16\cdot 400}{9,\hspace{-0.5mm}8\cdot 40^2}\vphantom{\frac{l}{g+a}}}+\sqrt{1+\frac{16\cdot 400}{9,\hspace{-0.5mm}8\cdot 40^2}\vphantom{\frac{l}{g+a}}}\hspace{1mm}\right]\right)=396;\hspace{5mm} \Delta T=396\,\text{s}.
+$$
+\textbf{\underline{Answer}:} $\Delta T=T\left(1-\dfrac{1}{2}\left[\sqrt{1+\dfrac{16L}{gt_0^2}}+\sqrt{1-\dfrac{16L}{gt_0^2}}\hspace{1mm}\right]\right)=396\,\text{s}$.
+
+\end{document} 

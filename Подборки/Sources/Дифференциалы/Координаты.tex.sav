@@ -1,0 +1,55 @@
+\documentclass[14pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{hyperref}
+\usepackage{epstopdf}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=230 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+\newlength{\varheight}
+\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+\spacing{1.1}
+\parskip=2mm
+\clubpenalty=10000
+\widowpenalty=10000
+\captionsetup[figure]{labelformat=empty}
+
+\begin{document}
+
+\begin{center}
+\Large{\textbf{Полные дифференциалы}}
+
+\textbf{23.04.2017}
+
+\vspace{5mm}
+\end{center}
+
+Приращением функции $f(t)$ называют величину $\Delta f=f(t+dt)-f(t)$. Если $f=f(t)$, то полным дифференциалом называют величину $df=f'(t)dt$, по сравнению с приращением по формуле Тейлора
+$$
+  \Delta f=f(t+dt)-f(t)=f'(t)dt+\dfrac12 f''(t)dt^2+\dfrac16 f^{(3)}(t)dt^3+\ldots
+$$
+В большинстве задач нужны только дифференциалы первого порядка, поэтому приращение величины $\Delta f$ за время $dt$ равно $df=f'(t)dt$. Дифференциалы можно и нужно понимать как бесконечно малые приращения. Для функции нескольких переменных $f(x,y,z,\ldots)$
+$$
+  df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz+\ldots
+$$
+Величина $(\partial f/\partial x)dx$ есть приращение функции $f$ при изменении только аргумента $x$. Соответственно, полное приращение есть сумма таких величин для разных аргументов.
+
+1. Запишите полные дифференциалы следующих величин:
+
+\end{document} 

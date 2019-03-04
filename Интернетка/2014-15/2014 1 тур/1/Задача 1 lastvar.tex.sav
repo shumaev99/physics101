@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[russian]{babel}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{false}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+\begin{center}
+\LARGE{Problem 1}
+ \end{center}
+\vspace{1cm}
+Последний вариант. Уравнение одно, лианеризации нет.
+
+\pagebreak
+
+\begin{center}
+\textbf{\LARGE{Задача № 1}}
+\end{center}
+
+\vspace{4mm}
+
+\textbf{\underline{Условие}:} Миномет установлен у основания некоторой горы под углом $\alpha=$ 1\hspace{-0.5pt},5 радиана к горизонту.
+Минометный расчет ведет записи о том, насколько далеко падают мины
+в зависимости от их начальной скорости. Определите по этим данным высоту
+и примерную форму горы.
+
+\begin{center}
+\begin{tabular}{|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|@{\hspace{1.4mm}}c@{\hspace{1.4mm}}|}
+\hline
+$v_0$, м/с & 10 & 14 & 18 & 22 & 26 & 30 & 34 & 38 & 42 & 46\\
+\hline
+$l$, м & 0,710576 & 1,611942 & 2,85057 & 4,45474 & 6,48101 & 8,9838 & 12,0195 & 15,6393 & 19,879 & 24,7493\\
+\hline
+$v_0$, м/с & 50 & 54 & 58 & 62 & 66 & 70 & 74 & 78 & 82 &\\
+\hline
+$l$, м & 30,2305 & 36,2765 & 42,8294 & 49,8405 & 57,2941 & 65,2363 & 73,8201 & 83,4179 & 95,0382 &\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{5mm}
+
+\begin{wrapfigure}{r}{210pt}
+\vspace{-7mm}
+\begin{center}
+\includegraphics[width=0.47\textwidth]{fig2.pdf}
+\end{center}
+\vspace{-5mm}
+\caption{Рис. 1.1. Ось $Ox$ горизонтальна, ось $Oy$ вертикальна. Миномет расположен в начале координат.}
+\end{wrapfigure}
+
+\textbf{\underline{Решение}:} Сопротивлением воздуха при решении задачи пренебрегаем. Введем систему координат, как на рис. 1.1. Рассмотрим движение снаряда, выпущенного из начала координат со скоростью $v_0$ под углом $\alpha$ к горизонту. Его координаты при таком движении зависят от времени по законам $x(t)=v_0 t\cos\alpha$ и $y(t)=v_0 t\sin\alpha-gt^2/2$ соответственно. Выразив $t$ из первого уравнения и подставив во второе, получим уравнение траектории:
+\begin{equation}
+  y=x\,\text{tg}\,\alpha-\frac{gx^2}{2v_0^2\cos^2\alpha}.
+  \label{traj}
+\end{equation}
+Далее приведем приближенный способ решения, который подкрепим более точным численным.
+
+Перейдем к полярным координатам $(l,\varphi)$. Координаты точек падения снаряда $x=l\cos\varphi$ и ${y=l\sin\varphi}$. Подставим их в уравнение \eqref{traj} и разделим обе его части на $x$:
+$$
+  \text{tg}\,\varphi=\text{tg}\,\alpha-\frac{gl\cos\varphi}{2v_0^2\cos^2\alpha},
+$$
+откуда, с использованием тождества $\text{tg}\,x-\text{tg}\,y=\dfrac{\sin(x-y)}{\cos x\cos y}$ получим
+\begin{equation}
+  \sin(\alpha-\varphi)=\frac{gl\cos^2\varphi}{2v_0^2\cos\alpha}.\label{trig}
+\end{equation}
+Такое уравнение невозможно решить стандартными способами, оно приводится к уравнению четвертой степени, которое решать безнадежно.
+
+Попробуем тогда найти приближенное решение. Элементарными преобразованиями уравнение~\eqref{trig} приводится к виду
+$$
+  \frac{\sin(\alpha-\varphi)}{\cos^2\varphi}=\frac{gl}{2v_0^2\cos\alpha}.
+$$
+График зависимости левой части от переменной изображен на рис. 1.3. Так как во всех 19 случаях величина $\varepsilon=gl/2v_0^2\cos\alpha$ меньше 1 (убедитесь сами), то уравнение имеет единственный корень, близкий к $\pi/2$ (он соответствует пересечению изображенного графика с прямой $y=\varepsilon$). Так как и угол $\alpha$ близок к $\pi/2$, то будем считать углы $\alpha$ и $\varphi$ близкими между собой. А именно, применим приближения $\sin(\alpha-\varphi)\approx\alpha-\varphi$ и $\cos\varphi=\sin(\pi/2-\varphi)\approx\pi/2-\varphi$. Уравнение~\eqref{trig}
+\begin{wrapfigure}{r}{220pt}
+\begin{center}
+\includegraphics[scale=0.3]{varfig0.pdf}
+\end{center}
+\vspace{-3mm}
+\caption{Рис. 1.3. График функции $y(x)=\sin(\alpha--\hspace{1mm}x)/\cos^2 x$, где $\alpha=1,\hspace{-0.5mm}5$ рад.}
+\vspace{-5mm}
+\end{wrapfigure}
+примет вид
+$$
+  \alpha-\varphi=\frac{gl}{2v_0^2\cos\alpha}\left(\frac{\pi}{2}-\varphi\right)^2,
+$$
+которое легко привести к виду
+$$
+  q\varphi^2-\varphi\left(q\pi-1\right)+\left(\frac{q\pi^2}{4}-\alpha\right)=0,\hspace{3mm} q=\frac{gl}{2v_0^2\cos\alpha}.
+$$
+Получили квадратное уравнение, корни которого
+$$
+  \varphi_{1,2}=\frac{1}{2q}\left(q\pi-1\pm\sqrt{(q\pi-1)^2-q\pi^2+4\alpha}\right).
+$$
+
+Во всех случаях искомый корень --- с плюсом перед радикалом (второй корень не подходит, так как он не соответствует примененным приближениям). В таблице представлены решения этого уравнения для всех случаев, представленных в условии, в порядке их перечисления. Как далее выяснится, ошибка по сравнению с точным решением $\Delta\varphi=0,\hspace{-0.5mm}001$\textdegree.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$\varphi$,\text{\textdegree} & 85,7915 & 85,7645 & 85,7517 & 85,7419 & 85,7326 & 85,7229 & 85,7126 & 85,7018 & 85,6907\\
+\hline
+85,6797 & 85,6695 & 85,6604 & 85,6528 & 85,6466 & 85,6416 & 85,6373 & 85,6328 & 85,6266 & 85,6151\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[h]
+\vspace{-5mm}
+\begin{center}
+\hspace{-10mm}
+\includegraphics[scale=0.85]{fig1.pdf}
+\vspace{-10mm}
+\caption{Pис. 1.4. График поверхности горы по точкам (не в масштабе). Зеленым изображена поверхность горы, другими цветами изображены траектории снарядов. Справа приведен график в масштабе.}
+\end{center}
+\end{figure}
+
+По полученным данным был построен график\footnote{На самом деле он построен по данным точного решения. Впрочем, невооруженным глазом это различие не заметно.}, см. рис. 1.4. Траектории снарядов кажутся настолько прижатыми к поверхности из-за малой разности углов $\alpha$ и $\varphi$.
+
+По полученным данным полярные углы $\varphi$ всех точек близки, то есть форма горы близка к линейной. Однако в пределах погрешности можно утверждать, что гора выпукла вверх. Наилучшая лианеризация горы соответствует углу наклона --- среднему этих величин\footnote{На самом деле правильно усреднять не углы, а их тангенсы.}: $\overline{\varphi}=85,\hspace{-1.3pt}69$\textdegree. Высота горы $H=l_{19}\sin\varphi_{19}=94,\hspace{-1.3pt}7601$~м.
+
+Проверим полученные результаты при помощи точного решения. Уравнение \eqref{trig} решили при помощи программы \textit{Mathematica}\footnote{Имеется в виду программа компании Wolfram Research, Inc., см. www.wolfram.com/mathematica}. Полученные данные иллюстрирует следующая таблица:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$\varphi$,\text{\textdegree} & 85,7915 & 85,7645 & 85,7517 & 85,7419 & 85,7326 & 85,7229 & 85,7126 & 85,7018 & 85,6907\\
+\hline
+85,6797 & 85,6695 & 85,6604 & 85,6528 & 85,6466 & 85,6416 & 85,6373 & 85,6328 & 85,6266 & 85,6151\\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{\underline{Ответ}:} Высота $H=94,\hspace{-1.3pt}7601$ м, форма --- наклонная плоскость, образующая угол $\varphi=\left(85,\hspace{-1.3pt}636\pm0,\hspace{-1.3pt}004\right)$\textdegree\,с горизонтом.
+
+\end{document} 

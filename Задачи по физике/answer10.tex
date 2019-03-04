@@ -1,0 +1,92 @@
+\documentclass[14pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Consider the rod to be a diagonal of a rectangle with one pair of sides directed towards the velocity of its motion. Then the lateral size of the rectangle in the lab frame is $\gamma=\left(1-v^2/c^2\right)^{-1/2}$ times smaller than in its rest frame, whereas the transverse size is the same in both frames. Obviously, the rod will appear straight (not curved) in the lab frame as the contraction of all parts of the rod is equal. So, the lateral sizes in the rest frame and in the lab frame are $x_0=l_0\cos\alpha_0$ and $x=x_0/\gamma=l_0\cos\alpha_0 \sqrt{1-v^2/c^2}$ respectively, the transverse size is $y_0=y=l_0\sin\alpha_0$. The length of the rod in the lab frame is
+$$
+  l=\sqrt{x^2+y^2}=l_0\sqrt{1-\frac{v^2 \cos^2 \alpha_0}{c^2}}.
+$$
+The new angle is
+$$
+  \alpha=\text{arctg}\,\frac{y}{x}=\text{arctg}\,\frac{\text{tg}\,\alpha_0}{\sqrt{1-v^2/c^2}}.
+$$
+
+2. The relative velocity of the spaceships is
+$$
+  \beta_{12}=\frac{\beta_2-\beta_1}{1-\beta_1 \beta_2}=0.5,
+$$
+where $\beta_2=0.8$ and $\beta_1=0.5$.
+
+3. The light beam in the water can be considered as a set of particles moving with relative velocity $u_0=c/n$ with respect to the water, for which $n=1.33$. Then the velocity in the lab frame is
+$$
+  u=\frac{u_0+v}{1+\dfrac{u_0 v}{c^2}}=c\cdot\frac{c+nv}{v+nc}.
+$$
+For $v\ll c$ and $n\sim 1$ this formula may be simplified:
+$$
+  u\approx \frac{c}{n}+v\left(1-\frac{1}{n^2}\right).
+$$
+
+4. By squaring the energy relations and subtracting them we get
+$$
+  E^2-p^2 c^2=\frac{m^2 c^4}{1-v^2/c^2}-\frac{m^2 v^2 c^2}{1-v^2/c^2}=\frac{m^2 c^2}{1-v^2/c^2}\left(c^2-v^2\right)=m^2 c^4,
+$$
+q.e.d.
+
+5. Using the neutron rest mass $m_n=939.5654$ MeV, the proton mass ${m_p=}$ ${=938.2720}$ MeV and the electron mass $m_e=0.5110$ MeV, we get the difference ot total rest masses
+$$
+  \Delta m=m_n-m_p-m_e=0.7824 \text{ MeV}.
+$$
+This answer differs from the experimental result by three times the uncertainty. This may mean that the uncertainty in the experiment is underestimated, but generally the result agrees well with the theory.
+
+6. The energy of the considered system is conserved and equal to ${E=W_k+}$ ${+2mc^2\approx W_k}$, as $W_k\gg mc^2$ (here $W_k=1$ GeV is the kinetic energy of the incident electron, $m=511$ keV is the particle's mass). Numerically ${E=}$ ${=1001}$~MeV. This energy is equally distributed between the photons, so the energy of each photon is ${E_\gamma=E/2=0.5}$ GeV. The momentum of each photon is the same, $p_\gamma=E_\gamma/c=0.5$ GeV.
+
+To determine the angle $\alpha\ll 1$ we need a more precise solution without step-by-step calculations. The momentum of the system is conserved and equal to
+$$
+  p=\frac{\sqrt{E^2-m^2 c^4}}{c}=\frac{W_k}{c}.
+$$
+On the other hand, the photon's momentum is
+$$
+  p_\gamma=\frac{W_k}{2c}+mc.
+$$
+So, by the momentum conservation,
+$$
+  \cos\alpha=\frac{p}{2p_\gamma}=\left(1+\frac{mc^2}{W_k}\right)^{-1}\approx 1-\frac{mc^2}{W_k}.
+$$
+That implies the angle
+$$
+  \alpha\approx\sqrt{\frac{2mc^2}{W_k}}=0.03 \text{ rad }=1.8\degree.
+$$
+
+\end{document}

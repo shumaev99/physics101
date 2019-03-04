@@ -1,0 +1,126 @@
+\chapter{}
+
+\textbf{\underline{Условие}:} Санки с мальчиком и собакой общей массой $M$ скатываются с постоянной скоростью $v_0$ с горы, угол которой к
+\begin{wrapfigure}{r}{120pt}
+\begin{center}
+\vspace{-3mm}
+\includegraphics[scale=0.6]{2/fig21.jpg}
+\end{center}
+\caption{расположение тел перед прыжком\href{http://www.fizportal.ru/z/1125.jpg}{$^*$}.}\label{dogsledgeone}
+\end{wrapfigure}
+горизонту $\alpha$ ($\cos\alpha=6/7$). Собака массой $m$ прыгает с санок по ходу их движения и приземляется со скоростью, которая равна $v$, и направлена под углом $\beta$ ($\cos\beta=3/7$) к горизонту. Санки после этого движутся снизу вверх. Определите скорость движения санок с мальчиком после прыжка собаки.
+
+\textbf{\underline{Решение}:} По условию, изначально сани двигались равномерно, между тем как на гладкой поверхности они бы двигались ускоренно. Естественно предположить, что разгону саней препятствует сила сухого трения между санями и горкой, причем коэффициент трения
+\begin{equation}
+  \mu=\text{tg}\,\alpha\label{friction}
+\end{equation}
+при их равномерном движении.
+
+Рассмотрим движение собаки после ее прыжка (см. рис. \ref{dogsledgeone}). Пусть она покинула сани со скоростью $v_1$ под углом $\beta_1$ к горизонту (см. рис. \ref{dogjump}). Найдем величины $v_1$ и $\beta_1$ при помощи принципа обратимости в механике. Пусть собака прыгает с горы в сани с начальной скоростью $v$ под углом $\beta$ к горизонту. Выберем систему координат, как на рис. \ref{dogjump}. В ней уравнение траектории движения собаки имеет вид
+\begin{equation}
+  y=x\,\text{tg}\,\beta-\frac{gx^2}{2v^2 \cos^2\!\beta}.\label{trajectory}
+\end{equation}
+
+\begin{wrapfigure}{r}{160pt}
+\begin{center}
+\vspace{-8mm}
+\includegraphics[scale=0.2]{2/fig22.pdf}
+\end{center}
+\vspace{-13mm}
+\caption{траектория движения собаки.}\label{dogjump}
+\end{wrapfigure}
+
+Найдем координаты $(x_0,y_0)$ точки приземления собаки в сани. Так как эта точка лежит на склоне горы, то $y_0=x_0\,\text{tg}\,\alpha$. Также, координаты данной точки удовлетворяют уравнению \eqref{trajectory}. Подставляя $y_0$ в \eqref{trajectory} и сокращая на $x_0$, получим:
+$$
+  \text{tg}\,\beta-\text{tg}\,\alpha=\frac{gx_0}{2v^2 \cos^2\!\beta},
+$$
+откуда
+$$
+  x_0=\frac{2v^2 \cos^2\!\beta \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}{g}.
+$$
+Соответственно, вертикальная координата
+\begin{equation}
+  y_0=x_0\,\text{tg}\,\alpha=\frac{2v^2 \cos^2\!\beta \,\text{tg}\,\alpha \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}{g}.\label{verticaldisp}
+\end{equation}
+
+\begin{wrapfigure}{r}{180pt}
+\begin{center}
+\vspace{-6mm}
+\includegraphics[scale=0.3]{2/fig23.pdf}
+\end{center}
+\caption{динамика тел во время прыжка. На верхнем рисунке сани все еще движутся вниз, на втором они остановились, на третьем --- движутся вверх}\label{impact}
+\vspace{5mm}
+\end{wrapfigure}
+
+При помощи соотношения \eqref{verticaldisp} найдем проекции $v_{1x}$ и $v_{1y}$ скорости $v_1$ собаки в момент прыжка из саней (в обычной системе координат, с осью $Ox$, направленной \textit{\textbf{слева направо}}). Так как во время движения собаки на нее действует только вертикальная сила тяжести, то горизонтальная проекция ее скорости не изменяется со временем:
+$$
+  v_x=v_{1x}=v\cos\beta=const.
+$$
+Вертикальную же проекцию скорости нетрудно найти из закона сохранения энергии:
+$$
+  v_{1y}=\sqrt{v^2 \sin^2\!\beta-2gy_0}=v\sqrt{\sin^2\!\beta-4 \cos^2\!\beta \,\text{tg}\,\alpha \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}.
+$$
+Соответственно, величины $v_1$ и $\beta_1$ могут быть выражены через $v_{1x}$ и $v_{1y}$ как
+\begin{equation}
+  v_1=\sqrt{v_{1x}^2+v_{1y}^2}=v\sqrt{1-4 \cos^2\!\beta \,\text{tg}\,\alpha \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}\label{doginitspeed}
+\end{equation}
+и
+\begin{equation}
+  \beta_1=\text{arctg}\,\frac{v_{1y}}{v_{1x}}=\text{arctg}\,\sqrt{\text{tg}^2\beta-4\,\text{tg}\,\alpha \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}\label{doginitangle}
+\end{equation}
+соответственно. Рассмотрим теперь быстрый, но конечный во времени процесс прыжка собаки. Будем считать этот процесс настолько быстрым, что действием силы тяжести во время удара можно пренебречь. Так как скорость саней в течение прыжка меняет направление, то и сила трения $\vec{F}_{\text{fr}}$ также меняет направление, что делает рассмотрение этого процесса весьма непростым. Для решения этой проблемы разобьем движение тел на два этапа: в первом скорость саней направлена вниз, во втором --- вверх (см. рис.~\eqref{impact}). Пусть сила реакции опоры зависит от времени по закону $N(t)$. Тогда сила трения зависит от времени по закону $F_\text{fr}(t)=\mu N(t)$. Проинтегрировав это соотношение по некоторому промежутку времени $T$, получим:
+\begin{equation}
+  \int\limits_T F_\text{fr}dt=\mu\int\limits_T Ndt.\label{integralfriction}
+\end{equation}
+Направим ось $Ox_1$ вниз вдоль горки, а ось $Oy_1$ --- по нормали к ней, и перейдем в систему координат $x_1 Oy_1$. Величина $p_\perp=\int Ndt$ есть ни что иное, как импульс силы реакции опоры. Аналогично, величина $p_\parallel=\int F_\text{fr}dt$ есть импульс силы трения. Используя соотношение \eqref{integralfriction}, получим:
+\begin{equation}
+  p_\parallel=\mu p_\perp.\label{forcemoments}
+\end{equation}
+Формулы \eqref{integralfriction} и \eqref{forcemoments} верны только тогда, когда сила трения направлена в одну и ту же сторону, а скорость саней не равна нулю. В частности, они верны на первом этапе прыжка, а также, возможно, на втором (но не на обоих сразу!). Пусть в конце первого этапа собака приобрела скорость $u_1$. Запишем закон изменения импульса (интеграл второго закона Ньютона, обобщение закона сохранения импульса для случая присутствия внешних сил) на первом этапе прыжка в проекции на выбранные оси:
+\begin{gather*}
+  p_{\parallel 1}=Mv_0-mu_1 \cos\left(\alpha+\beta_1\right),\\
+  p_{\perp 1}=mu_1 \sin\left(\alpha+\beta_1\right),
+\end{gather*}
+откуда с использованием соотношений \eqref{friction} и \eqref{forcemoments} получим
+\begin{equation}
+  u_1=\frac{Mv_0}{m\left(\cos\left(\alpha+\beta_1\right)+\mu\sin\left(\alpha+\beta_1\right)\right)}=\frac{Mv_0 \cos\alpha}{m\cos\beta_1}.\label{medialspeed}
+\end{equation}
+Запишем также закон изменения импульса на втором этапе (здесь $V$ --- конечная скорость саней):
+\begin{gather*}
+  p_{\parallel 2}=m\left(v_1-u_1\right)\cos\left(\alpha+\beta_1\right)-(M-m)V,\\
+  p_{\perp 2}=m\left(v_1-u_1\right) \sin\left(\alpha+\beta_1\right),
+\end{gather*}
+откуда с использованием \eqref{friction} и \eqref{forcemoments} получим
+\begin{equation}
+  V=\frac{m}{M-m}\left(v_1-u_1\right)\left(\cos\left(\alpha+\beta_1\right)-\mu\sin\left(\alpha+\beta_1\right)\right)=\frac{m\cos\left(2\alpha+\beta_1\right)}{(M-m)\cos\alpha}\left(v_1-\frac{Mv_0 \cos\alpha}{m\cos\beta_1}\right).\label{sledgespeed}
+\end{equation}
+Данное выражение может быть приведено при помощи соотношений \eqref{doginitspeed}, \eqref{doginitangle} и \eqref{medialspeed} к виду
+\begin{equation}
+  V=\frac{mv}{(M-m)\cos\alpha}\left(\cos 2\alpha \cos\beta-\sin 2\alpha \sqrt{\sin^2\!\beta-4 \cos^2\!\beta \,\text{tg}\,\alpha \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}\right)\left(1-\frac{Mv_0 \cos\alpha}{mv \cos\beta}\right).\label{sledgespeedfinal}
+\end{equation}
+Очевидно, левая дробь в выражении \eqref{sledgespeedfinal} положительна. Также из решения очевидно, что $v_1>u_1$, из чего следует положительность правой скобки в рассматриваемом выражении. Если же вычислить значение средней скобки при данных значениях углов $\alpha$ и $\beta$, получим:
+$$
+  f(\alpha,\beta)=\cos 2\alpha \cos\beta-\sin 2\alpha \sqrt{\sin^2\!\beta-4 \cos^2\!\beta \,\text{tg}\,\alpha \left(\text{tg}\,\beta-\text{tg}\,\alpha\right)}=-0,\hspace{-1.3pt}156<0.
+$$
+
+\begin{wrapfigure}{r}{205pt}
+\begin{center}
+\includegraphics[scale=0.41]{2/fig24-printed.jpg}
+\end{center}
+\vspace{-2mm}
+\caption{график функции $f(\alpha,\beta)$. Значению функции соответствует насыщенность цвета, белым изображена область отрицательных значений, в которой произойдет заклинивание.}\label{regionstop}
+\end{wrapfigure}
+
+А это означает, что выражение для конечной скорости саней \eqref{sledgespeedfinal} отрицательно! На самом же деле в данном случае произошло \textit{заклинивание} --- силы трения хватает с избытком для того, чтобы не дать саням сдвинуться, так что соотношение \eqref{forcemoments} не выполняется. Сани же после остановки так и не сдвинутся с места. Учитывая соотношение \eqref{friction}, можно сказать, что далее сани будут находиться в некоем безразличном равновесии.
+
+Осталось добавить, что данное решение справедливо при $v_1>u_1$. В противном случае, а именно, при
+$$
+  \frac{Mv_0}{mv}>\frac{\cos\beta}{\cos\alpha}=\frac12,
+$$
+сани после прыжка собаки будут продолжать двигаться вниз, а конечная скорость саней будет равна\footnote{Такая задача известна и предлагалась в сборнике задач МФТИ, см. \href{http://www.fizportal.ru/sbornic-zs-mfti}{здесь}}
+$$
+  V=\frac{2Mv_0-mv}{2(M-m)}.
+$$
+Также, диапазон углов $\alpha$ и $\beta$, для которых заклинивание будет происходить, изображен на рис. \ref{regionstop}.
+
+\textbf{\underline{Ответ}:} $V=0$. 

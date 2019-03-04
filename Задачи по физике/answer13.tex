@@ -1,0 +1,105 @@
+\documentclass[12pt,a4paper,pdflatex]{disser}
+%\usepackage[russian]{babel}
+%\usepackage[utf-8]{inputenc}
+%\usepackage{amsmath,amssymb}
+%\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[dvips]{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{amssymb}*
+%\usepackage{color}
+%\usepackage{ulem}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\oddsidemargin=0 cm
+\evensidemargin=0 cm
+\textwidth=170 mm
+\textheight=260 mm
+\topmargin=0 cm
+\voffset= -2cm
+\pagenumbering{true}
+%\newlength{\varheight}
+%\setlength{\varheight}{3.1cm}
+\setlength{\parindent}{0cm}
+%\newcommand{\taskname}[name]{\begin{center} \bf{\Large{name}} \end{center}}
+\spacing{1.1}
+\parskip=2mm
+%\captionsetup[figure]{labelformat=empty}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+
+1. Consider the center-of-mass frame of reference, let the positive $Ox$ direction be antiparallel to $v_0$. In this frame the velocities of the balls before the collision are $u_0=-2mv_0/(M+2m)$ and $u_1=u_2=Mv_0/(M+2m)$ respectively. Then right after the collision the velocities will be
+\begin{gather}
+  u_0 '=\frac{(M-m)u_0+2mu_1}{M+m}=\frac{2m^2 v_0}{(M+m)(M+2m)},\nonumber\\
+  u_1 '=\frac{2Mu_0-(M-m)u_1}{M+m}=-\frac{M(M+3m)v_0}{(M+m)(M+2m)}.\nonumber
+\end{gather}
+Consider the event of the collision to be the point $(x,t)=(0,0)$. Then the originally incident ball will be moving by law
+$$
+  x_0(t)=u_0 ' t=\frac{2m^2 v_0}{(M+m)(M+2m)}t=\frac{2v_0}{(\mu+1)(\mu+2)}t,
+$$
+and the other collided ball --- by law
+$$
+  x_1(t)=\frac{u_1 ' +u_2}{2}t+\frac{u_1 ' -u_2}{2\omega}\sin\omega t=-\frac{\mu v_0}{(\mu+1)(\mu+2)}t-\frac{\mu v_0}{(\mu+1)\omega}\sin\omega t,
+$$
+where $\omega=\sqrt{2k/m}=1$ rad/s and $\mu=M/m$.
+
+The second collision will happen if $x_0(t_1)=x_1(t_1)$ at some $t_1>0$. This condition may be simplified to
+$$
+  t_1=-\frac{\mu}{\omega}\sin\omega t_1.
+$$
+Obviously, this equation has a solution if $\mu$ is not less than some $\mu_0$ which can be derived from the condition $v_0(t_1)=v_1(t_1)$ (the $x-t$ curves touch each other in a single point). So, we have a system of equations
+\begin{gather}
+  \varphi=-\mu_0\sin\varphi,\nonumber\\
+  1=-\mu_0\cos\varphi,\nonumber
+\end{gather}
+where $\varphi=\omega t_1$. It can be reduced to a transcendental equation $\varphi=\tan\varphi$, which numeric solution is $\varphi_0=4.493$ rad, giving $\mu_0=4.603$. So, the second collision will happen if $M\ge 4.60m$ with a maximum interval $\Delta t_\text{max}=\varphi_0/\omega=4.49$ s. For an arbitrary $\mu>\mu_0$ the time interval $\Delta t=\varphi/\omega$, where $\varphi$ is found from $\varphi=-\mu\sin\varphi$.
+
+2. For an estimation let's consider the temperature of the air $T$ inside the channel constant. Then the density of the air $\rho$ linearly depends on $p$:
+$$
+  \rho(p)=\frac{p\mu}{RT},
+$$
+where $\mu=0.029$ kg/mol is the molar mass of air, $R=8.314 $ J/(mol\,$\cdot$\,K) is the gas constant. So, the pressure gradient at a distance $x$ from the center is
+$$
+  \frac{dp}{dx}=-\rho g(x)\frac{x}{\sqrt{x^2+R_0^2/2}}=-\frac{p\mu g_0}{RT}\frac{x}{R_0},
+$$
+where $R_0$ is the radius of the Moon, $g_0$ is the acceleration due to gravity on its surface. The solution of this equation is
+$$
+  p(x)=p_0\exp\left(-\frac{x^2}{2x_0^2}\right),
+$$
+where
+$$
+  x_0=\sqrt{\frac{R_0 RT}{\mu g_0}}=303.6 \text{ km}
+$$
+at $T=300$ K. So, the pressure near the surface is
+$$
+  p\left(\frac{R_0}{\sqrt{2}}\right)=2.46\cdot 10^{-4} \text{ atm}=25 \text{ Pa}.
+$$
+
+3. Let the amount of water $m_\text{i}=\alpha m$ freeze. Then the heat balance yields
+$$
+  \alpha \lambda=(1-\alpha)(c\Delta t+r),
+$$
+where $c=4200$ J/(kg\,$\cdot$\,K) is the heat capacity of water, $\Delta t=100$ K, $\lambda=330$ kJ/kg is the specific heat of melting, $r=2.3$ MJ/kg is the specific heat of evaporation. From this equation we get
+$$
+  \alpha=\frac{r+c\Delta t}{r+c\Delta t+\lambda}=0.89.
+$$
+So, $m_\text{i}=44.5$ g of water freezes, other $m_\text{v}=5.5$ g vaporizes.
+
+4. The first three statements are true. For the fourth statement we need to find $\exp(\sigma_i)$. For example,
+$$
+  \exp(\sigma_1)=I\sum\limits_{i=0}^\infty \frac{1}{(2i)!}+\sigma_1 \sum\limits_{i=0}^\infty \frac{1}{(2i+1)!}=I\cosh 1+\sigma_1 \sinh 1.
+$$
+Similarly,
+\begin{gather*}
+  \exp(\sigma_2)=I\cosh 1+\sigma_2 \sinh 1,\\
+  \exp(\sigma_3)=I\cosh 1+\sigma_3 \sinh 1.
+\end{gather*}
+This means that the relation $\exp(\sigma_i \sigma_j)=\exp(\sigma_i)\exp(\sigma_j)$ is false. This relation would be true if $\sigma_i$ were pairwise commutative.
+
+\end{document} 

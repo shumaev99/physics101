@@ -1,0 +1,800 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     27769,        791]
+NotebookOptionsPosition[     26207,        731]
+NotebookOutlinePosition[     26550,        746]
+CellTagsIndexPosition[     26507,        743]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"pts", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"340", ",", "56.51"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"530", ",", "88.09"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"720", ",", "140.4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"910", ",", "224.4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1100", ",", "332.4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1290", ",", "428.8"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1480", ",", "492.0"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.603808658749357*^9, 3.603808771981834*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"340", ",", "56.51`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"530", ",", "88.09`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"720", ",", "140.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"910", ",", "224.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1100", ",", "332.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1290", ",", "428.8`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1480", ",", "492.`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.603808773508921*^9, 3.6038800528346457`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", "pts", "]"}], ",", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"BSplineCurve", "[", 
+     RowBox[{"pts", ",", 
+      RowBox[{"SplineDegree", "\[Rule]", "2"}]}], "]"}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "0.00157895`"}], "+", 
+      RowBox[{"0.166211`", " ", "x"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "340", ",", "900"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "0.294737"}], " ", "+", " ", 
+      RowBox[{"0.332632", "*", "x"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "1100", ",", "1480"}], "}"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6038087783391976`*^9, 3.6038088936497927`*^9}, {
+  3.6038091675584593`*^9, 3.6038092193924246`*^9}, {3.6038799581362295`*^9, 
+  3.6038799837056923`*^9}, {3.603880018065657*^9, 3.6038800720277433`*^9}, {
+  3.6038801022794743`*^9, 3.603880169655328*^9}, {3.6038802113457117`*^9, 
+  3.6038802297097626`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, 
+    {RGBColor[0.24720000000000014`, 0.24, 0.6], 
+     PointBox[{{340., 56.51}, {530., 88.09}, {720., 140.4}, {910., 224.4}, {
+      1100., 332.4}, {1290., 428.8}, {1480., 492.}}]}, {}}, 
+   BSplineCurveBox[{{340, 56.51}, {530, 88.09}, {720, 140.4}, {910, 224.4}, {
+     1100, 332.4}, {1290, 428.8}, {1480, 492.}},
+    SplineDegree->2], {{}, {}, 
+    {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwVxX081HcAB3APjUKRnIeIcdWkrDxkqls+TK956UjkmXO+dlQqD3WOc8I5
+zvld6EnyMFrhNdqR11IqSZ46DyWV9TBpaIqGml6aI9v+eL/e5iTGm6OipKTk
+8Z//P/pEoakELq4rFpd4ODNR6COVNLtwkReKuBlXJm49NFFP3cXFD81pg8Vu
+TCy5/63KZ3cutDOUG8b3MFHQkfpJ4ctFlIZqVDaLicZrqq9no7nQN1KTtyYz
+sXhe8/bUOS6OOWid2N7ABMUyjh2a4mJLnCHNcqMHSsTKMxJZApI8bwzILD0x
+Pdz/6iSbh2TRsfP7aXtgdPbpPWPtRJw+bFCYsrAHjLFLfbE9iXAaMl9bJvDC
+hegQZ3pKEnTs2+YNP3hBKf/5w3IGH3LGRtn+uL2w1zwRWv6JjxVlWQucyb2o
+vm7lvVCVjFrrI73zxBur1fIi10UK4Bi7OuHAH97oyXw5Um2QgjVD3mUx/j7w
+CSEh9e0pyK1KjaR3++Bx/+UZkfA4xuhxar+47UNh8vDHX21TUdozub6vaR98
+217q171PxY4NNl/KGb74+4r4fIFfGiKGoq7FNPpisIj2u6osDW9arB7UWvuh
+7VGWbEArHX4B9c3tNX7oqTi8NYCTDjPjji1cc3887PyG6dSejv6TP/Lnyv3h
+TCthR9GF0CHRxNo0AP0K7oadyUJUs9q6/jkVALatnZD/XAhr7WHNkpWB0FaJ
+zOPYZUDrHdX7mzgQGxZsi07mZIBnYWXdogiEk9uIPf1tBuRaJzhpSUHgbVom
+inAWIZEuMH02GYQatm7EsgsiaE9urlM/Egz3O1edpj+LYKv7dGhkPBgajff7
+Mv0yUUe08gPDQtCp3P0+7WomDKK+MKoYDEHFCKPTakUWXpzLscjxCcXktFsR
+jZMFK4slXSadobD3dFzgtGaBsF3cM11ZKHYt1eMYi/GxS2u3uJGFxZzXN+V8
+MeLfFq8NcwyD6OBFg8FHYrjbXzveJwvDUa4i1mZjNvwORdzkrWQjrM8haEKS
+DUFhLz3ei43DbWOzPsPZ6HuewtxGscFbKlhn4SKBES8/fKKLjXe8ai+bcgm+
+QumuY8vCIUzz3DI1K0GE2fRb+XfhoD17Uqbrn4PTARV8jYxwyLv6W0drc/Ch
+qrzb4HY43owdeD2rRkF/bcGEYjYcqr6jBbEcCl/P/TXb5UCA4Mfz55oocP+k
+2iLjCCx15SXmzRR2xot4h+IJdORNjJo7FNQ/C6zijxK8cqgS3G6lUEQ7kp/C
+JUjX5c+Pyik0u3qFnEkiuCs3m7cZoKBxUW+mJZ3A1TFa0T1JoTyslL7mFMGm
+qbBi32kKByfODlicJtCr3Ldj6D0FO16uxPIMweiqnckfZii056ZO2RUQZE7p
+KAwVFCaawm+6FxF0VDbMcdSlcDBZ75P4E4EstKZoaqkUi1WmascvEhTolW9P
+0pBCbmfQmHGJIFIo4UuXSxG8e6lZXiWBGitkrn6VFGn88fGKaoJJvb1FDJoU
+7mojpTU1BAPdu7Z36Eux6tQLryuXCSq3beY/M5Ki8ueehlsygtxp+uoIYyli
+trYfuFtLkFBleOOdiRSOLU0m9+oIWKzlQQmmUih7NDzovULwPU1lbtFMiu6n
+MuGjeoJ/Ab8GOY4=
+      "]]}}, {{}, {}, 
+    {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwVx30wlAkAx/Ftp0hHKa3eRC2XK85LXEpvv1Lc2ZLYaC+Ei7ouae/W7tpd
+T+pMXjK0b88TwqSJtpw9b7HKy7hy2vIyKUUpJa3UVkoo5Pb++M53PssjYwOi
+6DQabaeh/38hdiad5iJFw5XbJ3K6+DinyuMIDE5LT2V5dvOh6HMvfWtwQIwP
+o8vgpOCI8B5XKZ47/XPJ8jEf0Ztr6mrcpJhRVtMmfcLHqjlHxHEeUrCqVUtT
++vgoK2kbHtwkxYMbyRqeno8GPam7v1MKfY/X0M5pAkw7mLrV6agUU/Y9zsGO
+AujPd/dFpEtx8tfQoFNsAejGHo8mVVLk0h+WvhYL4Hlw1MdKK0VO+R+PiwoF
+sE61HGcMSGEaMvI2tVWAbwuzbGUzZQi3ym5v/CzAHr19Af87GXa4r9W52gnh
+MjL/4BpvGVRetf1NLCGcv0SdF0bLMHj4l/IyvhBd9QwmmSRDbur7QzfyhChW
+t48tKZBBNyUING0SoiD73Ta7RhkYGcvMrrwXwssn5oFxrwwVFn+XxC6Mx8x3
+fk9jaHJ4lIbbnPaKx0jD+o0blskRWPjNzccx8chkJz/r3yjHU1luAFsZD1bf
+mvG5YXLsovzVzIZ4lLtt37dIIoerfPCj5UA8Nh2vcrlwTo7RwovGkRYifBh2
+D1Fel4M9b59/30YRdjvObY3sloMZN5qYFiXCvbDdlWVf5Oh8V5GYckYEeuD7
+5z0LFfgSwTlUXC0Ch5sdzV2jQKXDWJJRrwgdaZf2JwcpsMes+ljVLDHGohj5
+Qp4CUS/DtmWsFmPLhpeBbxQK/Pxghe5aqBjlGxrDmisU0Nm8qrNJEaP964T6
++F0F+vfLCJVaDPPrOXzNBwX+rQoxS+sWY8Iz689WcyUWG89OOkOXwPzF+Zcs
+JyWml2icW1ZK8GPK7HqWnxIdR05dDmdL4PC2q2fFESUsbD3NFkskWL3L5Pek
+dCXWDs3evKpIghdcakftZSVarmr3hrdJUF/nkhDWrMR4R2LRnREJao2cbE8O
+KGFqsvdm5vIERJunzTlhRCLjB8vbwp8S4Mbw5dLtSQzHf8qv5iVg5TbGyjfe
+JD4y2lRO+QnQum+2Lz1AIlKVmaNtSkDGspbssSQSlWxuSO1QAr62aNhLLpAQ
+ja6b0bmIAHmx9EBhA4nOoYnndlsIBAjNBst7SVhOf5ap/Y2AxrS58txXEs1m
+xXaknECzdmArc4rEwFmvTh8Fgc4Uk/Yig43sHiV/Nnh4OmuwjEbB23PW6xCS
+gNNki/UtOoXG6EOltlkECvQdyZ+MKFyrt9tUmkfgdOtTjt8cCiXc3OA7KgLZ
+6TRdh8GtE+4mxGUCl3yX8zjmFPTJd2qcrxBoaorMODCXgmPe+FJ5MQFafX+j
+yIKCSst5wVET4KlfOxQtoFBga8nVVRA4GWOqcVxIoaHkL2ZWJQGpw/feZQb3
+rtt+z/cqgZKio+G1iyhY+/M8SqoIDOQPKTqWUMiR3J3k1RAYCZ3H5FhR0Bgf
+Vq+4RmCGlZv6icFdsmkRDw1mnuXderWUwgKVy431tQRcg5RBsdYUPNyb4/QG
+Y/7VvmGDg+v32+fXEfC723lMZEMhznf0oX89gdAzo5NTBivvZ6TRGwj8BzZ8
+Tw8=
+      "]]}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{340., 0},
+  Method->{},
+  PlotRange->{{340., 1480.}, {0, 492.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{22.8, 22.8}, {9.84, 9.84}}]], "Output",
+ CellChangeTimes->{
+  3.6038087925750117`*^9, {3.6038091830633464`*^9, 3.603809220086464*^9}, {
+   3.6038800409599667`*^9, 3.6038800741808667`*^9}, 3.6038801069237394`*^9, {
+   3.603880141531719*^9, 3.6038801704123707`*^9}, 3.6038802305068083`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "=", 
+  RowBox[{"Interpolation", "[", "pts", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6038092513382516`*^9, 3.603809259165699*^9}, {
+  3.603809385704937*^9, 3.6038093857989426`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"InterpolatingFunction", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"340.`", ",", "1480.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+   "]"}],
+  False,
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.603809357822342*^9, 3.603809386351974*^9}, 
+   3.603809473563962*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", "\[Sigma]"}], 
+       RowBox[{"\[Rho]", " ", "g", " ", "R"}]], "/.", 
+      RowBox[{"\[Sigma]", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"0.03", ",", 
+         FractionBox["\"\<Newtons\>\"", "\"\<Meters\>\""]}], "]"}]}]}], "/.", 
+     RowBox[{"\[Rho]", "\[Rule]", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1000", ",", 
+        FractionBox["\"\<Kilograms\>\"", 
+         SuperscriptBox["\"\<Meters\>\"", "3"]]}], "]"}]}]}], "/.", 
+    RowBox[{"g", "\[Rule]", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"9.8", ",", 
+       FractionBox["\"\<Meters\>\"", 
+        SuperscriptBox["\"\<Seconds\>\"", "2"]]}], "]"}]}]}], "/.", 
+   RowBox[{"R", "\[Rule]", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{
+      RowBox[{"0.9", " ", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "3"}]]}], ",", "\"\<Meters\>\""}], "]"}]}]}], "//", 
+  "UnitSimplify"}]], "Input",
+ CellChangeTimes->{{3.6038148985112514`*^9, 3.6038150489218545`*^9}, {
+  3.6038151173167667`*^9, 3.6038151793133125`*^9}, {3.603815283864292*^9, 
+  3.6038153624727883`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.006802721088435373`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Meters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.603815051396996*^9, 3.603815363503847*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", "\[Sigma]"}], 
+       RowBox[{"\[Rho]", " ", "g", " ", "R"}]], "/.", 
+      RowBox[{"\[Sigma]", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"0.073", ",", 
+         FractionBox["\"\<Newtons\>\"", "\"\<Meters\>\""]}], "]"}]}]}], "/.", 
+     RowBox[{"\[Rho]", "\[Rule]", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1000", ",", 
+        FractionBox["\"\<Kilograms\>\"", 
+         SuperscriptBox["\"\<Meters\>\"", "3"]]}], "]"}]}]}], "/.", 
+    RowBox[{"g", "\[Rule]", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"9.8", ",", 
+       FractionBox["\"\<Meters\>\"", 
+        SuperscriptBox["\"\<Seconds\>\"", "2"]]}], "]"}]}]}], "/.", 
+   RowBox[{"R", "\[Rule]", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{
+      RowBox[{"0.9", " ", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "3"}]]}], ",", "\"\<Meters\>\""}], "]"}]}]}], "//", 
+  "UnitSimplify"}]], "Input",
+ CellChangeTimes->{{3.6038153804298153`*^9, 3.6038153822259183`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.016553287981859406`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"m\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Meters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.603815383341982*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"h1", "-", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"2", "\[Sigma]"}], 
+          RowBox[{"\[Rho]", " ", "g"}]], 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox["1", "R1"], "-", 
+           FractionBox["1", "R2"]}], ")"}]}]}], "/.", 
+       RowBox[{"h1", "\[Rule]", "0.1"}]}], "/.", 
+      RowBox[{"\[Sigma]", "\[Rule]", "0.03"}]}], "/.", 
+     RowBox[{"\[Rho]", "\[Rule]", "800"}]}], "/.", 
+    RowBox[{"g", "\[Rule]", "9.8"}]}], "/.", 
+   RowBox[{"R1", "\[Rule]", 
+    RowBox[{"0.5", " ", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}]}]}], "/.", 
+  RowBox[{"R2", "\[Rule]", 
+   RowBox[{"0.9", " ", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "3"}]]}]}]}]], "Input",
+ CellChangeTimes->{{3.6038169355917654`*^9, 3.6038170486512327`*^9}}],
+
+Cell[BoxData["0.09319727891156464`"], "Output",
+ CellChangeTimes->{3.6038170497942977`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"4", "\[Sigma]"}], "R1"], "+", 
+         RowBox[{"\[Rho]", " ", "g", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            FractionBox[
+             SuperscriptBox["R1", "2"], 
+             SuperscriptBox["R2", "2"]]}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{"H1", "-", "h1"}], ")"}]}]}], "/.", 
+        RowBox[{"h1", "\[Rule]", "0.1"}]}], "/.", 
+       RowBox[{"\[Sigma]", "\[Rule]", "0.03"}]}], "/.", 
+      RowBox[{"\[Rho]", "\[Rule]", "800"}]}], "/.", 
+     RowBox[{"g", "\[Rule]", "9.8"}]}], "/.", 
+    RowBox[{"R1", "\[Rule]", 
+     RowBox[{"0.5", " ", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "3"}]]}]}]}], "/.", 
+   RowBox[{"R2", "\[Rule]", 
+    RowBox[{"0.9", " ", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}]}]}], "/.", 
+  RowBox[{"H1", "\[Rule]", "0.12"}]}]], "Input",
+ CellChangeTimes->{{3.603818448530301*^9, 3.6038184838023186`*^9}, {
+  3.603818731630493*^9, 3.603818742200098*^9}}],
+
+Cell[BoxData["445.195061728395`"], "Output",
+ CellChangeTimes->{3.603955888845639*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["R2", "2"], 
+           FractionBox[
+            RowBox[{
+             FractionBox[
+              RowBox[{"4", "\[Sigma]1"}], "R1"], "+", 
+             FractionBox[
+              RowBox[{"4", "\[Sigma]2"}], "R2"], "+", 
+             RowBox[{"\[Rho]1", " ", "g", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                FractionBox[
+                 SuperscriptBox["R1", "2"], 
+                 SuperscriptBox["R2", "2"]]}], ")"}], 
+              RowBox[{"(", 
+               RowBox[{"H1", "-", "h1"}], ")"}]}]}], 
+            RowBox[{"\[Rho]2", " ", "g"}]]}], "/.", 
+          RowBox[{"\[Sigma]1", "\[Rule]", "0.03"}]}], "/.", 
+         RowBox[{"\[Sigma]2", "\[Rule]", "0.073"}]}], "/.", 
+        RowBox[{"R1", "\[Rule]", 
+         RowBox[{"0.5", " ", 
+          SuperscriptBox["10", 
+           RowBox[{"-", "3"}]]}]}]}], "/.", 
+       RowBox[{"R2", "\[Rule]", 
+        RowBox[{"0.9", " ", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "3"}]]}]}]}], "/.", 
+      RowBox[{"\[Rho]1", "\[Rule]", "800"}]}], "/.", 
+     RowBox[{"g", "\[Rule]", "9.8"}]}], "/.", 
+    RowBox[{"H1", "\[Rule]", "0.12"}]}], "/.", 
+   RowBox[{"h1", "\[Rule]", "0.1"}]}], "/.", 
+  RowBox[{"\[Rho]2", "\[Rule]", "1000"}]}]], "Input",
+ CellChangeTimes->{{3.603820313642979*^9, 3.6038203617057285`*^9}, {
+  3.6038204019200287`*^9, 3.603820596611164*^9}}],
+
+Cell[BoxData["1.9984632581521483`*^-7"], "Output",
+ CellChangeTimes->{{3.6038205745469017`*^9, 3.6038206004033813`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "56510", ",", "88090", ",", "140400", ",", "224400", ",", "332400", ",", 
+      "428800", ",", "492000"}], "}"}], ",", "\"\<Pascals\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6039558609600444`*^9, 3.6039559995419707`*^9}, {
+  3.603956036610091*^9, 3.6039560541800957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"56510"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )], ",", 
+   TemplateBox[{"88090"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )], ",", 
+   TemplateBox[{"140400"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )], ",", 
+   TemplateBox[{"224400"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )], ",", 
+   TemplateBox[{"332400"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )], ",", 
+   TemplateBox[{"428800"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )], ",", 
+   TemplateBox[{"492000"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"Pa\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: pascals"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Pascals\""}], "]"}]& )]}], "}"}]], "Output",
+ CellChangeTimes->{3.603956001229067*^9, 3.60395605634722*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"T", "=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "340", ",", "530", ",", "720", ",", "910", ",", "1100", ",", "1290", ",",
+       "1480"}], "}"}], ",", "\"\<Kelvins\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.603956003791214*^9, 3.6039560298257027`*^9}, {
+  3.6039560704690275`*^9, 3.603956097485573*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"340"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )], ",", 
+   TemplateBox[{"530"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )], ",", 
+   TemplateBox[{"720"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )], ",", 
+   TemplateBox[{"910"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )], ",", 
+   TemplateBox[{"1100"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )], ",", 
+   TemplateBox[{"1290"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )], ",", 
+   TemplateBox[{"1480"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"K\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: kelvins"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kelvins\""}], "]"}]& )]}], "}"}]], "Output",
+ CellChangeTimes->{3.603956030701753*^9, 3.603956098817649*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"V", "=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"0.1", ",", 
+    SuperscriptBox["\"\<Meters\>\"", "3"]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6039561061250668`*^9, 3.60395614971056*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.1`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          RowBox[{
+            SuperscriptBox["\"m\"", "3"]}]}], 
+        "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+    "Unit: meters cubed"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       SuperscriptBox["\"Meters\"", "3"]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.603956152213703*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Nu]", "=", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"p", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "V"}], 
+       RowBox[{"R", " ", 
+        RowBox[{"T", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}]], "/.", 
+      RowBox[{"R", "\[Rule]", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"8.314", ",", 
+         FractionBox["\"\<Joules\>\"", 
+          RowBox[{"\"\<Moles\>\"", "*", "\"\<Kelvins\>\""}]]}], "]"}]}]}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}], "//", 
+   "UnitSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.6039561975172944`*^9, 3.603956302074275*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"1.9991085200016983`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )], ",", 
+   TemplateBox[{"1.99912854426042`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )], ",", 
+   TemplateBox[{"2.345441424103921`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )], ",", 
+   TemplateBox[{"2.9660020037696246`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.634614122947056`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.9981128310704093`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )], ",", 
+   TemplateBox[{"3.998465629449512`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"mol\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: moles"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Moles\""}], "]"}]& )]}], "}"}]], "Output",
+ CellChangeTimes->{{3.603956288973525*^9, 3.6039563046804237`*^9}}]
+}, Open  ]]
+},
+WindowSize->{707, 505},
+WindowMargins->{{-1, Automatic}, {Automatic, 1}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 616, 18, 52, "Input"],
+Cell[1198, 42, 583, 17, 52, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1818, 64, 1065, 27, 72, "Input"],
+Cell[2886, 93, 4358, 79, 247, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7281, 177, 210, 4, 31, "Input"],
+Cell[7494, 183, 330, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7861, 199, 1169, 32, 107, "Input"],
+Cell[9033, 233, 473, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9543, 249, 1066, 30, 107, "Input"],
+Cell[10612, 281, 451, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11100, 297, 887, 28, 70, "Input"],
+Cell[11990, 327, 91, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12118, 333, 1102, 33, 72, "Input"],
+Cell[13223, 368, 86, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13346, 374, 1555, 43, 106, "Input"],
+Cell[14904, 419, 120, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15061, 425, 394, 10, 52, "Input"],
+Cell[15458, 437, 2907, 73, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18402, 515, 372, 9, 31, "Input"],
+Cell[18777, 526, 2885, 73, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21699, 604, 216, 5, 33, "Input"],
+Cell[21918, 611, 532, 15, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22487, 631, 722, 22, 70, "Input"],
+Cell[23212, 655, 2979, 73, 84, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
